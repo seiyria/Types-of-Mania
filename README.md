@@ -20,7 +20,7 @@ This is where the JSON files are used. The JSON files are created from a Seriali
 The pars files start with a root directory that contains the path to the location with all the relevant json files (these were created beforehand with the serializer). The path of each JSON file is opened, and information is taken and assigned to a string. Each of these strings is printed to the console, which I copy pasted into the clas files. 
 
 Example output:
-# ****** EnemyStatusStshinjuCustom - *****
+_# ****** EnemyStatusStshinjuCustom - *****
 stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb11_CustomStatusTable.uexp'
 Land_amber = Enemy(stshinjuCustomPath, 140)
 Land_amber = Enemy(stshinjuCustomPath, 1764)
