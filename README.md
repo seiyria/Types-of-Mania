@@ -49,6 +49,8 @@ The game's directory structure (the way the files need to be layed out after edi
 ** As I was writing this, I noticed that I may have missed a folder that holds more boss limbs and whatnot. I'll need to add them to the repo and run the serializer on them to get their JSON files. The file path for that folder is in:
 - 'Trials of Mana\Content\Game00\Data\Csv\CharaData\Parts'
 
+** A potential bug I just noticed: the custom class instances share the same variable name. Would this lead to the class instance overwriting itself, meaning all enemies except the last one will be skipped?
+
 The final pak file is created with UnrealPak. I downloaded it from this mega link provided by the bloodstained modding discord: https://mega.nz/file/BY0gUIqI#rYaUGom59yFDLNGtwai1W_QSeLZDIEd3qFbeApJ5f3Q
 This download also includes the above-mentioned Serializer.
 
