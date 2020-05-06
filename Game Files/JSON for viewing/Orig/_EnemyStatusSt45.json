@@ -1,0 +1,457 @@
+[
+  {
+    "Key": "No.0",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "dummy",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 99999,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 1,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 1,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 0,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 1,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 1,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 1,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 500.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 1.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_POS01",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 0,
+        "FlyingHeight": 200.0,
+        "Exp": 55,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_NONE",
+          "EItemType::ITEM_ID_NONE",
+          "EItemType::ITEM_ID_NONE"
+        ],
+        "DropItemProbability": [
+          0,
+          0,
+          0
+        ],
+        "DropLuc": 27,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 1,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 0,
+        "GrantAttributeType_Week": 0,
+        "GrantAttributeType_Deffense": 0,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY_01",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  },
+  {
+    "Key": "No.1",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "NINJA_LV1",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 49,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 6,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 9,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 0,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 6,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 9,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 13,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 100.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 1.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_ANY",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 0,
+        "FlyingHeight": 200.0,
+        "Exp": 5,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_DROP",
+          "EItemType::ITEM_ID_SHURIKEN",
+          "EItemType::ITEM_ID_NONE"
+        ],
+        "DropItemProbability": [
+          5,
+          3,
+          0
+        ],
+        "DropLuc": 2,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 3,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 0,
+        "GrantAttributeType_Week": 0,
+        "GrantAttributeType_Deffense": 15,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  },
+  {
+    "Key": "No.2",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "NINJA_LV37",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 544,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 159,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 127,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 0,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 91,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 127,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 175,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 100.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 1.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_ANY",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 0,
+        "FlyingHeight": 200.0,
+        "Exp": 276,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_DROP",
+          "EItemType::ITEM_ID_SHURIKEN",
+          "EItemType::ITEM_ID_NONE"
+        ],
+        "DropItemProbability": [
+          5,
+          3,
+          0
+        ],
+        "DropLuc": 116,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 3,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 0,
+        "GrantAttributeType_Week": 0,
+        "GrantAttributeType_Deffense": 15,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  },
+  {
+    "Key": "No.3",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "NINJAMASTER_LV37",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 680,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 184,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 127,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 0,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 91,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 127,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 184,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 100.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 1.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_ANY",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 0,
+        "FlyingHeight": 200.0,
+        "Exp": 294,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_SHURIKEN",
+          "EItemType::ITEM_ID_ITEMSEED_R",
+          "EItemType::ITEM_ID_NONE"
+        ],
+        "DropItemProbability": [
+          5,
+          3,
+          0
+        ],
+        "DropLuc": 123,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 3,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 0,
+        "GrantAttributeType_Week": 0,
+        "GrantAttributeType_Deffense": 15,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  },
+  {
+    "Key": "No.4",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "DARKPRIEST_LV37",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 816,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 152,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 127,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 195,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 76,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 191,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 195,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 64.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 1.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_ANY",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 1,
+        "FlyingHeight": 300.0,
+        "Exp": 300,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_CHOCO",
+          "EItemType::ITEM_ID_ITEMSEED_R",
+          "EItemType::ITEM_ID_NONE"
+        ],
+        "DropItemProbability": [
+          5,
+          3,
+          0
+        ],
+        "DropLuc": 128,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 3,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 32,
+        "GrantAttributeType_Week": 16,
+        "GrantAttributeType_Deffense": 0,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  },
+  {
+    "Key": "No.5",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "LESSERDAEMON_LV37",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 1225,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 195,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 127,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 0,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 76,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 152,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 219,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 196.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 2.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_ANY",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 0,
+        "FlyingHeight": 200.0,
+        "Exp": 331,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_ITEMSEED_UK",
+          "EItemType::ITEM_ID_SHADE",
+          "EItemType::ITEM_ID_ITEMSEED_R"
+        ],
+        "DropItemProbability": [
+          1,
+          3,
+          2
+        ],
+        "DropLuc": 138,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 3,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 24,
+        "GrantAttributeType_Week": 36,
+        "GrantAttributeType_Deffense": 0,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  },
+  {
+    "Key": "No.6",
+    "Value": {
+      "Name_29_7A62483740A6D0DF1414CB9963F7CF87": "NINJAMASTER_LV38",
+      "Hp_2_D1FBB5E1450A631F5BB06780E7A9D1EF": 697,
+      "Mp_4_0B8CE5D34E8D39479B0459B6833DE2A6": 0,
+      "TechniqueLv_7_C55F011045453C1B5EE843947799041A": 0,
+      "Offense_23_C7833DBF45E6E471939C4CB24F71C6CE": 189,
+      "Defense_11_CEDA3DA940B12870F88BDDB032EED6B7": 130,
+      "Agility_13_08E3993D4823455BFBB38F9F983154A9": 0,
+      "Intel_15_593E9E744128EAB0BF85CA8C41331AFF": 0,
+      "Sprit_17_0176098A4CA9819B76CFA2BD083CF75E": 0,
+      "Luck_19_FC9354FC4B582B7003B3748B2304D1E2": 94,
+      "DefenseMagic_22_712E9C644CF414B2620BB780F482DDE8": 130,
+      "OffenseMagic_105_6F83772C4F114397F0D36396FC71E076": 189,
+      "DownDurableValue_36_9434D3F24A970695E5621AAECED78C93": 100.0,
+      "WeightScale_38_6E7D53644E3AC97DE6C9AE93B9E46765": 1.0,
+      "GuardDurableValue_41_B7A11A46422747FD3379328611218892": 0.0,
+      "MoveMaxAxis_65_42ABDF59408E1141FF04DF84DC19B461": 1.0,
+      "ActionEnableBit_62_EAD822B0477B2EF47FF897A65C23112C": 15,
+      "AIStrategyTargetType_49_05BAB1C34166A06415649BA211D26E4B": "EAIStrategyTargetType::AI_STRATEGY_TARGET_TYPE_ANY",
+      "AIStrategyTacticsType_51_B0A7D31F46DA4A5C0F605CADAA1E400A": "EAIStrategyTacticsType::AI_STRATEGY_TACTICS_TYPE_ANY",
+      "AIStrategyPositionType_53_1B304817472218FFF24B6DAE00A3E16D": "EAIStrategyPositionType::AI_STRATEGY_POSITION_TYPE_ANY",
+      "AIStrategyMPManageType_55_28865B5D403649C1157C5C87699ADC29": "EAIStrategyMPManageType::AI_STRATEGY_MPMANAGE_TYPE_ANY",
+      "AIStrategySkillManageType_57_7606F6BD427D9709091E09AC011C3D6A": "EAIStrategySkillManageType::AI_STRATEGY_SKILLMANAGE_TYPE_ANY",
+      "AIStrategyItemManageType_59_A2A46B7F4304AE0965582EB097EAD1C2": "EAIStrategyItemManageType::AI_STRATEGY_ITEMMANAGE_TYPE_ANY",
+      "EnemyZParam_102_F2A34E9849EEB93036B7CD9070A68686": {
+        "EnemyTypeBitMask": 0,
+        "FlyingHeight": 200.0,
+        "Exp": 297,
+        "DropSpp": 0,
+        "DropItem": [
+          "EItemType::ITEM_ID_SHURIKEN",
+          "EItemType::ITEM_ID_ITEMSEED_R",
+          "EItemType::ITEM_ID_NONE"
+        ],
+        "DropItemProbability": [
+          5,
+          3,
+          0
+        ],
+        "DropLuc": 124,
+        "EnemyClass": 1,
+        "KnockOutDropSpp": 0,
+        "LAttackDropSpp": 3,
+        "ChargeAttackDropSpp": 3,
+        "UTTypes": "IntProperty,FloatProperty,IntProperty,IntProperty,ArrayProperty,ArrayProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "GrantEffectAndAttribute_90_E65FB9034B5EEED3A5044C9738C754AD": {
+        "GrantEffectType_Lv1": 0,
+        "GrantEffectType_Lv2": 0,
+        "GrantEffectType_Lv3": 0,
+        "GrantAttributeType_Inv": 0,
+        "GrantAttributeType_Week": 0,
+        "GrantAttributeType_Deffense": 15,
+        "GrantAttributeType_Absord": 0,
+        "UTTypes": "IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty,IntProperty"
+      },
+      "EnemyCategoryID_108_C36A0646409E51C277B78F86E23C1278": "EEnemyCategoryID::ENEMY",
+      "FeatureFlags_111_35CBE7AF4E6BBC6A141C37B749431662": {
+        "FeatureFlags": 0,
+        "UTTypes": "IntProperty"
+      }
+    }
+  }
+]
