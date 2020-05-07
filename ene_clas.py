@@ -4,6 +4,10 @@ import os
 # Global list for iterating through and making edits to .uexp files
 enemyInstList = []
 
+# paths we want the edited files to output to for UnrealPak.exe
+finDirPath_BP = 'final patch folder\\Trials of Mana\\Content\\Game00\\BP\\Enemy\\Zako\\Data\\'
+finDirPath_Data = 'final patch folder\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
+
 
 # TODO do we want to be able to update each class instance so we can check what its new value is?
 class Enemy:
@@ -44,6 +48,7 @@ def editHexAll(multiDict):
     # Get full path of file to use
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
+            # This will concatenate the 'head' and 'tail' to form the full file path
             fullPath = os.path.join(subdir, file)
             
             with open(fullPath, 'rb') as f:
@@ -74,10 +79,20 @@ def editHexAll(multiDict):
                         # Insert new byte slice into mutable byte array
                         mutableBytes[offset:(offset + 4)] = bytesToInsert                    
 
-
+            # TODO Do we need to find a way to make the directories if they don't exist?
+            # We'll simply change the output to where we want it in the folder to be used by UnrealPak
             # Write current file and output
-            outPath = "Game Files\\uexp files\\post edit\\" + file            
-
+            # TODO if check to see where the file needs to go
+            if file == 'EnemyStatusTable.uexp' or file == 'EnemyStatusMaxTable.uexp':
+                outPath = finDirPath_Data + file
+                # TODO create nonexisting directory
+                if not os.path.exists(finDirPath_Data):
+                    os.makedirs(finDirPath_Data)
+            else:
+                outPath = finDirPath_BP + file
+                if not os.path.exists(finDirPath_BP):
+                    os.makedirs(finDirPath_BP)
+            
             with open(outPath, 'wb') as f:
                 f.write(mutableBytes)
 

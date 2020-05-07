@@ -4,6 +4,8 @@ import os
 # Global list for iterating through and making edits to .uexp files
 enemyInstList = []
 
+finDirPath = 'final patch folder\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\ShinjuStatusTableList\\'
+
 
 # TODO do we want to be able to update each class instance so we can check what its new value is?
 class Enemy:
@@ -75,9 +77,62 @@ def editHexAll(multiDict):
                         mutableBytes[offset:(offset + 4)] = bytesToInsert                    
 
 
-            # Write current file and output
-            outPath = "Game Files\\Boss\\post edit\\shinju\\" + file            
-
+            if 'CustomStatusTable.uexp' in file:
+                outPath = finDirPath + file
+                # TODO create nonexisting directory
+                if not os.path.exists(finDirPath):
+                    os.makedirs(finDirPath)
+            elif '_eb11_' in file:                
+                newPath11 = finDirPath + "eb_11Parts"
+                if not os.path.exists(newPath11):
+                    os.makedirs(newPath11)
+                    outPath = newPath11 + "\\" + file
+                else:
+                    outPath = newPath11 + "\\" + file
+            elif '_eb12_' in file:                
+                newPath12 = finDirPath + "eb_12Parts"
+                if not os.path.exists(newPath12):
+                    os.makedirs(newPath12)
+                    outPath = newPath12 + "\\" + file
+                else:
+                    outPath = newPath12 + "\\" + file
+            elif '_eb13_' in file:                
+                newPath13 = finDirPath + "eb_13Parts"
+                if not os.path.exists(newPath13):
+                    os.makedirs(newPath13)
+                    outPath = newPath13 + "\\" + file
+                else:
+                    outPath = newPath13 + "\\" + file
+            elif '_eb14_' in file:                
+                newPath14 = finDirPath + "eb_14Parts"
+                if not os.path.exists(newPath14):
+                    os.makedirs(newPath14)
+                    outPath = newPath14 + "\\" + file
+                else:
+                    outPath = newPath14 + "\\" + file  
+            elif '_eb15_' in file:                
+                newPath15 = finDirPath + "eb_15Parts"
+                if not os.path.exists(newPath15):
+                    os.makedirs(newPath15)
+                    outPath = newPath15 + "\\" + file
+                else:
+                    outPath = newPath15 + "\\" + file
+            elif '_eb16_' in file:                
+                newPath16 = finDirPath + "eb_16Parts"
+                if not os.path.exists(newPath16):
+                    os.makedirs(newPath16)
+                    outPath = newPath16 + "\\" + file
+                else:
+                    outPath = newPath16 + "\\" + file
+            elif '_eb17_' in file:                
+                newPath17 = finDirPath + "eb_17Parts"
+                if not os.path.exists(newPath17):
+                    os.makedirs(newPath17)
+                    outPath = newPath17 + "\\" + file
+                else:
+                    outPath = newPath17 + "\\" + file              
+            
+            # Write files
             with open(outPath, 'wb') as f:
                 f.write(mutableBytes)
 

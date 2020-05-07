@@ -4,6 +4,9 @@ import os
 # Global list for iterating through and making edits to .uexp files
 enemyInstList = []
 
+# path we want the edited files to output to for UnrealPak.exe
+finDirPath = 'final patch folder\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
+
 
 # TODO do we want to be able to update each class instance so we can check what its new value is?
 class Enemy:
@@ -75,9 +78,12 @@ def editHexAll(multiDict):
                         mutableBytes[offset:(offset + 4)] = bytesToInsert                    
 
 
-            # Write current file and output
-            outPath = "Game Files\\Boss\\post edit\\uexp files\\" + file            
-
+            if file == 'BossStatusTable.uexp':
+                outPath = finDirPath + file
+                # TODO create nonexisting directory
+                if not os.path.exists(finDirPath):
+                    os.makedirs(finDirPath)            
+            
             with open(outPath, 'wb') as f:
                 f.write(mutableBytes)
 
