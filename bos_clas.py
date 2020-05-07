@@ -37,7 +37,6 @@ class Enemy:
         print("HP value: ")
 
 
-# TODO add an if statement to skip enemies with a value of 1 HP and adjust offset accordingly
 # TODO add a conditional check to skip code if argument value (param?) is 0
 def editHexAll(multiDict):
     
