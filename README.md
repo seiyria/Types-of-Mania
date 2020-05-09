@@ -3,7 +3,8 @@
 *Version 0.3 Update
 - pars.py files need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
 
-* General explanation of how the script works. May be out of date.
+
+General explanation of how the script works. May be out of date:
 
 Apologies in advance for incorrect terminology.
 
