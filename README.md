@@ -1,7 +1,8 @@
 # Trials-of-Mania---Difficulty-Mod
 
 *Version 0.3 Update
-- pars.py files need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
+- pars.py files are still horribly done and need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
+- At some point it'd be nice to store all of the class instance stuff as data in a json file instead of copy pasting them all onto the main ene_clas.py script.
 
 
 General explanation of how the script works. May be out of date:
