@@ -1,12 +1,17 @@
 import os
+import time
 
 
 # Global list for iterating through and making edits to .uexp files
 enemyInstList = []
+bossInstList = []
+shinjuInstList = []
 
 # paths we want the edited files to output to for UnrealPak.exe
-finDirPath_BP = 'final patch folder\\Trials of Mana\\Content\\Game00\\BP\\Enemy\\Zako\\Data\\'
-finDirPath_Data = 'final patch folder\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
+finDirPath_BP = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\BP\\Enemy\\Zako\\Data\\'
+finDirPath_Data = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
+finDirPath_Boss = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
+finDirPath_shinju = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\ShinjuStatusTableList\\'
 
 
 # TODO do we want to be able to update each class instance so we can check what its new value is?
@@ -38,6 +43,62 @@ class Enemy:
         print("HP value: ")
 
 
+class Boss:
+    # hpOffset is used as the base offset to calculate the other offsets
+    def __init__(self, file_path, hpOffset):
+        self.fileLocation = file_path
+        
+        self.attrOffsetDict = {}                
+        
+        # Append to global list for iterating
+        bossInstList.append(self)
+
+        # Offset locations for each stat we want to edit        
+        self.attrOffsetDict['hp'] = hpOffset
+        self.attrOffsetDict['atk'] = hpOffset + (29 * 3)
+        self.attrOffsetDict['def'] = hpOffset + (29 * 4)
+        self.attrOffsetDict['agi'] = hpOffset + (29 * 5)
+        self.attrOffsetDict['int'] = hpOffset + (29 * 6)
+        self.attrOffsetDict['spr'] = hpOffset + (29 * 7)
+        self.attrOffsetDict['luck'] = hpOffset + (29 * 8)
+        self.attrOffsetDict['defMag'] = hpOffset + (29 * 9)
+        self.attrOffsetDict['offMag'] = hpOffset + (29 * 10)
+        self.attrOffsetDict['exp'] = hpOffset + (822)
+    
+    # TODO method to see current attr values
+    def seeInfo(self):
+        print("HP value: ")
+
+
+class Shinju:
+    # hpOffset is used as the base offset to calculate the other offsets
+    def __init__(self, file_path, hpOffset):
+        self.fileLocation = file_path
+        
+        self.attrOffsetDict = {}                
+        
+        # Append to global list for iterating
+        shinjuInstList.append(self)
+
+        # Offset locations for each stat we want to edit
+        # self.hpOffset = hpOffset
+        self.attrOffsetDict['hp'] = hpOffset
+        self.attrOffsetDict['atk'] = hpOffset + (29 * 3)
+        self.attrOffsetDict['def'] = hpOffset + (29 * 4)
+        self.attrOffsetDict['agi'] = hpOffset + (29 * 5)
+        self.attrOffsetDict['int'] = hpOffset + (29 * 6)
+        self.attrOffsetDict['spr'] = hpOffset + (29 * 7)
+        self.attrOffsetDict['luck'] = hpOffset + (29 * 8)
+        self.attrOffsetDict['defMag'] = hpOffset + (29 * 9)
+        self.attrOffsetDict['offMag'] = hpOffset + (29 * 10)
+        self.attrOffsetDict['exp'] = hpOffset + (822)
+    
+    # TODO method to see current attr values
+    def seeInfo(self):
+        print("HP value: ")
+
+
+# TODO add an if statement to skip enemies with a value of 1 HP and adjust offset accordingly
 # TODO add a conditional check to skip code if argument value (param?) is 0
 def editHexAll(multiDict):
     
@@ -68,9 +129,9 @@ def editHexAll(multiDict):
                         numFromBytes = int.from_bytes(fourBytesToEdit, byteorder='little', signed=True)                    
 
                         newStatValue = round(numFromBytes * multiDict[attr])
-                        # I don't think 99999 is the highest value allowed, so can maybe change in the future
-                        if newStatValue > 99999:
-                            newStatValue = 99999                 
+                        
+                        if newStatValue > 2147483647:
+                            newStatValue = 2147483647                 
 
                         # new Stat value to 4 byte string
                         bytesToInsert = newStatValue.to_bytes(4, byteorder='little', signed=True)                    
@@ -92,11 +153,168 @@ def editHexAll(multiDict):
                 if not os.path.exists(finDirPath_BP):
                     os.makedirs(finDirPath_BP)
             
+            # TODO I think this could potentially write out the BossStatusTable.uexp file, we don't want that
+            with open(outPath, 'wb') as f:
+                f.write(mutableBytes)                    
+
+
+def editHexAll_Boss(bossDict):
+    
+    # Start for file iterating
+    rootdir = r'Game Files\Boss\Orig\uexp files'
+
+    # Get full path of file to use
+    for subdir, dirs, files in os.walk(rootdir):
+        for file in files:
+            fullPath = os.path.join(subdir, file)
+            
+            with open(fullPath, 'rb') as f:
+                byteData = f.read()
+        
+            # Get data into an array that is mutable
+            mutableBytes = bytearray(byteData)
+
+            for boss in bossInstList:                
+                # Check each Boss's fileLocation attr to see if it matches the current fullPath
+                if boss.fileLocation == fullPath:
+                    for attr, offset in boss.attrOffsetDict.items():
+                        
+                        # Original slice of four bytes in data that we will edit
+                        fourBytesToEdit = byteData[offset:(offset + 4)]                    
+
+                        # Convert those four bytes to an integer
+                        numFromBytes = int.from_bytes(fourBytesToEdit, byteorder='little', signed=True)                    
+
+                        newStatValue = round(numFromBytes * bossDict[attr])
+                        # I don't think 99999 is the highest value allowed, so can maybe change in the future
+                        if newStatValue > 2147483647:
+                            newStatValue = 2147483647           
+
+                        # new Stat value to 4 byte string
+                        bytesToInsert = newStatValue.to_bytes(4, byteorder='little', signed=True)                    
+
+                        # Insert new byte slice into mutable byte array
+                        arrayToEdit = mutableBytes[offset:(offset + 4)]
+                        mutableBytes[offset:(offset + 4)] = bytesToInsert  
+
+                        # checkMe = mutableBytes[offset:(offset + 4)]     
+                        # print(checkMe)
+                        # print(mutableBytes[0:10])
+
+
+            if file == 'BossStatusTable.uexp':
+                outPath = finDirPath_Boss + file
+                # TODO create nonexisting directory
+                if not os.path.exists(finDirPath_Boss):
+                    os.makedirs(finDirPath_Boss)            
+                with open(outPath, 'wb') as f:
+                    f.write(mutableBytes)
+            else:
+                continue
+
+
+def editHexAll_Shinju(shinjuDict):
+    
+    # Start for file iterating
+    rootdir = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList'
+
+    # Get full path of file to use
+    for subdir, dirs, files in os.walk(rootdir):
+        for file in files:
+            fullPath = os.path.join(subdir, file)
+            
+            with open(fullPath, 'rb') as f:
+                byteData = f.read()
+        
+            # Get data into an array that is mutable
+            mutableBytes = bytearray(byteData)
+
+            for enemy in shinjuInstList:                
+                # Check each Shinju's fileLocation attr to see if it matches the current fullPath
+                if enemy.fileLocation == fullPath:
+                    for attr, offset in enemy.attrOffsetDict.items():
+                        
+                        # Original slice of four bytes in data that we will edit
+                        fourBytesToEdit = byteData[offset:(offset + 4)]                    
+
+                        # Convert those four bytes to an integer
+                        numFromBytes = int.from_bytes(fourBytesToEdit, byteorder='little', signed=True)                    
+
+                        newStatValue = round(numFromBytes * shinjuDict[attr])
+                        # I don't think 99999 is the highest value allowed, so can maybe change in the future
+                        if newStatValue > 2147483647:
+                            newStatValue = 2147483647           
+
+                        # new Stat value to 4 byte string
+                        bytesToInsert = newStatValue.to_bytes(4, byteorder='little', signed=True)                    
+
+                        # Insert new byte slice into mutable byte array
+                        mutableBytes[offset:(offset + 4)] = bytesToInsert                    
+
+
+            if 'CustomStatusTable.uexp' in file:
+                outPath = finDirPath_shinju + file
+                # TODO create nonexisting directory
+                if not os.path.exists(finDirPath_shinju):
+                    os.makedirs(finDirPath_shinju)
+            elif '_eb11_' in file:                
+                newPath11 = finDirPath_shinju + "eb11_Parts"
+                if not os.path.exists(newPath11):
+                    os.makedirs(newPath11)
+                    outPath = newPath11 + "\\" + file
+                else:
+                    outPath = newPath11 + "\\" + file
+            elif '_eb12_' in file:                
+                newPath12 = finDirPath_shinju + "eb12_Parts"
+                if not os.path.exists(newPath12):
+                    os.makedirs(newPath12)
+                    outPath = newPath12 + "\\" + file
+                else:
+                    outPath = newPath12 + "\\" + file
+            elif '_eb13_' in file:                
+                newPath13 = finDirPath_shinju + "eb13_Parts"
+                if not os.path.exists(newPath13):
+                    os.makedirs(newPath13)
+                    outPath = newPath13 + "\\" + file
+                else:
+                    outPath = newPath13 + "\\" + file
+            elif '_eb14_' in file:                
+                newPath14 = finDirPath_shinju + "eb14_Parts"
+                if not os.path.exists(newPath14):
+                    os.makedirs(newPath14)
+                    outPath = newPath14 + "\\" + file
+                else:
+                    outPath = newPath14 + "\\" + file  
+            elif '_eb15_' in file:                
+                newPath15 = finDirPath_shinju + "eb15_Parts"
+                if not os.path.exists(newPath15):
+                    os.makedirs(newPath15)
+                    outPath = newPath15 + "\\" + file
+                else:
+                    outPath = newPath15 + "\\" + file
+            elif '_eb16_' in file:                
+                newPath16 = finDirPath_shinju + "eb16_Parts"
+                if not os.path.exists(newPath16):
+                    os.makedirs(newPath16)
+                    outPath = newPath16 + "\\" + file
+                else:
+                    outPath = newPath16 + "\\" + file
+            elif '_eb17_' in file:                
+                newPath17 = finDirPath_shinju + "eb17_Parts"
+                if not os.path.exists(newPath17):
+                    os.makedirs(newPath17)
+                    outPath = newPath17 + "\\" + file
+                else:
+                    outPath = newPath17 + "\\" + file              
+            else:
+                continue
+
+            # Write files
             with open(outPath, 'wb') as f:
                 f.write(mutableBytes)
 
 
-# ********* Enemy Instance Creation Start *********
+#region Enemy Instance Creation Start
 
 # ****** EnemyStatusSt01_2 - *****
 
@@ -1671,22 +1889,645 @@ Karl = Enemy(stMaxStatPath, 162748)
 Eagle = Enemy(stMaxStatPath, 164327)
 Bruiser = Enemy(stMaxStatPath, 165906)
 Bruiser2 = Enemy(stMaxStatPath, 167485)
+#endregion
 
+
+#region Boss Instance Creation Start
+
+# Charadata
+# ****** BossStatusStbossSt - *****
+
+stbossStPath = r'Game Files\Boss\Orig\uexp files\Charadata\BossStatusTable.uexp'
+
+FullmetalHugger = Boss(stbossStPath, 140)
+MachineGolemR = Boss(stbossStPath, 1764)
+Jewel_EaterR = Boss(stbossStPath, 3388)
+Zhenker = Boss(stbossStPath, 5012)
+Genoa = Boss(stbossStPath, 6636)
+Bill = Boss(stbossStPath, 8260)
+Ben = Boss(stbossStPath, 9884)
+Bill_and_Ben = Boss(stbossStPath, 11508)
+Gorva = Boss(stbossStPath, 13132)
+MachineGolemS = Boss(stbossStPath, 14756)
+Beast_Ruger = Boss(stbossStPath, 16380)
+Guilder_Vine = Boss(stbossStPath, 18004)
+Land_amber = Boss(stbossStPath, 19628)
+Feegu_Mund = Boss(stbossStPath, 21252)
+Zan_Bie = Boss(stbossStPath, 22876)
+Dangard = Boss(stbossStPath, 24500)
+Mispolm = Boss(stbossStPath, 26124)
+Doran = Boss(stbossStPath, 27748)
+Light_Geizer = Boss(stbossStPath, 29372)
+Sablehor = Boss(stbossStPath, 30996)
+BlackKnight = Boss(stbossStPath, 32620)
+CrimsonWizard = Boss(stbossStPath, 34244)
+CrimsonWizardEvent = Boss(stbossStPath, 35868)
+Man_eating_death = Boss(stbossStPath, 37492)
+Fallen_saint = Boss(stbossStPath, 39116)
+Earl_of_evil_eye = Boss(stbossStPath, 40740)
+JewelryBeast = Boss(stbossStPath, 42364)
+HugeDragon = Boss(stbossStPath, 43988)
+DarkRich = Boss(stbossStPath, 45612)
+ArchDemon = Boss(stbossStPath, 47236)
+BlackRabi = Boss(stbossStPath, 48860)
+MiniBlackRabi = Boss(stbossStPath, 50484)
+Bruiser = Boss(stbossStPath, 52108)
+Karl = Boss(stbossStPath, 53732)
+Bill = Boss(stbossStPath, 55356)
+Ben = Boss(stbossStPath, 56980)
+Bill_and_Ben = Boss(stbossStPath, 58604)
+Gorva = Boss(stbossStPath, 60228)
+FullmetalHugger = Boss(stbossStPath, 61852)
+Man_eating_death_Avatar = Boss(stbossStPath, 63476)
+Jewel_Eater = Boss(stbossStPath, 65100)
+Zhenker = Boss(stbossStPath, 66724)
+Genoa = Boss(stbossStPath, 68348)
+Guilder_Vine = Boss(stbossStPath, 69972)
+Anise = Boss(stbossStPath, 71596)
+AniseDragon = Boss(stbossStPath, 73220)
+Sablehor_BlueMan = Boss(stbossStPath, 74844)
+Sablehor_PurpleMan = Boss(stbossStPath, 76468)
+ManaStone_Earth = Boss(stbossStPath, 78092)
+ManaStone_Water = Boss(stbossStPath, 79716)
+ManaStone_Fire = Boss(stbossStPath, 81340)
+ManaStone_Wind = Boss(stbossStPath, 82964)
+Anise_Avatar = Boss(stbossStPath, 84588)
+ManaStone_Black = Boss(stbossStPath, 86212)
+Mispolm_Ivy = Boss(stbossStPath, 87836)
+Roki = Boss(stbossStPath, 89460)
+BeastKing = Boss(stbossStPath, 91084)
+Crystal = Boss(stbossStPath, 92708)
+ArchDemon_ArmL = Boss(stbossStPath, 94332)
+ArchDemon_ArmR = Boss(stbossStPath, 95956)
+FullmetalHugger = Boss(stbossStPath, 97580)
+Zhenker = Boss(stbossStPath, 99204)
+Genoa = Boss(stbossStPath, 100828)
+#endregion
+
+
+#region Shinju Instance Creation Start
+
+# ShinjuStatusTableList
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb11_CustomStatusTable.uexp'
+Land_amber = Shinju(stshinjuCustomPath, 140)
+Land_amber = Shinju(stshinjuCustomPath, 1764)
+Land_amber = Shinju(stshinjuCustomPath, 3388)
+Land_amber = Shinju(stshinjuCustomPath, 5012)
+Land_amber = Shinju(stshinjuCustomPath, 6636)
+Land_amber = Shinju(stshinjuCustomPath, 8260)
+Land_amber = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb12_CustomStatusTable.uexp'
+Feegu_Mund = Shinju(stshinjuCustomPath, 140)
+Feegu_Mund = Shinju(stshinjuCustomPath, 1764)
+Feegu_Mund = Shinju(stshinjuCustomPath, 3388)
+Feegu_Mund = Shinju(stshinjuCustomPath, 5012)
+Feegu_Mund = Shinju(stshinjuCustomPath, 6636)
+Feegu_Mund = Shinju(stshinjuCustomPath, 8260)
+Feegu_Mund = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb13_CustomStatusTable.uexp'
+Zan_Bie = Shinju(stshinjuCustomPath, 140)
+Zan_Bie = Shinju(stshinjuCustomPath, 1764)
+Zan_Bie = Shinju(stshinjuCustomPath, 3388)
+Zan_Bie = Shinju(stshinjuCustomPath, 5012)
+Zan_Bie = Shinju(stshinjuCustomPath, 6636)
+Zan_Bie = Shinju(stshinjuCustomPath, 8260)
+Zan_Bie = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb14_CustomStatusTable.uexp'
+Dangard = Shinju(stshinjuCustomPath, 140)
+Dangard = Shinju(stshinjuCustomPath, 1764)
+Dangard = Shinju(stshinjuCustomPath, 3388)
+Dangard = Shinju(stshinjuCustomPath, 5012)
+Dangard = Shinju(stshinjuCustomPath, 6636)
+Dangard = Shinju(stshinjuCustomPath, 8260)
+Dangard = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb15_02_CustomStatusTable.uexp'
+Mispolm = Shinju(stshinjuCustomPath, 140)
+Mispolm = Shinju(stshinjuCustomPath, 1764)
+Mispolm = Shinju(stshinjuCustomPath, 3388)
+Mispolm = Shinju(stshinjuCustomPath, 5012)
+Mispolm = Shinju(stshinjuCustomPath, 6636)
+Mispolm = Shinju(stshinjuCustomPath, 8260)
+Mispolm = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb15_CustomStatusTable.uexp'
+Mispolm = Shinju(stshinjuCustomPath, 140)
+Mispolm = Shinju(stshinjuCustomPath, 1764)
+Mispolm = Shinju(stshinjuCustomPath, 3388)
+Mispolm = Shinju(stshinjuCustomPath, 5012)
+Mispolm = Shinju(stshinjuCustomPath, 6636)
+Mispolm = Shinju(stshinjuCustomPath, 8260)
+Mispolm = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb16_CustomStatusTable.uexp'
+Doran = Shinju(stshinjuCustomPath, 140)
+Doran = Shinju(stshinjuCustomPath, 1764)
+Doran = Shinju(stshinjuCustomPath, 3388)
+Doran = Shinju(stshinjuCustomPath, 5012)
+Doran = Shinju(stshinjuCustomPath, 6636)
+Doran = Shinju(stshinjuCustomPath, 8260)
+Doran = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusStshinjuCustom - *****
+stshinjuCustomPath = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb17_CustomStatusTable.uexp'
+Light_Geizer = Shinju(stshinjuCustomPath, 140)
+Light_Geizer = Shinju(stshinjuCustomPath, 1764)
+Light_Geizer = Shinju(stshinjuCustomPath, 3388)
+Light_Geizer = Shinju(stshinjuCustomPath, 5012)
+Light_Geizer = Shinju(stshinjuCustomPath, 6636)
+Light_Geizer = Shinju(stshinjuCustomPath, 8260)
+Light_Geizer = Shinju(stshinjuCustomPath, 9884)
+
+# ****** ShinjuStatusSteb_11Parts0 - *****
+steb_11Parts0Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\01_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts0Path, 111)
+ArmL = Shinju(steb_11Parts0Path, 1690)
+ArmR = Shinju(steb_11Parts0Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts0Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts0Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts0Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts0Path, 9585)
+
+# ****** ShinjuStatusSteb_11Parts1 - *****
+steb_11Parts1Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\02_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts1Path, 111)
+ArmL = Shinju(steb_11Parts1Path, 1690)
+ArmR = Shinju(steb_11Parts1Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts1Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts1Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts1Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts1Path, 9585)
+
+# ****** ShinjuStatusSteb_11Parts2 - *****
+steb_11Parts2Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\03_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts2Path, 111)
+ArmL = Shinju(steb_11Parts2Path, 1690)
+ArmR = Shinju(steb_11Parts2Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts2Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts2Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts2Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts2Path, 9585)
+
+# ****** ShinjuStatusSteb_11Parts3 - *****
+steb_11Parts3Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\04_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts3Path, 111)
+ArmL = Shinju(steb_11Parts3Path, 1690)
+ArmR = Shinju(steb_11Parts3Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts3Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts3Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts3Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts3Path, 9585)
+
+# ****** ShinjuStatusSteb_11Parts4 - *****
+steb_11Parts4Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\05_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts4Path, 111)
+ArmL = Shinju(steb_11Parts4Path, 1690)
+ArmR = Shinju(steb_11Parts4Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts4Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts4Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts4Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts4Path, 9585)
+
+# ****** ShinjuStatusSteb_11Parts5 - *****
+steb_11Parts5Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\06_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts5Path, 111)
+ArmL = Shinju(steb_11Parts5Path, 1690)
+ArmR = Shinju(steb_11Parts5Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts5Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts5Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts5Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts5Path, 9585)
+
+# ****** ShinjuStatusSteb_11Parts6 - *****
+steb_11Parts6Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_11Parts\07_eb11_01_PartsStatusTable.uexp'
+Body = Shinju(steb_11Parts6Path, 111)
+ArmL = Shinju(steb_11Parts6Path, 1690)
+ArmR = Shinju(steb_11Parts6Path, 3269)
+ArmL_Core01 = Shinju(steb_11Parts6Path, 4848)
+ArmL_Core02 = Shinju(steb_11Parts6Path, 6427)
+ArmR_Core01 = Shinju(steb_11Parts6Path, 8006)
+ArmR_Core02 = Shinju(steb_11Parts6Path, 9585)
+
+# ****** ShinjuStatusSteb_12Parts7 - *****
+steb_12Parts7Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\01_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts7Path, 111)
+Body = Shinju(steb_12Parts7Path, 1690)
+ArmL = Shinju(steb_12Parts7Path, 3269)
+ArmR = Shinju(steb_12Parts7Path, 4848)
+Tail = Shinju(steb_12Parts7Path, 6427)
+
+# ****** ShinjuStatusSteb_12Parts8 - *****
+steb_12Parts8Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\02_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts8Path, 111)
+Body = Shinju(steb_12Parts8Path, 1690)
+ArmL = Shinju(steb_12Parts8Path, 3269)
+ArmR = Shinju(steb_12Parts8Path, 4848)
+Tail = Shinju(steb_12Parts8Path, 6427)
+
+# ****** ShinjuStatusSteb_12Parts9 - *****
+steb_12Parts9Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\03_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts9Path, 111)
+Body = Shinju(steb_12Parts9Path, 1690)
+ArmL = Shinju(steb_12Parts9Path, 3269)
+ArmR = Shinju(steb_12Parts9Path, 4848)
+Tail = Shinju(steb_12Parts9Path, 6427)
+
+# ****** ShinjuStatusSteb_12Parts10 - *****
+steb_12Parts10Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\04_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts10Path, 111)
+Body = Shinju(steb_12Parts10Path, 1690)
+ArmL = Shinju(steb_12Parts10Path, 3269)
+ArmR = Shinju(steb_12Parts10Path, 4848)
+Tail = Shinju(steb_12Parts10Path, 6427)
+
+# ****** ShinjuStatusSteb_12Parts11 - *****
+steb_12Parts11Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\05_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts11Path, 111)
+Body = Shinju(steb_12Parts11Path, 1690)
+ArmL = Shinju(steb_12Parts11Path, 3269)
+ArmR = Shinju(steb_12Parts11Path, 4848)
+Tail = Shinju(steb_12Parts11Path, 6427)
+
+# ****** ShinjuStatusSteb_12Parts12 - *****
+steb_12Parts12Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\06_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts12Path, 111)
+Body = Shinju(steb_12Parts12Path, 1690)
+ArmL = Shinju(steb_12Parts12Path, 3269)
+ArmR = Shinju(steb_12Parts12Path, 4848)
+Tail = Shinju(steb_12Parts12Path, 6427)
+
+# ****** ShinjuStatusSteb_12Parts13 - *****
+steb_12Parts13Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_12Parts\07_eb12_01_PartsStatusTable.uexp'
+Head = Shinju(steb_12Parts13Path, 111)
+Body = Shinju(steb_12Parts13Path, 1690)
+ArmL = Shinju(steb_12Parts13Path, 3269)
+ArmR = Shinju(steb_12Parts13Path, 4848)
+Tail = Shinju(steb_12Parts13Path, 6427)
+
+# ****** ShinjuStatusSteb_13Parts14 - *****
+steb_13Parts14Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\01_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts14Path, 111)
+Altar_A = Shinju(steb_13Parts14Path, 1690)
+Altar_B = Shinju(steb_13Parts14Path, 3269)
+Altar_C = Shinju(steb_13Parts14Path, 4848)
+
+# ****** ShinjuStatusSteb_13Parts15 - *****
+steb_13Parts15Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\02_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts15Path, 111)
+Altar_A = Shinju(steb_13Parts15Path, 1690)
+Altar_B = Shinju(steb_13Parts15Path, 3269)
+Altar_C = Shinju(steb_13Parts15Path, 4848)
+
+# ****** ShinjuStatusSteb_13Parts16 - *****
+steb_13Parts16Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\03_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts16Path, 111)
+Altar_A = Shinju(steb_13Parts16Path, 1690)
+Altar_B = Shinju(steb_13Parts16Path, 3269)
+Altar_C = Shinju(steb_13Parts16Path, 4848)
+
+# ****** ShinjuStatusSteb_13Parts17 - *****
+steb_13Parts17Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\04_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts17Path, 111)
+Altar_A = Shinju(steb_13Parts17Path, 1690)
+Altar_B = Shinju(steb_13Parts17Path, 3269)
+Altar_C = Shinju(steb_13Parts17Path, 4848)
+
+# ****** ShinjuStatusSteb_13Parts18 - *****
+steb_13Parts18Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\05_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts18Path, 111)
+Altar_A = Shinju(steb_13Parts18Path, 1690)
+Altar_B = Shinju(steb_13Parts18Path, 3269)
+Altar_C = Shinju(steb_13Parts18Path, 4848)
+
+# ****** ShinjuStatusSteb_13Parts19 - *****
+steb_13Parts19Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\06_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts19Path, 111)
+Altar_A = Shinju(steb_13Parts19Path, 1690)
+Altar_B = Shinju(steb_13Parts19Path, 3269)
+Altar_C = Shinju(steb_13Parts19Path, 4848)
+
+# ****** ShinjuStatusSteb_13Parts20 - *****
+steb_13Parts20Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_13Parts\07_eb13_01_PartsStatusTable.uexp'
+Body = Shinju(steb_13Parts20Path, 111)
+Altar_A = Shinju(steb_13Parts20Path, 1690)
+Altar_B = Shinju(steb_13Parts20Path, 3269)
+Altar_C = Shinju(steb_13Parts20Path, 4848)
+
+# ****** ShinjuStatusSteb_14Parts21 - *****
+steb_14Parts21Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\01_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts21Path, 111)
+Head02_R = Shinju(steb_14Parts21Path, 1690)
+
+# ****** ShinjuStatusSteb_14Parts22 - *****
+steb_14Parts22Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\02_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts22Path, 111)
+Head02_R = Shinju(steb_14Parts22Path, 1690)
+
+# ****** ShinjuStatusSteb_14Parts23 - *****
+steb_14Parts23Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\03_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts23Path, 111)
+Head02_R = Shinju(steb_14Parts23Path, 1690)
+
+# ****** ShinjuStatusSteb_14Parts24 - *****
+steb_14Parts24Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\04_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts24Path, 111)
+Head02_R = Shinju(steb_14Parts24Path, 1690)
+
+# ****** ShinjuStatusSteb_14Parts25 - *****
+steb_14Parts25Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\05_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts25Path, 111)
+Head02_R = Shinju(steb_14Parts25Path, 1690)
+
+# ****** ShinjuStatusSteb_14Parts26 - *****
+steb_14Parts26Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\06_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts26Path, 111)
+Head02_R = Shinju(steb_14Parts26Path, 1690)
+
+# ****** ShinjuStatusSteb_14Parts27 - *****
+steb_14Parts27Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_14Parts\07_eb14_01_PartsStatusTable.uexp'
+Head01_L = Shinju(steb_14Parts27Path, 111)
+Head02_R = Shinju(steb_14Parts27Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts28 - *****
+steb_15Parts28Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\01_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts28Path, 111)
+Body = Shinju(steb_15Parts28Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts29 - *****
+steb_15Parts29Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\02_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts29Path, 111)
+Body = Shinju(steb_15Parts29Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts30 - *****
+steb_15Parts30Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\03_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts30Path, 111)
+Body = Shinju(steb_15Parts30Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts31 - *****
+steb_15Parts31Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\04_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts31Path, 111)
+Body = Shinju(steb_15Parts31Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts32 - *****
+steb_15Parts32Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\05_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts32Path, 111)
+Body = Shinju(steb_15Parts32Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts33 - *****
+steb_15Parts33Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\06_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts33Path, 111)
+Body = Shinju(steb_15Parts33Path, 1690)
+
+# ****** ShinjuStatusSteb_15Parts34 - *****
+steb_15Parts34Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_15Parts\07_eb15_01_PartsStatusTable.uexp'
+Head = Shinju(steb_15Parts34Path, 111)
+Body = Shinju(steb_15Parts34Path, 1690)
+
+# ****** ShinjuStatusSteb_16Parts35 - *****
+steb_16Parts35Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\01_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts35Path, 111)
+Body = Shinju(steb_16Parts35Path, 1690)
+HandLB = Shinju(steb_16Parts35Path, 3269)
+HandRB = Shinju(steb_16Parts35Path, 4848)
+
+# ****** ShinjuStatusSteb_16Parts36 - *****
+steb_16Parts36Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\02_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts36Path, 111)
+Body = Shinju(steb_16Parts36Path, 1690)
+HandLB = Shinju(steb_16Parts36Path, 3269)
+HandRB = Shinju(steb_16Parts36Path, 4848)
+
+# ****** ShinjuStatusSteb_16Parts37 - *****
+steb_16Parts37Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\03_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts37Path, 111)
+Body = Shinju(steb_16Parts37Path, 1690)
+HandLB = Shinju(steb_16Parts37Path, 3269)
+HandRB = Shinju(steb_16Parts37Path, 4848)
+
+# ****** ShinjuStatusSteb_16Parts38 - *****
+steb_16Parts38Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\04_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts38Path, 111)
+Body = Shinju(steb_16Parts38Path, 1690)
+HandLB = Shinju(steb_16Parts38Path, 3269)
+HandRB = Shinju(steb_16Parts38Path, 4848)
+
+# ****** ShinjuStatusSteb_16Parts39 - *****
+steb_16Parts39Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\05_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts39Path, 111)
+Body = Shinju(steb_16Parts39Path, 1690)
+HandLB = Shinju(steb_16Parts39Path, 3269)
+HandRB = Shinju(steb_16Parts39Path, 4848)
+
+# ****** ShinjuStatusSteb_16Parts40 - *****
+steb_16Parts40Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\06_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts40Path, 111)
+Body = Shinju(steb_16Parts40Path, 1690)
+HandLB = Shinju(steb_16Parts40Path, 3269)
+HandRB = Shinju(steb_16Parts40Path, 4848)
+
+# ****** ShinjuStatusSteb_16Parts41 - *****
+steb_16Parts41Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_16Parts\07_eb16_01_PartsTable.uexp'
+Head = Shinju(steb_16Parts41Path, 111)
+Body = Shinju(steb_16Parts41Path, 1690)
+HandLB = Shinju(steb_16Parts41Path, 3269)
+HandRB = Shinju(steb_16Parts41Path, 4848)
+
+# ****** ShinjuStatusSteb_17Parts42 - *****
+steb_17Parts42Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\01_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts42Path, 111)
+Body = Shinju(steb_17Parts42Path, 1690)
+
+# ****** ShinjuStatusSteb_17Parts43 - *****
+steb_17Parts43Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\02_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts43Path, 111)
+Body = Shinju(steb_17Parts43Path, 1690)
+
+# ****** ShinjuStatusSteb_17Parts44 - *****
+steb_17Parts44Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\03_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts44Path, 111)
+Body = Shinju(steb_17Parts44Path, 1690)
+
+# ****** ShinjuStatusSteb_17Parts45 - *****
+steb_17Parts45Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\04_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts45Path, 111)
+Body = Shinju(steb_17Parts45Path, 1690)
+
+# ****** ShinjuStatusSteb_17Parts46 - *****
+steb_17Parts46Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\05_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts46Path, 111)
+Body = Shinju(steb_17Parts46Path, 1690)
+
+# ****** ShinjuStatusSteb_17Parts47 - *****
+steb_17Parts47Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\06_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts47Path, 111)
+Body = Shinju(steb_17Parts47Path, 1690)
+
+# ****** ShinjuStatusSteb_17Parts48 - *****
+steb_17Parts48Path = r'Game Files\Boss\Orig\uexp files\ShinjuStatusTableList\eb_17Parts\07_eb17_01_PartsStatusTable.uexp'
+Eye = Shinju(steb_17Parts48Path, 111)
+Body = Shinju(steb_17Parts48Path, 1690)
+#endregion
+
+
+# default values in a dict
+defaultDict = {}
+
+defaultDict['hp'] = 2
+defaultDict['atk'] = 1.5
+defaultDict['def'] = 1
+defaultDict['agi'] = 1.2
+defaultDict['int'] = 1.5
+defaultDict['spr'] = 1.5
+defaultDict['luck'] = 1.2
+defaultDict['defMag'] = 1
+defaultDict['offMag'] = 1
+defaultDict['exp'] = 1
 
 # Create Dict for entering multipliers
 
 multiDict = {}
+bossDict = {}
+shinjuDict = {}
 
-# *Caution: zero values will set that stat to 0
-multiDict['hp'] = 2
-multiDict['atk'] = 1.5
-multiDict['def'] = 1.2
-multiDict['agi'] = 1.2
-multiDict['int'] = 1.5
-multiDict['spr'] = 1.5
-multiDict['luck'] = 1.2
-multiDict['defMag'] = 1.2
-multiDict['offMag'] = 1.2
-multiDict['exp'] = 1
+onOffStart = True
+while onOffStart:    
+    defCheck = input('Would you like to use the "default" modifiers (the modifiers from the mod\'s premade release on the Nexus page)?\n' \
+                    "The default modifiers are the following: HP: 2 (double HP), Atk: 1.5, Def: 1 (base value), Agi: 1.2, Int: 1.5, Spr: 1.5" \
+                            ", Luck: 1.2, DefMag: 1, OffMag: 1, EXP: 1\n" \
+                    'Input "y" if so, "n" to enter your own custom modifier values.\n\n' \
+                                "Input: ")        
+    if defCheck != 'y' and defCheck != 'n':
+        print("\n***Please enter 'y' (no quotes) or 'n' as your input.\n")
+    elif defCheck == 'y' or defCheck == 'n':
+        onOffStart = False
+        
+
+# use default dict as values for everything if 'y'
+if defCheck == 'y':
+    for k, v in defaultDict.items():
+        multiDict[k] = v
+        bossDict[k] = v
+        shinjuDict[k] = v
+
+elif defCheck == 'n':
+    # TODO set up the layout for the command prompt inputs
+    introMsg = "\nPlease enter what you would like the multipliers for each of the common enemies' stats to be: \n" \
+                "NOTE: Enter '1' to keep the stat at its default value.\nWARNING: Entering '0' will set that stat to '0' for all enemies.\n"            
+    print(introMsg)
+
+    onOff = True
+    while onOff:
+        try:
+            # *Caution: zero values will set that stat to 0
+            multiDict['hp'] = float(input('Choose a multiplier for Enemy HP: '))
+            multiDict['atk'] = float(input('Choose a multiplier for Enemy Atk: '))
+            multiDict['def'] = float(input('Choose a multiplier for Enemy Def: '))
+            multiDict['agi'] = float(input('Choose a multiplier for Enemy Agi: '))
+            multiDict['int'] = float(input('Choose a multiplier for Enemy Int: '))
+            multiDict['spr'] = float(input('Choose a multiplier for Enemy Spr: '))
+            multiDict['luck'] = float(input('Choose a multiplier for Enemy Luck: '))
+            multiDict['defMag'] = float(input('Choose a multiplier for Enemy defMag: '))
+            multiDict['offMag'] = float(input('Choose a multiplier for Enemy offMag: '))
+            multiDict['exp'] = float(input('Choose a multiplier for Enemy Exp: '))            
+            print("\nThe multipliers you've selected for common enemies are:")
+            print(str(multiDict) + "\n")
+            confirm1 = input("Are you okay with these values? 'y' if so, 'n' to redo: ")
+            if confirm1 != 'y' and confirm1 != 'n':
+                print("\n***Please enter 'y' (no quotes) or 'n' as your input.\n")
+            elif confirm1 == 'y' or confirm1 == 'n':
+                if confirm1 == 'y':
+                    print("\n")                    
+                    onOff = False
+                elif confirm1 == 'n':
+                    print("\n")
+                    continue                            
+        except ValueError:
+            print('\nInput must be an integer (5, 6...) or float number (1.2, 2.3...)\n')
+
+
+    msg2_Boss = input("Please enter what you would like the multipliers for each of the boss's stats to be: \n" \
+                "TO USE THE SAME MULTIPLIERS AS THE ENEMIES, INPUT 'copy'. To enter your own modifiers for bosses, input 'n'.\n" \
+                    "Input: ")
+
+    onOffBoss = True
+    while onOffBoss:
+        if msg2_Boss != 'copy' and msg2_Boss != 'n':
+            print("\n***Please enter 'copy' (no quotes) or 'n' as your input.\n")
+        elif msg2_Boss == 'copy' or msg2_Boss == 'n':
+            if msg2_Boss == 'copy':
+                onOffBoss = False
+            elif msg2_Boss == 'n':                                
+                onOffBoss = False
+
+    if msg2_Boss == 'copy':        
+        for k, v in multiDict.items():        
+            bossDict[k] = v
+            shinjuDict[k] = v
+    elif msg2_Boss == 'n':
+        onOff = True
+        while onOff:
+            try:
+                bossDict['hp'] = float(input('Choose a multiplier for Boss HP: '))
+                bossDict['atk'] = float(input('Choose a multiplier for Boss Atk: '))
+                bossDict['def'] = float(input('Choose a multiplier for Boss Def: '))
+                bossDict['agi'] = float(input('Choose a multiplier for Boss Agi: '))
+                bossDict['int'] = float(input('Choose a multiplier for Boss Int: '))
+                bossDict['spr'] = float(input('Choose a multiplier for Boss Spr: '))
+                bossDict['luck'] = float(input('Choose a multiplier for Boss Luck: '))
+                bossDict['defMag'] = float(input('Choose a multiplier for Boss defMag: '))
+                bossDict['offMag'] = float(input('Choose a multiplier for Boss offMag: '))
+                bossDict['exp'] = float(input('Choose a multiplier for Boss Exp: '))                
+                print("\nThe multipliers you've selected for bosses are:")
+                print(str(bossDict) + "\n")
+
+                confirm1 = input("Are you okay with these values? 'y' if so, 'n' to redo: ")
+                if confirm1 != 'y' and confirm1 != 'n':
+                    print("\n***Please enter 'y' (no quotes) or 'n' as your input.\n")
+                elif confirm1 == 'y' or confirm1 == 'n':
+                    if confirm1 == 'y':                    
+                        print("\n")
+                        onOff = False
+                    elif confirm1 == 'n':
+                        print("\n")
+                        continue
+
+
+            except ValueError:
+                print('Input must be an integer (5, 6...) or float number (1.2, 2.3...)')
+        
+        # For now, we're using the same multipliers for Boss adds as the main Boss stats. So do this no matter what
+        # Copy values from bossDict to shinjuDict
+        for k, v in bossDict.items():
+            shinjuDict[k] = v
+
+print("The selected modifiers are: \n" \
+        "Common Enemies: " + str(multiDict) + "\n" \
+        "Bosses : " + str(bossDict) + "\n")
+confirmEdit = input("If this is satisfactory, press any key to continue. Otherwise, please close the console and restart.")
+confirmEdit = None
+
+print("\n")
+print('Editing data files...\n')
 
 editHexAll(multiDict)
+editHexAll_Boss(bossDict)
+editHexAll_Shinju(shinjuDict)
+
+time.sleep(1)
+
+print("Please check that the directory 'Custom_TofMania - 0.3_P' has new files created.\n" \
+        "If the files existed before running this script, they should be updated now.\n")
+
+closeVar = input('Press any key to exit the console.')
+closeVar = None

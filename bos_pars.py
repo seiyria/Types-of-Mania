@@ -59,6 +59,7 @@ for subdir, dirs, files in os.walk(rootdir):
         # make variable for path to uexp
         uexpPath = r'Game Files\Boss\Orig\uexp files\Charadata\BossStatusTable.uexp'
         
-        printVars('bossSt', uexpPath)      
+        printVars('bossSt', uexpPath)
+        # print('hello')
 
 # path to uexp file: r'Game Files\Boss\uexp files\Charadata\BossStausTable.uexp'
