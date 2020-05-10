@@ -1,0 +1,28 @@
+{
+  "name": "trials-of-mania",
+  "version": "0.0.0",
+  "description": "Trials of Mania",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod/issues"
+  },
+  "homepage": "https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod#readme",
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
+}
