@@ -10,5 +10,8 @@ import { BossParsers, NormalEnemyParsers } from './parsers';
 const normalEnemies = NormalEnemyParsers.map(x => x.parse()).flat();
 
 const editor = new PakFileEditor({});
-editor.editHexForEnemy(normalEnemies[0]);
+
+normalEnemies.forEach(e => editor.editHexForEnemy(e));
+
+editor.flush();
 

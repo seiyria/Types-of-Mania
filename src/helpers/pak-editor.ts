@@ -21,19 +21,30 @@ export class PakFileEditor {
   constructor(private opts: IPakFileEditorOpts) {}
 
   public editHexForEnemy(enemy: Enemy) {
+
+    // check if we have this file in cache already
     let file: Buffer = this.fileCache[enemy.uexpFilePath];
     if(!file) {
       file = fs.readFileSync(enemy.uexpFilePath);
       this.fileCache[enemy.uexpFilePath] = file;
     }
 
+    // iterate through all the offsets and apply the multipliers
     Object.keys(enemy.offsets).forEach(offsetStat => {
-      console.log(offsetStat, 
-        file[enemy.offsets[offsetStat as Stat]], 
-        file.readUInt32LE(enemy.offsets[offsetStat as Stat]));
-    });
+      const statValue = file.readInt32LE(enemy.offsets[offsetStat as Stat]);
+      let newStatValue = Math.floor(statValue * 100);
 
-    console.log(enemy, file);
+      if(newStatValue > 2147483647) newStatValue = 2147483647;
+
+      file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
+    });
+  }
+
+  // flush all files to the build directory
+  public flush() {
+    Object.keys(this.fileCache).forEach(fileName => {
+      console.log(fileName);
+    });
   }
 
 }

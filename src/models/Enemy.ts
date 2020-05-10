@@ -43,7 +43,7 @@ export class Enemy {
       luck:   this.opts.hpOffset + (29 * 8),
       defMag: this.opts.hpOffset + (29 * 9),
       offMag: this.opts.hpOffset + (29 * 10),
-      exp:    this.opts.hpOffset + (29 * 822),
+      exp:    this.opts.hpOffset + (822),
     };
   }
 
