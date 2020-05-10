@@ -18,6 +18,8 @@ Copy the built pak file from the `TrialsOfMania` folder into a `~mod` folder
 
 ## Development
 
+You need to install NodeJS. The latest version is always recommended.
+
 ### Setup
 
 * `npm i`

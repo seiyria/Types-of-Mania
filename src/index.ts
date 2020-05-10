@@ -1,6 +1,14 @@
 
-import { Parsers as NormalEnemyParsers } from './parsers/parse-enemies';
-import { Parsers as BossParsers } from './parsers/parse-boss';
 
-console.log(NormalEnemyParsers.map(x => x.parse().map(x => (x as any).opts)));
-console.log(BossParsers.map(x => x.parse().map(x => (x as any).opts)));
+import { PakFileEditor } from './helpers/pak-editor';
+
+import { BossParsers, NormalEnemyParsers } from './parsers';
+
+// console.log(NormalEnemyParsers.map(x => x.parse().map(x => (x as any).opts)));
+// console.log(BossParsers.map(x => x.parse().map(x => (x as any).opts)));
+
+const normalEnemies = NormalEnemyParsers.map(x => x.parse()).flat();
+
+const editor = new PakFileEditor({});
+editor.editHexForEnemy(normalEnemies[0]);
+

@@ -1,6 +1,6 @@
 {
   "name": "trials-of-mania",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "description": "Trials of Mania",
   "main": "index.js",
   "scripts": {
@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod#readme",
   "devDependencies": {
-    "@types/node": "^13.13.5",
-    "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "@types/fs-extra": "8.1.0",
+    "@types/node": "^13.13.5"
   },
   "dependencies": {
-    "minimist": "^1.2.5"
+    "fs-extra": "9.0.0",
+    "minimist": "^1.2.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3",
+    "yaml": "1.9.2"
   }
 }

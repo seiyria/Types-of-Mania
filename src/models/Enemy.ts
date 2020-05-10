@@ -1,4 +1,18 @@
-import { IOffsets } from './IOffsets';
+
+export enum Stat {
+  HP = 'hp',
+  ATK = 'atk',
+  DEF = 'def',
+  AGI = 'agi',
+  INT = 'int',
+  SPR = 'spr',
+  LUCK = 'luck',
+  OFFMAG = 'offMag',
+  DEFMAG = 'defMag',
+  EXP = 'exp'
+}
+
+// TODO: ai, drop rates, drop items, lucre
 
 export interface IEnemyOpts {
 
@@ -14,7 +28,11 @@ export interface IEnemyOpts {
 
 export class Enemy {
 
-  public get offsets(): IOffsets {
+  public get uexpFilePath(): string {
+    return this.opts.uexpFilePath;
+  }
+
+  public get offsets(): Record<Stat, number> {
     return {
       hp:     this.opts.hpOffset,
       atk:    this.opts.hpOffset + (29 * 3),

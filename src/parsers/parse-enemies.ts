@@ -1,13 +1,13 @@
 
-import * as fs from 'fs';
+import * as fs from 'fs-extra';
 import * as path from 'path';
 
-import { EnemyParser } from '../helpers/parse-vars';
+import { EnemyParser } from '../helpers';
 
 const allFiles = fs.readdirSync(path.join(__dirname, '..', '..', 'gamefiles', 'enemy', 'uexp'))
   .map(f => path.basename(f, '.uexp'));
 
-export const Parsers = allFiles.map(fileName => {
+export const NormalEnemyParsers = allFiles.map(fileName => {
   return new EnemyParser({
     offsetStart: 111,
     offsetIteratorIncrementBy: 1579,

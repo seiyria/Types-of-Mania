@@ -1,0 +1,29 @@
+
+version: 1
+
+seed: 0
+
+global: &global
+  hp: 2
+  atk: 1.5
+  def: 1
+  agi: 1.2
+  int: 1.5
+  spr: 1.5
+  defMag: 1
+  offMag: 1
+  exp: 1
+
+boss:
+  <<: *global
+
+monster:
+  <<: *global
+
+shinju:
+  <<: *global
+
+parts:
+  <<: *global
+
+specific: {}
