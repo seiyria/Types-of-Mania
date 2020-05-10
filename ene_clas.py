@@ -6,17 +6,18 @@ import time
 enemyInstList = []
 bossInstList = []
 shinjuInstList = []
+partsInstList = []
 
 # paths we want the edited files to output to for UnrealPak.exe
 finDirPath_BP = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\BP\\Enemy\\Zako\\Data\\'
 finDirPath_Data = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
 finDirPath_Boss = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\'
 finDirPath_shinju = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\ShinjuStatusTableList\\'
+finDirPath_parts = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\Parts\\'
 
 
 # TODO do we want to be able to update each class instance so we can check what its new value is?
-class Enemy:
-    # hpOffset is used as the base offset to calculate the other offsets
+class Enemy:    
     def __init__(self, file_path, hpOffset):
         self.fileLocation = file_path
         
@@ -25,8 +26,8 @@ class Enemy:
         # Append to global list for iterating
         enemyInstList.append(self)
 
-        # Offset locations for each stat we want to edit
-        # self.hpOffset = hpOffset
+        # Offset locations for each stat we want to edit      
+        # hpOffset is used as the base offset to calculate the other offsets  
         self.attrOffsetDict['hp'] = hpOffset
         self.attrOffsetDict['atk'] = hpOffset + (29 * 3)
         self.attrOffsetDict['def'] = hpOffset + (29 * 4)
@@ -79,6 +80,33 @@ class Shinju:
         
         # Append to global list for iterating
         shinjuInstList.append(self)
+
+        # Offset locations for each stat we want to edit
+        # self.hpOffset = hpOffset
+        self.attrOffsetDict['hp'] = hpOffset
+        self.attrOffsetDict['atk'] = hpOffset + (29 * 3)
+        self.attrOffsetDict['def'] = hpOffset + (29 * 4)
+        self.attrOffsetDict['agi'] = hpOffset + (29 * 5)
+        self.attrOffsetDict['int'] = hpOffset + (29 * 6)
+        self.attrOffsetDict['spr'] = hpOffset + (29 * 7)
+        self.attrOffsetDict['luck'] = hpOffset + (29 * 8)
+        self.attrOffsetDict['defMag'] = hpOffset + (29 * 9)
+        self.attrOffsetDict['offMag'] = hpOffset + (29 * 10)
+        self.attrOffsetDict['exp'] = hpOffset + (822)
+    
+    # TODO method to see current attr values
+    def seeInfo(self):
+        print("HP value: ")
+
+class Parts:
+    # hpOffset is used as the base offset to calculate the other offsets
+    def __init__(self, file_path, hpOffset):
+        self.fileLocation = file_path
+        
+        self.attrOffsetDict = {}                
+        
+        # Append to global list for iterating
+        partsInstList.append(self)
 
         # Offset locations for each stat we want to edit
         # self.hpOffset = hpOffset
@@ -310,6 +338,55 @@ def editHexAll_Shinju(shinjuDict):
                 continue
 
             # Write files
+            with open(outPath, 'wb') as f:
+                f.write(mutableBytes)
+
+
+def editHexAll_Parts(partsDict):
+    
+    # Start for file iterating    
+    rootdir = r'Game Files\Boss\Orig\uexp files\Parts'
+
+    # Get full path of file to use
+    for subdir, dirs, files in os.walk(rootdir):
+        for file in files:
+            # This will concatenate the 'head' and 'tail' to form the full file path
+            fullPath = os.path.join(subdir, file)
+            
+            with open(fullPath, 'rb') as f:
+                byteData = f.read()
+        
+            # Get data into an array that is mutable
+            mutableBytes = bytearray(byteData)
+
+            for enemy in partsInstList:                
+                # Check each Enemy's fileLocation attr to see if it matches the current fullPath
+                if enemy.fileLocation == fullPath:
+                    for attr, offset in enemy.attrOffsetDict.items():
+                        
+                        # Original slice of four bytes in data that we will edit
+                        fourBytesToEdit = byteData[offset:(offset + 4)]                    
+
+                        # Convert those four bytes to an integer
+                        numFromBytes = int.from_bytes(fourBytesToEdit, byteorder='little', signed=True)                    
+
+                        newStatValue = round(numFromBytes * multiDict[attr])
+                        
+                        if newStatValue > 2147483647:
+                            newStatValue = 2147483647                 
+
+                        # new Stat value to 4 byte string
+                        bytesToInsert = newStatValue.to_bytes(4, byteorder='little', signed=True)                    
+
+                        # Insert new byte slice into mutable byte array
+                        mutableBytes[offset:(offset + 4)] = bytesToInsert                    
+            
+            # We'll simply change the output to where we want it in the folder to be used by UnrealPak
+            # Write current file and output                    
+            outPath = finDirPath_parts + file
+            if not os.path.exists(finDirPath_parts):
+                os.makedirs(finDirPath_parts)
+                        
             with open(outPath, 'wb') as f:
                 f.write(mutableBytes)
 
@@ -2380,6 +2457,175 @@ Body = Shinju(steb_17Parts48Path, 1690)
 #endregion
 
 
+#region Parts Instance Creation Start
+# ****** eb01_01_PartsStatusTable - *****
+eb01_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb01_01_PartsStatusTable.uexp'
+Head = Parts(eb01_01_PartsStatusTable_Path, 111)
+Body = Parts(eb01_01_PartsStatusTable_Path, 1690)
+ArmLB = Parts(eb01_01_PartsStatusTable_Path, 3269)
+ArmRB = Parts(eb01_01_PartsStatusTable_Path, 4848)
+
+# ****** eb01_02_PartsTable - *****
+eb01_02_PartsTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb01_02_PartsTable.uexp'
+Head = Parts(eb01_02_PartsTable_Path, 111)
+Body = Parts(eb01_02_PartsTable_Path, 1690)
+ArmLB = Parts(eb01_02_PartsTable_Path, 3269)
+ArmRB = Parts(eb01_02_PartsTable_Path, 4848)
+
+# ****** eb01_03_PartsTable - *****
+eb01_03_PartsTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb01_03_PartsTable.uexp'
+Head = Parts(eb01_03_PartsTable_Path, 111)
+Body = Parts(eb01_03_PartsTable_Path, 1690)
+ArmLB = Parts(eb01_03_PartsTable_Path, 3269)
+ArmRB = Parts(eb01_03_PartsTable_Path, 4848)
+
+# ****** eb03_01_PartsStatusTable - *****
+eb03_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb03_01_PartsStatusTable.uexp'
+None_part = Parts(eb03_01_PartsStatusTable_Path, 111)
+Body = Parts(eb03_01_PartsStatusTable_Path, 1690)
+ArmL = Parts(eb03_01_PartsStatusTable_Path, 3269)
+ArmR = Parts(eb03_01_PartsStatusTable_Path, 4848)
+Tail = Parts(eb03_01_PartsStatusTable_Path, 6427)
+
+# ****** eb03_11_PartsStatusTable - *****
+eb03_11_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb03_11_PartsStatusTable.uexp'
+None_part = Parts(eb03_11_PartsStatusTable_Path, 111)
+Body = Parts(eb03_11_PartsStatusTable_Path, 1690)
+ArmL = Parts(eb03_11_PartsStatusTable_Path, 3269)
+ArmR = Parts(eb03_11_PartsStatusTable_Path, 4848)
+Tail = Parts(eb03_11_PartsStatusTable_Path, 6427)
+
+# ****** eb07_01_PartsStatusTable - *****
+eb07_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb07_01_PartsStatusTable.uexp'
+Body = Parts(eb07_01_PartsStatusTable_Path, 111)
+Shadow = Parts(eb07_01_PartsStatusTable_Path, 1690)
+ShadowDummy1 = Parts(eb07_01_PartsStatusTable_Path, 3269)
+ShadowDummy2 = Parts(eb07_01_PartsStatusTable_Path, 4848)
+ShadowDummy3 = Parts(eb07_01_PartsStatusTable_Path, 6427)
+ShadowDummy4 = Parts(eb07_01_PartsStatusTable_Path, 8006)
+ShadowDummy5 = Parts(eb07_01_PartsStatusTable_Path, 9585)
+
+# ****** eb07_11_PartsStatusTable - *****
+eb07_11_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb07_11_PartsStatusTable.uexp'
+Body = Parts(eb07_11_PartsStatusTable_Path, 111)
+Shadow = Parts(eb07_11_PartsStatusTable_Path, 1690)
+ShadowDummy1 = Parts(eb07_11_PartsStatusTable_Path, 3269)
+ShadowDummy2 = Parts(eb07_11_PartsStatusTable_Path, 4848)
+ShadowDummy3 = Parts(eb07_11_PartsStatusTable_Path, 6427)
+ShadowDummy4 = Parts(eb07_11_PartsStatusTable_Path, 8006)
+ShadowDummy5 = Parts(eb07_11_PartsStatusTable_Path, 9585)
+
+# ****** eb10_01_PartsStatusTable - *****
+eb10_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb10_01_PartsStatusTable.uexp'
+Head = Parts(eb10_01_PartsStatusTable_Path, 111)
+Body = Parts(eb10_01_PartsStatusTable_Path, 1690)
+ArmL = Parts(eb10_01_PartsStatusTable_Path, 3269)
+ArmTipL = Parts(eb10_01_PartsStatusTable_Path, 4848)
+ArmR = Parts(eb10_01_PartsStatusTable_Path, 6427)
+ArmTipR = Parts(eb10_01_PartsStatusTable_Path, 8006)
+Neck = Parts(eb10_01_PartsStatusTable_Path, 9585)
+Flower = Parts(eb10_01_PartsStatusTable_Path, 11164)
+
+# ****** eb10_11_PartsStatusTable - *****
+eb10_11_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb10_11_PartsStatusTable.uexp'
+Head = Parts(eb10_11_PartsStatusTable_Path, 111)
+Body = Parts(eb10_11_PartsStatusTable_Path, 1690)
+ArmL = Parts(eb10_11_PartsStatusTable_Path, 3269)
+ArmTipL = Parts(eb10_11_PartsStatusTable_Path, 4848)
+ArmR = Parts(eb10_11_PartsStatusTable_Path, 6427)
+ArmTipR = Parts(eb10_11_PartsStatusTable_Path, 8006)
+Neck = Parts(eb10_11_PartsStatusTable_Path, 9585)
+Flower = Parts(eb10_11_PartsStatusTable_Path, 11164)
+
+# ****** eb11_01_PartsStatusTable - *****
+eb11_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb11_01_PartsStatusTable.uexp'
+Body = Parts(eb11_01_PartsStatusTable_Path, 111)
+ArmL = Parts(eb11_01_PartsStatusTable_Path, 1690)
+ArmR = Parts(eb11_01_PartsStatusTable_Path, 3269)
+ArmL_Core01 = Parts(eb11_01_PartsStatusTable_Path, 4848)
+ArmL_Core02 = Parts(eb11_01_PartsStatusTable_Path, 6427)
+ArmR_Core01 = Parts(eb11_01_PartsStatusTable_Path, 8006)
+ArmR_Core02 = Parts(eb11_01_PartsStatusTable_Path, 9585)
+
+# ****** eb12_01_PartsStatusTable - *****
+eb12_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb12_01_PartsStatusTable.uexp'
+Head = Parts(eb12_01_PartsStatusTable_Path, 111)
+Body = Parts(eb12_01_PartsStatusTable_Path, 1690)
+ArmL = Parts(eb12_01_PartsStatusTable_Path, 3269)
+ArmR = Parts(eb12_01_PartsStatusTable_Path, 4848)
+Tail = Parts(eb12_01_PartsStatusTable_Path, 6427)
+
+# ****** eb13_01_PartsStatusTable - *****
+eb13_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb13_01_PartsStatusTable.uexp'
+Body = Parts(eb13_01_PartsStatusTable_Path, 111)
+Altar_A = Parts(eb13_01_PartsStatusTable_Path, 1690)
+Altar_B = Parts(eb13_01_PartsStatusTable_Path, 3269)
+Altar_C = Parts(eb13_01_PartsStatusTable_Path, 4848)
+
+# ****** eb14_01_PartsStatusTable - *****
+eb14_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb14_01_PartsStatusTable.uexp'
+Head01_L = Parts(eb14_01_PartsStatusTable_Path, 111)
+Head02_R = Parts(eb14_01_PartsStatusTable_Path, 1690)
+
+# ****** eb15_01_PartsTable - *****
+eb15_01_PartsTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb15_01_PartsTable.uexp'
+Head = Parts(eb15_01_PartsTable_Path, 111)
+Body = Parts(eb15_01_PartsTable_Path, 1690)
+
+# ****** eb15_02_PartsTable - *****
+eb15_02_PartsTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb15_02_PartsTable.uexp'
+Head = Parts(eb15_02_PartsTable_Path, 111)
+
+# ****** eb16_01_PartsTable - *****
+eb16_01_PartsTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb16_01_PartsTable.uexp'
+Head = Parts(eb16_01_PartsTable_Path, 111)
+Body = Parts(eb16_01_PartsTable_Path, 1690)
+HandLB = Parts(eb16_01_PartsTable_Path, 3269)
+HandRB = Parts(eb16_01_PartsTable_Path, 4848)
+
+# ****** eb17_01_PartsStatusTable - *****
+eb17_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb17_01_PartsStatusTable.uexp'
+Eye = Parts(eb17_01_PartsStatusTable_Path, 111)
+Body = Parts(eb17_01_PartsStatusTable_Path, 1690)
+
+# ****** eb21_01_PartsStatusTable - *****
+eb21_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb21_01_PartsStatusTable.uexp'
+Body = Parts(eb21_01_PartsStatusTable_Path, 111)
+RouletteDeath_Actor01 = Parts(eb21_01_PartsStatusTable_Path, 1690)
+RouletteDeath_Actor02 = Parts(eb21_01_PartsStatusTable_Path, 3269)
+RouletteDeath_Actor03 = Parts(eb21_01_PartsStatusTable_Path, 4848)
+RouletteDeath_Actor04 = Parts(eb21_01_PartsStatusTable_Path, 6427)
+
+# ****** eb25_01_PartsStatusTable - *****
+eb25_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb25_01_PartsStatusTable.uexp'
+None_part = Parts(eb25_01_PartsStatusTable_Path, 111)
+Body = Parts(eb25_01_PartsStatusTable_Path, 1690)
+ArmL = Parts(eb25_01_PartsStatusTable_Path, 3269)
+ArmR = Parts(eb25_01_PartsStatusTable_Path, 4848)
+Tail = Parts(eb25_01_PartsStatusTable_Path, 6427)
+None_part = Parts(eb25_01_PartsStatusTable_Path, 8006)
+None_part = Parts(eb25_01_PartsStatusTable_Path, 9585)
+None_part = Parts(eb25_01_PartsStatusTable_Path, 11164)
+
+# ****** eb27_01_PartsStatusTable - *****
+eb27_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb27_01_PartsStatusTable.uexp'
+Body = Parts(eb27_01_PartsStatusTable_Path, 111)
+ArmL = Parts(eb27_01_PartsStatusTable_Path, 1690)
+ArmR = Parts(eb27_01_PartsStatusTable_Path, 3269)
+SpiralMoon_Gimmick01 = Parts(eb27_01_PartsStatusTable_Path, 4848)
+HellSouthernCross_Gimick01 = Parts(eb27_01_PartsStatusTable_Path, 6427)
+HellSouthernCross_Gimick02 = Parts(eb27_01_PartsStatusTable_Path, 8006)
+Gigaburn_Gimmick01 = Parts(eb27_01_PartsStatusTable_Path, 9585)
+Gigaburn_Gimmick02 = Parts(eb27_01_PartsStatusTable_Path, 11164)
+Gigaburn_Gimmick03 = Parts(eb27_01_PartsStatusTable_Path, 12743)
+
+# ****** eb33_01_PartsStatusTable - *****
+eb33_01_PartsStatusTable_Path = r'Game Files\Boss\Orig\uexp files\Parts\eb33_01_PartsStatusTable.uexp'
+Head = Parts(eb33_01_PartsStatusTable_Path, 111)
+Body = Parts(eb33_01_PartsStatusTable_Path, 1690)
+#endregion
+
+
 # default values in a dict
 defaultDict = {}
 
@@ -2399,6 +2645,7 @@ defaultDict['exp'] = 1
 multiDict = {}
 bossDict = {}
 shinjuDict = {}
+partsDict = {}
 
 onOffStart = True
 while onOffStart:    
@@ -2419,6 +2666,7 @@ if defCheck == 'y':
         multiDict[k] = v
         bossDict[k] = v
         shinjuDict[k] = v
+        partsDict[k] = v
 
 elif defCheck == 'n':
     # TODO set up the layout for the command prompt inputs
@@ -2442,26 +2690,25 @@ elif defCheck == 'n':
             multiDict['exp'] = float(input('Choose a multiplier for Enemy Exp: '))            
             print("\nThe multipliers you've selected for common enemies are:")
             print(str(multiDict) + "\n")
-            confirm1 = input("Are you okay with these values? 'y' if so, 'n' to redo: ")
-            if confirm1 != 'y' and confirm1 != 'n':
-                print("\n***Please enter 'y' (no quotes) or 'n' as your input.\n")
-            elif confirm1 == 'y' or confirm1 == 'n':
-                if confirm1 == 'y':
-                    print("\n")                    
-                    onOff = False
-                elif confirm1 == 'n':
-                    print("\n")
-                    continue                            
+            while 1:
+                confirm1 = input("Are you okay with these values? 'y' if so, 'n' to redo: \n")
+                if confirm1 != 'y' and confirm1 != 'n':
+                    print("\n***Please enter 'y' (no quotes) or 'n' as your input.")                    
+                elif confirm1 == 'y' or confirm1 == 'n':                    
+                    if confirm1 == 'y':                                        
+                        onOff = False
+                        break
+                    elif confirm1 == 'n':                        
+                        break
+                        continue                            
         except ValueError:
             print('\nInput must be an integer (5, 6...) or float number (1.2, 2.3...)\n')
 
-
-    msg2_Boss = input("Please enter what you would like the multipliers for each of the boss's stats to be: \n" \
-                "TO USE THE SAME MULTIPLIERS AS THE ENEMIES, INPUT 'copy'. To enter your own modifiers for bosses, input 'n'.\n" \
-                    "Input: ")
-
     onOffBoss = True
     while onOffBoss:
+        msg2_Boss = input("\nPlease enter what you would like the multipliers for each of the boss's stats to be: \n" \
+                "*TO USE THE SAME MULTIPLIERS AS THE ENEMIES, INPUT 'copy'. To enter your own modifiers for bosses, input 'n'.\n" \
+                    "Input: ")
         if msg2_Boss != 'copy' and msg2_Boss != 'n':
             print("\n***Please enter 'copy' (no quotes) or 'n' as your input.\n")
         elif msg2_Boss == 'copy' or msg2_Boss == 'n':
@@ -2474,6 +2721,7 @@ elif defCheck == 'n':
         for k, v in multiDict.items():        
             bossDict[k] = v
             shinjuDict[k] = v
+            partsDict[k] = v
     elif msg2_Boss == 'n':
         onOff = True
         while onOff:
@@ -2510,11 +2758,20 @@ elif defCheck == 'n':
         # Copy values from bossDict to shinjuDict
         for k, v in bossDict.items():
             shinjuDict[k] = v
+            partsDict[k] = v
 
 print("The selected modifiers are: \n" \
         "Common Enemies: " + str(multiDict) + "\n" \
         "Bosses : " + str(bossDict) + "\n")
-confirmEdit = input("If this is satisfactory, press any key to continue. Otherwise, please close the console and restart.")
+
+# DEBUG
+print("\n********** DEBUG **********\n")
+print(multiDict)
+print(bossDict)
+print(shinjuDict)
+print(partsDict)
+
+confirmEdit = input("If this is satisfactory, press 'enter' to continue. Otherwise, please close the console and restart.")
 confirmEdit = None
 
 print("\n")
@@ -2523,11 +2780,12 @@ print('Editing data files...\n')
 editHexAll(multiDict)
 editHexAll_Boss(bossDict)
 editHexAll_Shinju(shinjuDict)
+editHexAll_Parts(partsDict)
 
 time.sleep(1)
 
 print("Please check that the directory 'Custom_TofMania - 0.3_P' has new files created.\n" \
         "If the files existed before running this script, they should be updated now.\n")
 
-closeVar = input('Press any key to exit the console.')
+closeVar = input("Press 'enter' to exit the console.")
 closeVar = None
