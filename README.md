@@ -42,8 +42,8 @@ We can't bundle UnrealPak with this repo, but you can get it from [here](https:/
 
 * Specify different multipliers for random creatures compared to bosses
 * Specify different multipliers for individual creatures
-* Item randomization
-* Monster randomization
+* Item randomization (w/ seeds)
+* Monster randomization (w/ seeds)
 
 ## Version History
 
