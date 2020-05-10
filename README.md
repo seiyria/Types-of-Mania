@@ -1,5 +1,12 @@
 # Trials-of-Mania---Difficulty-Mod
 
+*Version 0.3 Update
+- pars.py files are still horribly done and need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
+- At some point it'd be nice to store all of the class instance stuff as data in a json file instead of copy pasting them all onto the main ene_clas.py script.
+
+
+General explanation of how the script works. May be out of date:
+
 Apologies in advance for incorrect terminology.
 
 The "Game Files" directory holds both the input and output files for the scripts. The "Boss" subdirectory contains the files used by "bos_clas.py", "bos_parse.py", "shinju_clas.py", and "shinju_pars.py". The other two, "JSON for viewing" and "uexp files" subdirs hold the files used by "ene_clas.py" and "ene_pars.py".
@@ -50,6 +57,7 @@ The game's directory structure (the way the files need to be layed out after edi
 - 'Trials of Mana\Content\Game00\Data\Csv\CharaData\Parts'
 
 ** A potential bug I just noticed: the custom class instances share the same variable name. Would this lead to the class instance overwriting itself, meaning all enemies except the last one will be skipped?
+   ** Upon testing it seems like this doesn't cause a problem, but I should probably give them different var names just to avoid confusion.
 
 The final pak file is created with UnrealPak. I downloaded it from this mega link provided by the bloodstained modding discord: https://mega.nz/file/BY0gUIqI#rYaUGom59yFDLNGtwai1W_QSeLZDIEd3qFbeApJ5f3Q
 This download also includes the above-mentioned Serializer.
