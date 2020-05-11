@@ -17,6 +17,9 @@ export interface VarParserOptions {
   // the file path for the corresponding json file
   jsonFilePath: string;
 
+  // the subfolder a file is placed in logically (used primarly for shinju)
+  buildFolder?: string;
+
   // the enemy type matching this parser
   type: EnemyType;
 }
@@ -49,6 +52,7 @@ export class EnemyParser {
         return new Enemy({
           uexpFilePath: this.opts.uexpFilePath,
           name,
+          buildFolder: this.opts.buildFolder,
           type: this.opts.type,
           hpOffset: this.opts.offsetStart + (enemyIndex * this.opts.offsetIteratorIncrementBy)
         });

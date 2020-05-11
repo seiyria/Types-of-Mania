@@ -33,7 +33,6 @@ export class PakFileEditor {
   public editHexForEnemy(enemy: Enemy): void {
 
     const fileKey = path.basename(enemy.uexpFilePath);
-    console.log(enemy.uexpFilePath)
 
     // check if we have this file in cache already
     let file: Buffer = this.fileCache[fileKey];
@@ -43,6 +42,10 @@ export class PakFileEditor {
       file = fs.readFileSync(enemy.uexpFilePath);
       this.fileCache[fileKey] = file;
       this.fileOutputLocation[fileKey] = FILE_LOCATIONS[enemy.type];
+
+      if(enemy.buildFolder) {
+        this.fileOutputLocation[fileKey] = `${this.fileOutputLocation[fileKey]}/${enemy.buildFolder}`;
+      }
     }
 
     // get the multipliers for this specific enemy
@@ -55,6 +58,9 @@ export class PakFileEditor {
 
       // we can't exceed int max (2^32 - 1)
       if(newStatValue > 2147483647) newStatValue = 2147483647;
+
+      // safe-guard so we can't set HP to 0 (I imagine this works)
+      if(offsetStat === Stat.HP && newStatValue <= 0) newStatValue = 1;
 
       file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
     });
@@ -110,7 +116,7 @@ export class PakFileEditor {
     setTimeout(() => {
       fs.removeSync('Engine');
       fs.removeSync(`${fullBuildRoot}/filelist.txt`);
-      fs.removeSync(`${buildRoot}/tmp`);
+      // fs.removeSync(`${buildRoot}/tmp`);
 
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);

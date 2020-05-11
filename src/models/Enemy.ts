@@ -26,6 +26,9 @@ export interface EnemyOpts {
   // the uexp file path for this enemy
   uexpFilePath: string;
 
+  // the optional build folder for this enemy (used mostly for shinju)
+  buildFolder?: string;
+
   // the enemy name
   name: string;
 
@@ -40,6 +43,10 @@ export class Enemy {
 
   public get name(): string {
     return this.opts.name;
+  }
+
+  public get buildFolder(): string {
+    return this.opts.buildFolder || '';
   }
 
   public get type(): EnemyType {

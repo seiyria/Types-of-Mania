@@ -16,6 +16,7 @@ export const ShinjuParsers = allFiles.map(fileName => {
     offsetIteratorIncrementBy: 1579,
     type: EnemyType.Shinju,
     uexpFilePath: `gamefiles/boss/uexp/shinjustatustablelist/${fileName}.uexp`,
-    jsonFilePath: `gamefiles/boss/json/shinjustatustablelist/${fileName}.json`
+    jsonFilePath: `gamefiles/boss/json/shinjustatustablelist/${fileName}.json`,
+    buildFolder: path.dirname(fileName) !== '.' ? path.dirname(fileName) : ''
   });
 });
