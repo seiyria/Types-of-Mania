@@ -73,11 +73,13 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 ## Future Features
 
 * Install `pak` from config setting (`installTo`: `C:/Path/To/Trials/Of/Mana`) so you don't have to copy/paste.
+* Generate monster list w/ stats alongside output for visibility/editing purposes.
+* Generate item list alongside output for visibility/editing purposes.
 * Parts working
 * Shinju working
 * Lucre multiplier
 * Edit healing item potency
-* Pattern matches (like specific, but *lv10, *lv11, etc to capture specific ranges of creatures. should use a regex to capture a group at a time)
+* Pattern matches (like `specific`, but *lv10, *lv11, etc to capture specific ranges of creatures. should use a regex to capture a group at a time. `specific` should be modified to use regexes entirely.)
 * Item drop rate multiplier
 * Item shop randomizer (w/ seeds)
 * Item randomization (w/ seeds)
