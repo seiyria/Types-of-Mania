@@ -54,8 +54,12 @@ We can't bundle UnrealPak with this repo, but you can get it from [here](https:/
 * Parts working
 * Shinju working
 * Specify different multipliers for individual creatures (TODO: come up with a sane naming scheme that uniquely identifies each creature/level combo)
+* Lucre multiplier
+* Item drop rate multiplier
 * Item randomization (w/ seeds)
+* Item drop randomization (w/ seeds)
 * Monster randomization (w/ seeds)
+* Monster ability randomization (w/ seeds)
 
 ## Version History
 
