@@ -97,12 +97,15 @@ export class PakFileEditor {
 
     if(!doesExeExist || !doesBatExist) return;
 
-    const fileRoot = `build/${packageFile.version}/tmp`;
+    const buildRoot = `build/${packageFile.version}`;
+
+    const fileRoot = `${buildRoot}/tmp`;
     const fullRoot = path.resolve(fileRoot);
-    const fullBatRoot = path.resolve('build/tools/UnrealPak/UnrealPak-Without-Compression.bat');
+    const fullBatRoot = path.resolve('build/tools/UnrealPak/UnrealPak.exe');
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
+    fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${path.resolve(`${buildRoot}/tmp/*.*`)}" "..\..\..\*.*"`)
     const out = childProcess.execSync(`"${fullBatRoot}" ${fullRoot}`);
     console.log(out.toString())
 
@@ -111,18 +114,18 @@ export class PakFileEditor {
 
     // we have to wait a bit because ???
     setTimeout(() => {
-      fs.removeSync(`build/${packageFile.version}/Trials of Mana_P.pak`);
-      fs.moveSync(`build/${packageFile.version}/tmp.pak`, `build/${packageFile.version}/Trials of Mana_P.pak`)
+      fs.removeSync(`${buildRoot}/Trials of Mana_P.pak`);
+      fs.moveSync(`${buildRoot}/tmp.pak`, `${buildRoot}/Trials of Mana_P.pak`)
 
       fs.removeSync('Engine');
       // fs.removeSync('build/tools/UnrealPak/filelist.txt');
       // fs.removeSync(`build/${packageFile.version}/tmp`);
 
-      fs.writeFileSync(`build/${packageFile.version}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
+      fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
 
     // we're done!
-    console.log(`Done! Your built pak file is located at build/${packageFile.version}/Trials of Mana_P.pak`);
+    console.log(`Done! Your built pak file is located at ${buildRoot}/Trials of Mana_P.pak`);
     console.log('A copy of the config file that created this build has been included for reference.');
   }
 
