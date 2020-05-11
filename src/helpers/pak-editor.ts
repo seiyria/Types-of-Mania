@@ -116,7 +116,7 @@ export class PakFileEditor {
     setTimeout(() => {
       fs.removeSync('Engine');
       fs.removeSync(`${fullBuildRoot}/filelist.txt`);
-      // fs.removeSync(`${buildRoot}/tmp`);
+      fs.removeSync(`${buildRoot}/tmp`);
 
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
