@@ -77,7 +77,6 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 * Generate monster list w/ stats alongside output for visibility/editing purposes.
 * Generate item list alongside output for visibility/editing purposes.
 * Parts working
-* Shinju working
 * Lucre multiplier
 * Edit healing item potency
 * Pattern matches (like `specific`, but *lv10, *lv11, etc to capture specific ranges of creatures. should use a regex to capture a group at a time. `specific` should be modified to use regexes entirely.)
