@@ -101,11 +101,12 @@ export class PakFileEditor {
 
     const fileRoot = `${buildRoot}/tmp`;
     const fullRoot = path.resolve(fileRoot);
-    const fullExeRoot = path.resolve('build/tools/UnrealPak/UnrealPak-Without-Compression.bat');
+    const fullExeRoot = path.resolve('build/tools/UnrealPak/UnrealPak.exe');
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
-    const out = childProcess.execSync(`"${fullExeRoot}" "${fullRoot}"`);
+    fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${path.resolve(`${buildRoot}/tmp/*.*`)}" "../..\\..\\*.*"`)
+    const out = childProcess.execSync(`"${fullExeRoot}" "${path.resolve(buildRoot)}\\Trials of Mana_P.pak" -Create=${path.resolve(buildRoot)}/filelist.txt`);
 
     console.log(out.toString())
 
@@ -115,11 +116,11 @@ export class PakFileEditor {
     // we have to wait a bit because ???
     setTimeout(() => {
       fs.removeSync(`${buildRoot}/Trials of Mana_P.pak`);
-      fs.moveSync(`${buildRoot}/tmp.pak`, `${buildRoot}/Trials of Mana_P.pak`)
+      // fs.moveSync(`${buildRoot}/tmp.pak`, `${buildRoot}/Trials of Mana_P.pak`)
 
       fs.removeSync('Engine');
-      fs.removeSync('build/tools/UnrealPak/filelist.txt');
-      fs.removeSync(`build/${packageFile.version}/tmp`);
+      // fs.removeSync('build/tools/UnrealPak/filelist.txt');
+      // fs.removeSync(`build/${packageFile.version}/tmp`);
 
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
