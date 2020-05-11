@@ -10,6 +10,11 @@
     "build:js": "tsc --outDir dist && cpy --parents gamefiles/** dist",
     "build:cli": "pkg dist/package.json --out-path bin",
     "build:all": "npm run build:js && npm run build:cli",
+    "package:win": "cd bin && bestzip ./windows.zip ./config.yml ./types-of-mania-win.exe",
+    "package:osx": "cd bin && bestzip ./osx.zip ./config.yml ./types-of-mania-macos",
+    "package:linux": "cd bin && bestzip ./linux.zip ./config.yml ./types-of-mania-linux",
+    "package:all": "npm run package:win && npm run package:osx && npm run package:linux",
+    "release:all": "npm run build:all && npm run package:all",
     "test": "npm run lint"
   },
   "engines": {
@@ -43,6 +48,7 @@
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "2.31.0",
     "@typescript-eslint/parser": "2.31.0",
+    "bestzip": "^2.1.5",
     "cpy-cli": "^3.1.1",
     "eslint": "7.0.0",
     "pkg": "^4.4.8"
