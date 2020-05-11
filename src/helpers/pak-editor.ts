@@ -12,17 +12,17 @@ finDirPath_shinju = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\D
 finDirPath_parts = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\Parts\\'
 */
 
-export interface IPakFileEditorOpts {
-  configLoader: ConfigLoader
+export interface PakFileEditorOpts {
+  configLoader: ConfigLoader;
 }
 
 export class PakFileEditor {
 
   private fileCache: Record<string, Buffer> = {};
   
-  constructor(private opts: IPakFileEditorOpts) {}
+  constructor(private opts: PakFileEditorOpts) {}
 
-  public editHexForEnemy(enemy: Enemy) {
+  public editHexForEnemy(enemy: Enemy): void {
 
     // check if we have this file in cache already
     let file: Buffer = this.fileCache[enemy.uexpFilePath];
@@ -46,7 +46,7 @@ export class PakFileEditor {
   }
 
   // flush all files to the build directory
-  public flush() {
+  public flush(): void {
     Object.keys(this.fileCache).forEach(fileName => {
       console.log('flush', fileName);
     });

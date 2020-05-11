@@ -3,7 +3,7 @@ import * as path from 'path';
 
 import { Enemy, EnemyType } from '../models';
 
-export interface IVarParserOptions {
+export interface VarParserOptions {
 
   // the offset of where to start the parser
   offsetStart: number;
@@ -23,7 +23,7 @@ export interface IVarParserOptions {
 
 export class EnemyParser {
 
-  constructor(private opts: IVarParserOptions) {}
+  constructor(private opts: VarParserOptions) {}
 
   // parse the file baesd on what is passed into the parser
   public parse(): Enemy[] {

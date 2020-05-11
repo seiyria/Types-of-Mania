@@ -21,7 +21,7 @@ export enum Stat {
 
 // TODO: ai, drop rates, drop items, lucre
 
-export interface IEnemyOpts {
+export interface EnemyOpts {
 
   // the uexp file path for this enemy
   uexpFilePath: string;
@@ -33,7 +33,7 @@ export interface IEnemyOpts {
   hpOffset: number;
 
   // the type of enemy
-  type: EnemyType
+  type: EnemyType;
 }
 
 export class Enemy {
@@ -65,6 +65,6 @@ export class Enemy {
     };
   }
 
-  constructor(private opts: IEnemyOpts) {}
+  constructor(private opts: EnemyOpts) {}
 
 }

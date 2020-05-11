@@ -6,7 +6,8 @@ import deepmerge from 'deepmerge';
 
 import { Enemy, Stat } from '../models';
 
-export interface IConfig {
+// this mirrors config.yml
+export interface ModConfig {
   version: number;
 
   seed: number;
@@ -20,23 +21,25 @@ export interface IConfig {
   specific: Record<string, Record<Stat, number>>;
 }
 
-export interface IConfigOpts {
-  overrides: Partial<IConfig>;
+export interface ConfigLoaderOpts {
+  overrides: Partial<ModConfig>;
 }
 
 export class ConfigLoader {
 
-  private config!: IConfig;
+  private config!: ModConfig;
   
-  constructor(private opts: IConfigOpts) {
+  constructor(private opts: ConfigLoaderOpts) {
     this.init();
   }
 
-  private init() {
+  private init(): void {
     try {
+
+      // load config.yml
       const config = YAML.safeLoad(fs.readFileSync(path.join(__dirname, '..', '..', 'config', 'config.yml')).toString());
 
-      // if you specify override.global, copy those values to the other sections
+      // if you specify override.global (via cli), copy those values to the other sections
       if(this.opts.overrides) {
         Object.keys(this.opts.overrides.global || {}).forEach(key => {
           ['boss', 'monster', 'shinju', 'part'].forEach(masterKey => {
@@ -46,6 +49,7 @@ export class ConfigLoader {
         });
       }
   
+      // merge the two configs into the finalized config
       this.config = deepmerge(config, this.opts.overrides || {});
     } catch(e) {
       console.error(`Could not find config.yml in config/. Please place one there.`);
@@ -54,11 +58,14 @@ export class ConfigLoader {
   }
 
   public getStats(enemy: Enemy): Record<Stat, number> {
+
+    // get the type of enemy and the specific name overrides if possible
     const type = this.config[enemy.type] || {};
     const specific = this.config.specific[enemy.name] || {};
 
     const stats: any = {};
 
+    // take the stats in the priority order: specific name, type, ... if none, multiply by 1
     Object.values(Stat).forEach(stat => {
       stats[stat as Stat] = specific[stat] || type[stat] || 1;
     });
