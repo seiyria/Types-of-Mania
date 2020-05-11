@@ -7,7 +7,7 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 * Allows for changing of the following stats via a multiplier: hp, atk, def, agi, int, spr, luck, offMag, defMag, exp.
 * Allows for global changes, or specific boss, monster, shinju, or part enemies.
 * Allows for specific enemy changes for fine-tuning specific enemies.
-* Has a very simple build process.
+* Has a very simple build process, which allows for automatic installation to your mod directory.
 * Supports a config file for easy sharing of configs.
 * Supports CLI arguments for easy copy/paste setups.
 
@@ -17,7 +17,8 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 
 The CLI allows you to specify custom overrides without messing with `config.yml`. It is very flexible, and lets you specify any key/subkey as follows:
 
-* `--seed <num>` will set the RNG seed for randomizing.
+* `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
+* `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
 * `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier` 
 * `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier` 
 * `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier` 
@@ -72,7 +73,6 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 
 ## Future Features
 
-* Install `pak` from config setting (`installTo`: `C:/Path/To/Trials/Of/Mana`) so you don't have to copy/paste.
 * Generate monster list w/ stats alongside output for visibility/editing purposes.
 * Generate item list alongside output for visibility/editing purposes.
 * Parts working

@@ -3,6 +3,8 @@ version: 1
 
 seed: 0
 
+installTo: C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana
+
 global: &global
   hp: 2
   atk: 1.5

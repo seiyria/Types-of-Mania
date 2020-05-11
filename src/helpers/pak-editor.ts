@@ -95,30 +95,44 @@ export class PakFileEditor {
     const buildRoot = `build/${packageFile.version}`;
     const fullBuildRoot = path.resolve(buildRoot);
 
-    const fileRoot = `${buildRoot}/tmp`;
     const fullExeRoot = path.resolve('build/tools/UnrealPak/UnrealPak.exe');
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
     fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${fullBuildRoot}\\tmp\\*.*" "..\\..\\..\\*.*"`);
-    childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\Trials of Mana_P.pak" -Create=${fullBuildRoot}\\filelist.txt`);
+    childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\TypesOfMania_P.pak" -Create=${fullBuildRoot}\\filelist.txt`);
 
     // clean up files
     console.log('Cleaning up...');
 
     // we have to wait a bit because ???
     setTimeout(() => {
-      // fs.moveSync(`${buildRoot}/tmp.pak`, `${buildRoot}/Trials of Mana_P.pak`)
-
       fs.removeSync('Engine');
-      fs.removeSync(`${fullBuildRoot}\\filelist.txt`);
-      fs.removeSync(`build/${packageFile.version}/tmp`);
+      fs.removeSync(`${fullBuildRoot}/filelist.txt`);
+      fs.removeSync(`${buildRoot}/tmp`);
 
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
 
+    const installTo = this.opts.configLoader.finalConfig.installTo;
+    if(installTo) {
+      if(fs.pathExistsSync(installTo)) {
+        console.log(`Installing directly to ${installTo}...`);
+        
+        const finalInstallDir = `${installTo}/Trials of Mana/Content/Paks/~mod`;
+        await fs.ensureDirSync(finalInstallDir);
+
+        fs.copyFileSync(`${buildRoot}/TypesOfMania_P.pak`, `${finalInstallDir}/TypesOfMania_P.pak`);
+        fs.writeFileSync(`${finalInstallDir}/TypesOfMania_config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
+
+      } else {
+        console.log(`Tried to install directly to ${installTo} but failed (directory does not exist). Skipping...`);
+
+      }
+    }
+
     // we're done!
-    console.log(`Done! Your built pak file is located at ${buildRoot}/Trials of Mana_P.pak`);
+    console.log(`Done! Your built pak file is located at ${buildRoot}/TypesOfMania_P.pak`);
     console.log('A copy of the config file that created this build has been included for reference.');
   }
 

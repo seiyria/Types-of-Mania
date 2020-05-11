@@ -12,6 +12,8 @@ export interface ModConfig {
 
   seed: number;
 
+  installTo: string;
+
   global: Record<Stat, number>;
   boss: Record<Stat, number>;
   monster: Record<Stat, number>;
@@ -33,7 +35,7 @@ export class ConfigLoader {
 
   private config!: ModConfig;
   private validKeys = [
-    'version', 'seed', 
+    'version', 'seed', 'installTo',
     'global', 'boss', 'monster', 'shinju', 'part', 'specific'
   ];
   
