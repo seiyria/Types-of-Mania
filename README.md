@@ -76,6 +76,7 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 
 * Generate monster list w/ stats alongside output for visibility/editing purposes.
 * Generate item list alongside output for visibility/editing purposes.
+* Verbose stat edit logs.
 * Parts working
 * Lucre multiplier
 * Edit healing item potency
