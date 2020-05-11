@@ -21,6 +21,8 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 
 The valid `stat` keys you can set can be found in `config.yml`.
 
+To pass these in to `npm start`, do this (for example): `npm start -- --global.xp 1 --global.hp 3` (notice the first set of `--` before the args are passed in).
+
 ### config.yml
 
 The `config/config.yml` file can be modified to add any of the keys you would normally pass via the CLI. It also features the ability to single out specific monsters for scaling. For example, you could do this:
@@ -51,7 +53,7 @@ You need to install NodeJS. The latest version is always recommended.
 
 ### Building
 
-Yada yada, npm do stuff. Requires Windows because of UnrealPak.
+* `npm start` (runs the configurator with default config)
 
 #### Included JSON Files
 
