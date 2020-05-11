@@ -119,3 +119,5 @@ dist
 .vscode
 build
 Engine
+*.js
+bin

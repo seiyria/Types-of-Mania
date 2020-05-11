@@ -2,10 +2,8 @@
 
 import packageFile from '../../package.json';
 
-import { PakFileEditor } from '../helpers/pak-editor';
-
 import { BossParsers, NormalEnemyParsers, ShinjuParsers } from '../parsers';
-import { ConfigLoader } from '../helpers';
+import { ConfigLoader, PakFileEditor } from '../helpers';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const argv = require('minimist')(process.argv.slice(2));
@@ -16,8 +14,10 @@ if(argv.version) {
   process.exit(0);
 }
 
+const { config, ...totalConfig } = argv;
+
 // set up the config / pak file editor
-const configLoader = new ConfigLoader({ overrides: argv });
+const configLoader = new ConfigLoader({ overrides: totalConfig, configLocation: config });
 const editor = new PakFileEditor({ configLoader });
 
 // get all of the enemies

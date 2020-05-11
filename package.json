@@ -1,31 +1,51 @@
 {
-  "name": "trials-of-mania",
+  "name": "types-of-mania",
   "version": "0.4.0",
-  "description": "Trials of Mania",
-  "main": "index.js",
+  "description": "Types of Mania",
+  "main": "src/index.ts",
+  "bin": "src/cli/cli.js",
   "scripts": {
     "start": "ts-node src/cli/cli.ts",
     "lint": "eslint . --ext .ts",
+    "build:js": "tsc --outDir dist && cpy --parents gamefiles/** dist",
+    "build:cli": "pkg dist/package.json --out-path bin",
+    "build:all": "npm run build:js && npm run build:cli",
     "test": "npm run lint"
+  },
+  "engines": {
+    "node": ">12"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod.git"
+    "url": "git+https://github.com/seiyria/Types-of-Mania.git"
   },
-  "author": "",
+  "author": "Kyle Kemp <kyle@seiyria.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod/issues"
+    "url": "https://github.com/seiyria/Types-of-Mania/issues"
   },
-  "homepage": "https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod#readme",
+  "homepage": "https://github.com/seiyria/Types-of-Mania#readme",
+  "pkg": {
+    "assets": [
+      "./node_modules/@types",
+      "./node_modules/typescript/lib/*.d.ts",
+      "src/**/*.ts",
+      "./tsconfig.json",
+      "./gamefiles/**/*.uexp",
+      "./gamefiles/**/*.json"
+    ]
+  },
   "devDependencies": {
+    "@babel/runtime": "^7.9.6",
     "@types/fs-extra": "8.1.0",
     "@types/fs-readdir-recursive": "1.0.0",
     "@types/js-yaml": "3.12.3",
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "2.31.0",
     "@typescript-eslint/parser": "2.31.0",
-    "eslint": "7.0.0"
+    "cpy-cli": "^3.1.1",
+    "eslint": "7.0.0",
+    "pkg": "^4.4.8"
   },
   "dependencies": {
     "deepmerge": "4.2.2",

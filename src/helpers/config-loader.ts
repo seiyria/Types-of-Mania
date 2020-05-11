@@ -25,6 +25,7 @@ export interface ModConfig {
 
 export interface ConfigLoaderOpts {
   overrides: Partial<ModConfig>;
+  configLocation?: string;
 }
 
 export class ConfigLoader {
@@ -46,8 +47,10 @@ export class ConfigLoader {
   private init(): void {
     try {
 
+      const configLocation = this.opts.configLocation || path.join(__dirname, '..', '..', 'config', 'config.yml');
+
       // load config.yml
-      const config = YAML.safeLoad(fs.readFileSync(path.join(__dirname, '..', '..', 'config', 'config.yml')).toString());
+      const config = YAML.safeLoad(fs.readFileSync(configLocation).toString());
 
       // if you specify override.global (via cli), copy those values to the other sections
       if(this.opts.overrides) {
@@ -62,7 +65,7 @@ export class ConfigLoader {
       // merge the two configs into the finalized config
       this.config = deepmerge(config, this.opts.overrides || {});
     } catch(e) {
-      console.error(`Could not find config.yml in config/. Please place one there.`);
+      console.error(`Could not find config.yml in config/. Please place one there or specify --config.`);
       process.exit(1);
     }
 
