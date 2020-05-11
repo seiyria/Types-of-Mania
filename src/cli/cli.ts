@@ -1,5 +1,7 @@
 
 
+import packageFile from '../../package.json';
+
 import { PakFileEditor } from '../helpers/pak-editor';
 
 import { BossParsers, NormalEnemyParsers } from '../parsers';
@@ -8,6 +10,11 @@ import { ConfigLoader } from '../helpers';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const argv = require('minimist')(process.argv.slice(2));
 delete argv._;
+
+if(argv.version) {
+  console.log(`v${packageFile.version}`);
+  process.exit(0);
+}
 
 // set up the config / pak file editor
 const configLoader = new ConfigLoader({ overrides: argv });

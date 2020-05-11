@@ -17,6 +17,7 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 
 The CLI allows you to specify custom overrides without messing with `config.yml`. It is very flexible, and lets you specify any key/subkey as follows:
 
+* `--version` will just print the current version of the app.
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
 * `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier` 
