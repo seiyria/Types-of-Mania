@@ -1,0 +1,3858 @@
+[
+  {
+    "Key": "EItemType::ITEM_ID_DROP",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 20,
+        "ShopSaleLucValue": 5,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 200,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_CHOCO",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 50,
+        "ShopSaleLucValue": 12,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 500,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DONUTS",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_HONEY",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 9999,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_WALNUT",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 150,
+        "ShopSaleLucValue": 37,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_MP",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 50,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MIXNUTS",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_MP",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_PUIPUI",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 20,
+        "ShopSaleLucValue": 5,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_AILMENT",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 5,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_STARDUST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 50,
+        "ShopSaleLucValue": 12,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RELEASE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 5,
+          "Arts": "EArtsType::ARTS_ID_PLAYER_ANTI_MAGIC",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BELL",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_REVIVAL",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 2,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ANGEL",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 300,
+        "ShopSaleLucValue": 75,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_REVIVAL",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 2,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 9999,
+          "EffTime": 25,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ROPE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 50,
+        "ShopSaleLucValue": 12,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ESCAPE_DGN",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          [
+            {
+              "StartProgress": {
+                "Chapter": 0,
+                "Section": 1,
+                "Item": 1010,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 1,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 6,
+                "Item": 30,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 6,
+                "Item": 40,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 14,
+                "Item": 30,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 15,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 17,
+                "Item": 1010,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 17,
+                "Item": 1010,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 6,
+                "Section": 3,
+                "Item": 1021,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 6,
+                "Section": 3,
+                "Item": 1022,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 6,
+                "Section": 3,
+                "Item": 3020,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 6,
+                "Section": 3,
+                "Item": 3020,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            }
+          ]
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DREAMING",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 500,
+        "ShopSaleLucValue": 5,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_REPLACE_TIME",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          [
+            {
+              "StartProgress": {
+                "Chapter": 0,
+                "Section": 1,
+                "Item": 1010,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 1,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 1,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 1,
+                "Item": 40,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 2,
+                "Item": 20,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 3,
+                "Item": 20,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 7,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 8,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 1,
+                "Section": 17,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 1,
+                "Section": 17,
+                "Item": 20,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            },
+            {
+              "StartProgress": {
+                "Chapter": 2,
+                "Section": 10,
+                "Item": 20,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 2,
+                "Section": 11,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            }
+          ]
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_EXP_BOOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 5,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_BOOST",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 10,
+          "EffTime": 600,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_EXP_BOOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 10,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_BOOST",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 15,
+          "EffTime": 600,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_EXP_BOOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 15,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_BOOST",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 20,
+          "EffTime": 600,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LUC_BOOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 5,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_BOOST",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 10,
+          "EffTime": 600,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LUC_BOOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 10,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_BOOST",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 15,
+          "EffTime": 600,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LUC_BOOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 1791,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 15,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_BOOST",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 20,
+          "EffTime": 600,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_POW_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 1,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DEF_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 1,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_INT_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 1,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SPI_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 1,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LUK_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 1,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_HP_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 5,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MP_NOSTRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_USE",
+        "GetLimitNumber": 10,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 35,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_NOSTRUM",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 2,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_EARTH",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DIAMONDMISSILE_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_GNOME",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_EARTH_QUAKE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BASILISK",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 700,
+        "ShopSaleLucValue": 175,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_STONE_CLOUD",
+          "Ailment": 8,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BULETTE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_PROTECT_UP",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MALLBEAR",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DAIA_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_STORM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_AIR_BLAST_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_JINN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 350,
+        "ShopSaleLucValue": 88,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_THUNDER_STORM",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_HARPY",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 700,
+        "ShopSaleLucValue": 175,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_STUN_WIND",
+          "Ailment": 4,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BEESEYE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_PROTECT_DOWN",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SIREN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_THUNDER_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ICECOIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_ICE_SMASH_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_UNDINE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MEGA_SPLASH",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_WHITE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 700,
+        "ShopSaleLucValue": 175,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_COLD_BLAZE",
+          "Ailment": 16,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SAHAGIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MIND_UP",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SLIME",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_POWER_DOWN",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_POSIEDON",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_ICE_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_FIRECOIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_FIREBALL_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SALAMAND",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_EXPLODE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LIZARD",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 700,
+        "ShopSaleLucValue": 175,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_BLAZE_WALL",
+          "Ailment": 128,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DRAKE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_POWER_UP",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BATTOM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MIND_DOWN",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_KERBEROS",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_FLAME_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DARKCOIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_EVIL_GATE_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SHADE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 500,
+        "ShopSaleLucValue": 125,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DARK_FORCE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_GHOST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 800,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DEATH_SPELL",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SPECTER",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RELEASE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_ANTI_MAGIC",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SHADOW",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 500,
+        "ShopSaleLucValue": 125,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_BLACK_CURSE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DEMON",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DARK_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LIGHT",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_HOLYBALL_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_WISP",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 500,
+        "ShopSaleLucValue": 125,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_SAINT_BEAM",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_POTO",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 180,
+        "ShopSaleLucValue": 45,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_HEALLIGHT_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_PAKKUN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MAGIC_SHIELD",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MAMAPOTO",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_UC",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 100,
+        "ShopSaleLucValue": 25,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_AILMENT",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 5,
+          "Arts": "EArtsType::ARTS_ID_TWINKLERAIN_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_PAPAPOTO",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_SAINT_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MOONCOIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 300,
+        "ShopSaleLucValue": 75,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_LUNATIC",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LUNA",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_HALF_VANISH",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DEVIL",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_BODY_CHANGE",
+          "Ailment": 64,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_POROBIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 350,
+        "ShopSaleLucValue": 87,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_LIFE_BOOSTER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_WOLFDEV",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 350,
+        "ShopSaleLucValue": 87,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_ENERGY_BALL",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_CARMIRA",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 350,
+        "ShopSaleLucValue": 87,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MOON_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MICONID",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 200,
+        "ShopSaleLucValue": 50,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_SLEEP_FLOWER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BUGEYE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 700,
+        "ShopSaleLucValue": 175,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_POISON_BUBBLE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DRYAD",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_TRANS_SHAPE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_GRELL",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_AURA_WAVE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MATANGO",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 500,
+        "ShopSaleLucValue": 125,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_COUNTER_MAGIC",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_CRAWLER",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_MAGIC",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 350,
+        "ShopSaleLucValue": 87,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_LEAF_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_HANDAXE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_THROW",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 100,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_AXE_BOMBER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SHURIKEN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_THROW",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 70,
+        "ShopSaleLucValue": 17,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_THROWING_STAR",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DART",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_THROW",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 80,
+        "ShopSaleLucValue": 20,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DARTS",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_PUMPKIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_THROW",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 450,
+        "ShopSaleLucValue": 113,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_GRENADE_BOM",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_PALADIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_SAINT_SABER_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LORD",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_HEALLIGHT_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MASTER",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DAIA_SABER_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DUELIST",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DARK_SABER_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ARCANE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_SAINT_BEAM_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SECRET",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_EXPLODE_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RUNE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DEATH_SPELL",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_FORBID",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_DARK_FORCE_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_GOLDEN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_AURA_WAVE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SILVER",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 4095,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_LEAF_SABER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DEADWOLF",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_ENERGY_BALL",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DEMONWLF",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MOON_SABER_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_HOLY",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_HEALLIGHT_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_SALT",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_AILMENT",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 5,
+          "Arts": "EArtsType::ARTS_ID_TWINKLERAIN_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ASH",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_BLACK_CURSE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BLOOD",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RELEASE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_ANTI_MAGIC",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_GOODLUCK",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_LIFE_BOOSTER",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BADLUCK",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MINE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BULLSEYE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_KATON_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_NIGHTEYE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ATTACK",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_RAIZIN_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_BRIESIN",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_POWER_UP_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_VENUS",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MIND_UP_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DRAGON",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_PROTECT_DOWN_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_GREIPNIR",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 2,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ACTIVE_MAGIC",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_MIND_DOWN_WIDE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESERV1",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 1,
+        "UseClassBit": 120,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESERV2",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 2,
+        "UseClassBit": 120,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESERV3",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 4,
+        "UseClassBit": 120,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESERV4",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 8,
+        "UseClassBit": 120,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESERV5",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 16,
+        "UseClassBit": 120,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESERV6",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 32,
+        "UseClassBit": 120,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_RESET",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_CLASS",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2046,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 400,
+        "ShopSaleLucValue": 200,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ITEMSEED_N",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_SEED",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 5,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 50,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ITEMSEED_R",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_SEED",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 10,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 50,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ITEMSEED_SR",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_SEED",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 15,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 50,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ITEMSEED_SSR",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_SEED",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 20,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 50,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_ITEMSEED_UK",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_SEED",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 9,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 30,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RECOVERY_HP",
+          "EffIsAllRange": true,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 50,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_NITRO",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 0,
+        "UseClassBit": 0,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_HAMMER",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 0,
+        "UseClassBit": 0,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MOWGLI",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 3,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 32,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_FLUTE",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 127,
+        "UseClassBit": 4095,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RIDE",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_DRUM",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 63,
+        "UseClassBit": 2047,
+        "UseSituationBit": 1,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": 1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_RIDE",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 1,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          [
+            {
+              "StartProgress": {
+                "Chapter": 4,
+                "Section": 4,
+                "Item": 10,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "EndProgress": {
+                "Chapter": 4,
+                "Section": 5,
+                "Item": 3010,
+                "UTTypes": "IntProperty,IntProperty,IntProperty"
+              },
+              "UTTypes": "StructProperty,StructProperty"
+            }
+          ]
+        ],
+        "IsConfirm": true,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_MIRROR",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 0,
+        "UseClassBit": 0,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  },
+  {
+    "Key": "EItemType::ITEM_ID_LUC",
+    "Value": {
+      "ItemData_3_CF780DE6460B8A55C91157B702A6BFA1": {
+        "MainCategoryType": "EItemCategoryType::ITEM_CATEGORY_TYPE_IMPORTANT",
+        "GetLimitNumber": 0,
+        "UseCharactorBit": 0,
+        "UseClassBit": 0,
+        "UseSituationBit": 0,
+        "RarityType": "EItemRarityType::ITEM_RARITY_TYPE_R",
+        "SetLimit": -1,
+        "ShopBuyLucValue": 0,
+        "ShopSaleLucValue": 0,
+        "ItemEffect": {
+          "EffType": "EItemUseType::ITEM_USE_TYPE_ETC",
+          "EffIsAllRange": false,
+          "UseCharaSituationrBit": 0,
+          "Arts": "EArtsType::ARTS_ID_NONE",
+          "Ailment": 0,
+          "Basic_VAlue": 0,
+          "EffTime": 0,
+          "UTTypes": "EnumProperty,BoolProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty"
+        },
+        "ItemIgnoreProgressList": [
+          []
+        ],
+        "IsConfirm": false,
+        "UTTypes": "EnumProperty,IntProperty,IntProperty,IntProperty,IntProperty,EnumProperty,IntProperty,IntProperty,IntProperty,StructProperty,ArrayProperty,BoolProperty"
+      }
+    }
+  }
+]
