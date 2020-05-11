@@ -42,7 +42,7 @@ This would make monsters that are `MAGICIAN_LV16` give 10x their normal exp. The
 
 ### Finished Pak Files
 
-Copy the built pak file from the `TrialsOfMania` folder into a `~mod` folder.
+Copy the built `Trials of Mana.pak` file from the `build` folder into the `Trials of Mana/Content/Paks/~mod` folder. If the `~mod` folder does not already exist, you'll have to make it.
 
 ## Development
 
@@ -72,6 +72,7 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 
 ## Future Features
 
+* Install `pak` from config setting (`installTo`: `C:/Path/To/Trials/Of/Mana`) so you don't have to copy/paste.
 * Parts working
 * Shinju working
 * Lucre multiplier
