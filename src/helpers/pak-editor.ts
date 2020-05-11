@@ -60,7 +60,7 @@ export class PakFileEditor {
   }
 
   // flush all files to the build directory
-  public flush(): void {
+  public async flush(): Promise<void> {
 
     // the root build directory
     const fileRoot = `build/${packageFile.version}`;
@@ -69,11 +69,11 @@ export class PakFileEditor {
     fs.removeSync(`${fileRoot}/tmp`);
 
     // create each file from memory
-    Object.keys(this.fileCache).forEach(async fileName => {
+    await Promise.all(Object.keys(this.fileCache).map(async fileName => {
       const path = `${fileRoot}/tmp/${this.fileOutputLocation[fileName]}`;
       await fs.ensureDir(path);
       await fs.writeFile(`${path}/${fileName}`, this.fileCache[fileName]);
-    });
+    }));
 
     this.pack();
   }
@@ -101,12 +101,12 @@ export class PakFileEditor {
 
     const fileRoot = `${buildRoot}/tmp`;
     const fullRoot = path.resolve(fileRoot);
-    const fullBatRoot = path.resolve('build/tools/UnrealPak/UnrealPak.exe');
+    const fullExeRoot = path.resolve('build/tools/UnrealPak/UnrealPak-Without-Compression.bat');
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
-    fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${path.resolve(`${buildRoot}/tmp/*.*`)}" "..\..\..\*.*"`)
-    const out = childProcess.execSync(`"${fullBatRoot}" ${fullRoot}`);
+    const out = childProcess.execSync(`"${fullExeRoot}" "${fullRoot}"`);
+
     console.log(out.toString())
 
     // clean up files
@@ -118,8 +118,8 @@ export class PakFileEditor {
       fs.moveSync(`${buildRoot}/tmp.pak`, `${buildRoot}/Trials of Mana_P.pak`)
 
       fs.removeSync('Engine');
-      // fs.removeSync('build/tools/UnrealPak/filelist.txt');
-      // fs.removeSync(`build/${packageFile.version}/tmp`);
+      fs.removeSync('build/tools/UnrealPak/filelist.txt');
+      fs.removeSync(`build/${packageFile.version}/tmp`);
 
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
