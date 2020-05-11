@@ -18,11 +18,11 @@ A difficulty modifier tool for Trials of Mana.
 The CLI allows you to specify custom overrides without messing with `config.yml`. It is very flexible, and lets you specify any key/subkey as follows:
 
 * `--seed <num>` will set the RNG seed for randomizing.
-* `--global.<stat> <num>` will set the global `stat` to `num` 
-* `--boss.<stat> <num>` will set the boss `stat` to `num` 
-* `--monster.<stat> <num>` will set the monster `stat` to `num` 
-* `--shinju.<stat> <num>` will set the shinju `stat` to `num` 
-* `--part.<stat> <num>` will set the part `stat` to `num` 
+* `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier` 
+* `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier` 
+* `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier` 
+* `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier` 
+* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier` 
 
 The valid `stat` keys you can set can be found in `config.yml`.
 
