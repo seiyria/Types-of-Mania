@@ -20,6 +20,7 @@
   "homepage": "https://github.com/seiyria/Trials-of-Mania---Difficulty-Mod#readme",
   "devDependencies": {
     "@types/fs-extra": "8.1.0",
+    "@types/fs-readdir-recursive": "1.0.0",
     "@types/js-yaml": "3.12.3",
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "2.31.0",
@@ -29,6 +30,7 @@
   "dependencies": {
     "deepmerge": "4.2.2",
     "fs-extra": "9.0.0",
+    "fs-readdir-recursive": "1.1.0",
     "js-yaml": "3.13.1",
     "minimist": "^1.2.5",
     "ts-node": "^8.10.1",

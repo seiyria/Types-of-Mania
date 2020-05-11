@@ -7,5 +7,5 @@ export const BossParsers = [new EnemyParser({
   offsetIteratorIncrementBy: 1624,
   type: EnemyType.Boss,
   uexpFilePath: `gamefiles/boss/uexp/chardata/BossStatusTable.uexp`,
-  jsonFilePath: `gamefiles/boss/json/chardata/_BossStatusTable.json`
+  jsonFilePath: `gamefiles/boss/json/chardata/BossStatusTable.json`
 })];

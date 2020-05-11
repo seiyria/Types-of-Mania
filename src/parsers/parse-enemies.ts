@@ -5,7 +5,8 @@ import * as path from 'path';
 import { EnemyParser } from '../helpers';
 import { EnemyType } from '../models';
 
-const allFiles = fs.readdirSync(path.join(__dirname, '..', '..', 'gamefiles', 'enemy', 'uexp'))
+const allFiles = fs
+  .readdirSync(path.join(__dirname, '..', '..', 'gamefiles', 'enemy', 'uexp'))
   .map(f => path.basename(f, '.uexp'));
 
 export const NormalEnemyParsers = allFiles.map(fileName => {
@@ -14,6 +15,6 @@ export const NormalEnemyParsers = allFiles.map(fileName => {
     offsetIteratorIncrementBy: 1579,
     type: EnemyType.Monster,
     uexpFilePath: `gamefiles/enemy/uexp/${fileName}.uexp`,
-    jsonFilePath: `gamefiles/enemy/json/_${fileName}.json`
+    jsonFilePath: `gamefiles/enemy/json/${fileName}.json`
   });
 });
