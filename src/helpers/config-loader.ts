@@ -32,6 +32,10 @@ export class ConfigLoader {
   }
 
   private config!: ModConfig;
+  private validKeys = [
+    'version', 'seed', 
+    'global', 'boss', 'monster', 'shinju', 'part', 'specific'
+  ];
   
   constructor(private opts: ConfigLoaderOpts) {
     this.init();
@@ -59,6 +63,18 @@ export class ConfigLoader {
       console.error(`Could not find config.yml in config/. Please place one there.`);
       process.exit(1);
     }
+
+    this.validateConfig();
+  }
+
+  // validate the config file
+  private validateConfig(): void {
+    Object.keys(this.config).forEach(key => {
+      if(this.validKeys.includes(key)) return;
+
+      console.error(`Invalid config setting: ${key}. Remove it from your config and try again.`);
+      process.exit(1);
+    });
   }
 
   public getStats(enemy: Enemy): Record<Stat, number> {
