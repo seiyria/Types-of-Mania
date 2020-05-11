@@ -27,6 +27,10 @@ export interface ConfigLoaderOpts {
 
 export class ConfigLoader {
 
+  public get finalConfig(): ModConfig {
+    return this.config;
+  }
+
   private config!: ModConfig;
   
   constructor(private opts: ConfigLoaderOpts) {

@@ -59,13 +59,14 @@ The JSON files included in this repo are built from a [Serializer from this proj
 
 #### UnrealPak
 
-We can't bundle UnrealPak with this repo, but you can get it from [here](https://mega.nz/file/BY0gUIqI#rYaUGom59yFDLNGtwai1W_QSeLZDIEd3qFbeApJ5f3Q) (link courtesy of the Bloodstained discord). More instructions on where to place this coming later.
+We can't bundle UnrealPak with this repo, but you can get it from [here](https://mega.nz/file/BY0gUIqI#rYaUGom59yFDLNGtwai1W_QSeLZDIEd3qFbeApJ5f3Q) (link courtesy of the Bloodstained discord). 
+
+Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (the directory may have to be created). The final folder structure should be `build/tools/UnrealPak` with the `.exe` and `.bat` files in that folder.
 
 ## Future Features
 
 * Parts working
 * Shinju working
-* Specify different multipliers for individual creatures (TODO: come up with a sane naming scheme that uniquely identifies each creature/level combo)
 * Lucre multiplier
 * Item drop rate multiplier
 * Item shop randomizer (w/ seeds)
@@ -76,6 +77,10 @@ We can't bundle UnrealPak with this repo, but you can get it from [here](https:/
 
 ## Version History
 
-- Version 0.3 Update
+- Version 0.4
+   - Rewrite to JS.
+   - Support config files.
+
+- Version 0.3
    - pars.py files are still horribly done and need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
    - At some point it'd be nice to store all of the class instance stuff as data in a json file instead of copy pasting them all onto the main ene_clas.py script.
