@@ -81,7 +81,8 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 
 - Version 0.4
    - Rewrite to JS.
-   - Support config files.
+   - Support config files, CLI arguments.
+   - Update build process to output a pak file w/ the associated config.
 
 - Version 0.3
    - pars.py files are still horribly done and need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
