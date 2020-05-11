@@ -33,6 +33,7 @@ export class PakFileEditor {
   public editHexForEnemy(enemy: Enemy): void {
 
     const fileKey = path.basename(enemy.uexpFilePath);
+    console.log(enemy.uexpFilePath)
 
     // check if we have this file in cache already
     let file: Buffer = this.fileCache[fileKey];
