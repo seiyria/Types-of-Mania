@@ -5,6 +5,11 @@ A difficulty modifier tool for Trials of Mana.
 ## Features
 
 * Allows for changing of the following stats via a multiplier: hp, atk, def, agi, int, spr, luck, offMag, defMag, exp.
+* Allows for global changes, or specific boss, monster, shinju, or part enemies.
+* Allows for specific enemy changes for fine-tuning specific enemies.
+* Has a very simple build process.
+* Supports a config file for easy sharing of configs.
+* Supports CLI arguments for easy copy/paste setups.
 
 ## Usage
 
