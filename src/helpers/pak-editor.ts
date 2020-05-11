@@ -85,42 +85,34 @@ export class PakFileEditor {
 
     // make sure the two build tools exist
     const doesExeExist = await fs.pathExists(`build/tools/UnrealPak/UnrealPak.exe`);
-    const doesBatExist = await fs.pathExists(`build/tools/UnrealPak/UnrealPak-Without-Compression.bat`);
 
     if(!doesExeExist) {
       console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed in build/tools/UnrealPak`);
-    }
 
-    if(!doesBatExist) {
-      console.error(`Error: Could not find UnrealPak-Without-Compression.bat. Please make sure it is placed in build/tools/UnrealPak`);
+      return;
     }
-
-    if(!doesExeExist || !doesBatExist) return;
 
     const buildRoot = `build/${packageFile.version}`;
+    const fullBuildRoot = path.resolve(buildRoot);
 
     const fileRoot = `${buildRoot}/tmp`;
-    const fullRoot = path.resolve(fileRoot);
     const fullExeRoot = path.resolve('build/tools/UnrealPak/UnrealPak.exe');
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
-    fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${path.resolve(`${buildRoot}/tmp/*.*`)}" "../..\\..\\*.*"`)
-    const out = childProcess.execSync(`"${fullExeRoot}" "${path.resolve(buildRoot)}\\Trials of Mana_P.pak" -Create=${path.resolve(buildRoot)}/filelist.txt`);
-
-    console.log(out.toString())
+    fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${fullBuildRoot}\\tmp\\*.*" "..\\..\\..\\*.*"`);
+    childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\Trials of Mana_P.pak" -Create=${fullBuildRoot}\\filelist.txt`);
 
     // clean up files
     console.log('Cleaning up...');
 
     // we have to wait a bit because ???
     setTimeout(() => {
-      fs.removeSync(`${buildRoot}/Trials of Mana_P.pak`);
       // fs.moveSync(`${buildRoot}/tmp.pak`, `${buildRoot}/Trials of Mana_P.pak`)
 
       fs.removeSync('Engine');
-      // fs.removeSync('build/tools/UnrealPak/filelist.txt');
-      // fs.removeSync(`build/${packageFile.version}/tmp`);
+      fs.removeSync(`${fullBuildRoot}\\filelist.txt`);
+      fs.removeSync(`build/${packageFile.version}/tmp`);
 
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
