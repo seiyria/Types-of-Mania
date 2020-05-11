@@ -1,6 +1,6 @@
 # Trials of Mania
 
-A difficulty modifier tool for Trials of Mana.
+A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://github.com/pyroll/Trials-of-Mania---Difficulty-Mod) for the original Python scripts that got this going.
 
 ## Features
 
@@ -91,7 +91,3 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
    - Rewrite to JS.
    - Support config files, CLI arguments.
    - Update build process to output a pak file w/ the associated config.
-
-- Version 0.3
-   - pars.py files are still horribly done and need to be reworked, might wait until after I add the rest of the data files to the mod in the next update.
-   - At some point it'd be nice to store all of the class instance stuff as data in a json file instead of copy pasting them all onto the main ene_clas.py script.
