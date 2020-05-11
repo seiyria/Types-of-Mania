@@ -75,6 +75,20 @@ export class ConfigLoader {
       console.error(`Invalid config setting: ${key}. Remove it from your config and try again.`);
       process.exit(1);
     });
+
+    const validateStatBlock = (statBlock: string) => {
+      const validKeys = Object.values(Stat);
+      Object.keys(this.config[statBlock as keyof ModConfig]).forEach(statKey => {
+        if(validKeys.includes(statKey as Stat)) return;
+
+        console.error(`Invalid config setting: ${statBlock}.${statKey}. Remove it from your config and try again.`);
+        process.exit(1);
+      });
+    };
+
+    ['global', 'boss', 'monster', 'shinju', 'part'].forEach(parent => {
+      validateStatBlock(parent);
+    });
   }
 
   public getStats(enemy: Enemy): Record<Stat, number> {

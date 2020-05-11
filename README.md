@@ -76,6 +76,7 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 * Parts working
 * Shinju working
 * Lucre multiplier
+* Edit healing item potency
 * Item drop rate multiplier
 * Item shop randomizer (w/ seeds)
 * Item randomization (w/ seeds)
