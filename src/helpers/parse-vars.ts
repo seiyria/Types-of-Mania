@@ -1,7 +1,7 @@
 
 import * as path from 'path';
 
-import { Enemy } from '../models';
+import { Enemy, EnemyType } from '../models';
 
 export interface IVarParserOptions {
 
@@ -16,6 +16,9 @@ export interface IVarParserOptions {
 
   // the file path for the corresponding json file
   jsonFilePath: string;
+
+  // the enemy type matching this parser
+  type: EnemyType;
 }
 
 export class EnemyParser {
@@ -49,6 +52,7 @@ export class EnemyParser {
         return new Enemy({
           uexpFilePath: this.opts.uexpFilePath,
           name: fullName,
+          type: this.opts.type,
           hpOffset: this.opts.offsetStart + (enemyIndex * this.opts.offsetIteratorIncrementBy)
         });
       })

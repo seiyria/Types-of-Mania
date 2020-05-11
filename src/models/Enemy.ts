@@ -1,4 +1,11 @@
 
+export enum EnemyType {
+  Boss = 'boss',
+  Monster = 'monster',
+  Shinju = 'shinju',
+  Part = 'part'
+}
+
 export enum Stat {
   HP = 'hp',
   ATK = 'atk',
@@ -24,9 +31,20 @@ export interface IEnemyOpts {
 
   // the hp offset for the enemy
   hpOffset: number;
+
+  // the type of enemy
+  type: EnemyType
 }
 
 export class Enemy {
+
+  public get name(): string {
+    return this.opts.name;
+  }
+
+  public get type(): EnemyType {
+    return this.opts.type;
+  }
 
   public get uexpFilePath(): string {
     return this.opts.uexpFilePath;

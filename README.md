@@ -10,11 +10,20 @@ A difficulty modifier tool for Trials of Mana.
 
 ### CLI
 
-There will be a CLI.
+The CLI allows you to specify custom overrides without messing with `config.yml`. It is very flexible, and lets you specify any key/subkey as follows:
+
+* `--seed <num>` will set the RNG seed for randomizing.
+* `--global.<stat> <num>` will set the global `stat` to `num` 
+* `--boss.<stat> <num>` will set the boss `stat` to `num` 
+* `--monster.<stat> <num>` will set the monster `stat` to `num` 
+* `--shinju.<stat> <num>` will set the shinju `stat` to `num` 
+* `--part.<stat> <num>` will set the part `stat` to `num` 
+
+The valid `stat` keys you can set can be found in `config.yml`.
 
 ### Finished Pak Files
 
-Copy the built pak file from the `TrialsOfMania` folder into a `~mod` folder
+Copy the built pak file from the `TrialsOfMania` folder into a `~mod` folder.
 
 ## Development
 
@@ -26,7 +35,7 @@ You need to install NodeJS. The latest version is always recommended.
 
 ### Commands
 
-* `npm start` (does stuff)
+* `npm start` (runs the configurator with default config)
 
 ### Building
 
@@ -42,6 +51,8 @@ We can't bundle UnrealPak with this repo, but you can get it from [here](https:/
 
 ## Future Features
 
+* Parts working
+* Shinju working
 * Specify different multipliers for random creatures compared to bosses
 * Specify different multipliers for individual creatures
 * Item randomization (w/ seeds)

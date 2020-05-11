@@ -2,6 +2,7 @@
 import * as fs from 'fs-extra';
 
 import { Enemy, Stat } from '../models';
+import { ConfigLoader } from './config-loader';
 
 /*
 finDirPath_BP = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\BP\\Enemy\\Zako\\Data\\'
@@ -12,6 +13,7 @@ finDirPath_parts = 'Custom_TofMania - 0.3_P\\Trials of Mana\\Content\\Game00\\Da
 */
 
 export interface IPakFileEditorOpts {
+  configLoader: ConfigLoader
 }
 
 export class PakFileEditor {
@@ -29,10 +31,13 @@ export class PakFileEditor {
       this.fileCache[enemy.uexpFilePath] = file;
     }
 
+    // get the multipliers for this specific enemy
+    const enemyMultipliers = this.opts.configLoader.getStats(enemy);
+
     // iterate through all the offsets and apply the multipliers
     Object.keys(enemy.offsets).forEach(offsetStat => {
       const statValue = file.readInt32LE(enemy.offsets[offsetStat as Stat]);
-      let newStatValue = Math.floor(statValue * 100);
+      let newStatValue = Math.floor(statValue * enemyMultipliers[offsetStat as Stat]);
 
       if(newStatValue > 2147483647) newStatValue = 2147483647;
 
@@ -43,7 +48,7 @@ export class PakFileEditor {
   // flush all files to the build directory
   public flush() {
     Object.keys(this.fileCache).forEach(fileName => {
-      console.log(fileName);
+      console.log('flush', fileName);
     });
   }
 

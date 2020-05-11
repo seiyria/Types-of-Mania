@@ -23,7 +23,7 @@ monster:
 shinju:
   <<: *global
 
-parts:
+part:
   <<: *global
 
 specific: {}
