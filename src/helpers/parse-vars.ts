@@ -41,17 +41,14 @@ export class EnemyParser {
 
       // turn all enemies into Enemy objects
       .map((enemyData: any, enemyIndex: number) => {
-        const internalId = enemyData.Key;
         const name = enemyData.Value.Name_29_7A62483740A6D0DF1414CB9963F7CF87;
-
-        const fullName = `${name} (${internalId})`;
 
         // skip dummy enemies
         if(name === 'dummy') return;
 
         return new Enemy({
           uexpFilePath: this.opts.uexpFilePath,
-          name: fullName,
+          name,
           type: this.opts.type,
           hpOffset: this.opts.offsetStart + (enemyIndex * this.opts.offsetIteratorIncrementBy)
         });

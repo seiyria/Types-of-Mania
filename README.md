@@ -21,6 +21,18 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 
 The valid `stat` keys you can set can be found in `config.yml`.
 
+### config.yml
+
+The `config/config.yml` file can be modified to add any of the keys you would normally pass via the CLI. It also features the ability to single out specific monsters for scaling. For example, you could do this:
+
+```yml
+specific:
+   MAGICIAN_LV16:
+      exp: 10
+```
+
+This would make monsters that are `MAGICIAN_LV16` give 10x their normal exp. The name for the creature comes out of the JSON files in the `gamedata` folder.
+
 ### Finished Pak Files
 
 Copy the built pak file from the `TrialsOfMania` folder into a `~mod` folder.
