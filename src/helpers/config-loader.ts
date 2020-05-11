@@ -81,7 +81,7 @@ export class ConfigLoader {
       process.exit(1);
     });
 
-    const validateStatBlock = (statBlock: string) => {
+    const validateStatBlock = (statBlock: string): void => {
       const validKeys = Object.values(Stat);
       Object.keys(this.config[statBlock as keyof ModConfig]).forEach(statKey => {
         if(validKeys.includes(statKey as Stat)) return;
