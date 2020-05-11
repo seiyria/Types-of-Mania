@@ -110,7 +110,7 @@ export class PakFileEditor {
 
     // we have to wait a bit because ???
     setTimeout(() => {
-      fs.copyFileSync(`build/${packageFile.version}/tmp/Trials of Mana.pak`, `build/${packageFile.version}/Trials of Mana.pak`)
+      fs.copyFileSync(`build/${packageFile.version}/tmp/Trials of Mana.pak`, `build/${packageFile.version}/Trials of Mana_P.pak`)
 
       fs.removeSync('Engine');
       fs.removeSync('build/tools/UnrealPak/filelist.txt');
@@ -120,7 +120,7 @@ export class PakFileEditor {
     }, 100);
 
     // we're done!
-    console.log(`Done! Your built pak file is located at build/${packageFile.version}/Trials of Mana.pak`);
+    console.log(`Done! Your built pak file is located at build/${packageFile.version}/Trials of Mana_P.pak`);
     console.log('A copy of the config file that created this build has been included for reference.');
   }
 
