@@ -131,3 +131,8 @@ This will apply to all creatures level 10-19, and make their HP 300%.
 -------------------
 
 The GitHub repo has more information: https://github.com/seiyria/Types-of-Mania as well as more frequent releases.
+
+# Discord
+---------
+
+Join the Trials of Mana modding Discord to share your feedback: https://discord.gg/MgDh4QW
