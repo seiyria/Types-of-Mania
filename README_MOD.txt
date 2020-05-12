@@ -1,7 +1,8 @@
 # Types of Mania
 ----------------
 
-This mod is based off of rollcall's excellent rebalance mod. It adds more features on top of the base mod.
+This mod is based off of rollcall's excellent rebalance mod. It offers the ability to add a multiplier to modify 
+nearly any enemy stat in the game.
 
 # Features
 ----------
