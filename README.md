@@ -99,6 +99,7 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 * Monster randomization (w/ seeds)
 * Monster ability randomization (w/ seeds)
 * Item-specific drop rate multiplier boosts
+* Notation to set value instead of a multiplier (`hp: @100` possibly?)
 * Tests
 
 If you or someone you know can help get the Bloodstained Serializer working in reverse to turn these `json` files back into `uexp` files, that would be immensely helpful.
