@@ -45,12 +45,12 @@ export class ConfigLoader {
   }
 
   private init(): void {
+
+    const configLocation = this.opts.configLocation || 'config/config.yml';
+
     try {
-
-      const configLocation = this.opts.configLocation || path.join(__dirname, '..', '..', 'config', 'config.yml');
-
       // load config.yml
-      const config = YAML.safeLoad(fs.readFileSync(configLocation).toString());
+      const config = YAML.safeLoad(fs.readFileSync(path.resolve(configLocation)).toString());
 
       // if you specify override.global (via cli), copy those values to the other sections
       if(this.opts.overrides) {
@@ -65,7 +65,7 @@ export class ConfigLoader {
       // merge the two configs into the finalized config
       this.config = deepmerge(config, this.opts.overrides || {});
     } catch(e) {
-      console.error(`Could not find config.yml at config/config.yml. Please place one there or specify --config.`);
+      console.error(`Could not find config.yml at ${configLocation}. Please place one there or specify --config.`);
       process.exit(1);
     }
 

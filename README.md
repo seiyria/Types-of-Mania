@@ -20,7 +20,7 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 * `--version` will just print the current version of the app.
 * `--dumpData` will dump monster names and item names.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
-* `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `build/tools/UnrealPak/UnrealPak.exe`
+* `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `buildtools/UnrealPak.exe`
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
 * `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier` 
@@ -86,7 +86,7 @@ The JSON files included in this repo are built from a [Serializer from this proj
 
 We can't bundle UnrealPak with this repo, but you can get it from [here](https://mega.nz/file/BY0gUIqI#rYaUGom59yFDLNGtwai1W_QSeLZDIEd3qFbeApJ5f3Q) (link courtesy of the Bloodstained discord). 
 
-Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (the directory may have to be created). The final folder structure should be `build/tools/UnrealPak` with the `.exe` and `.bat` files in that folder.
+Unzip the file and grab `Tools/UnrealPak/UnrealPak.exe` folder and put it in `buildtools` (the directory may have to be created). The final folder structure should be `buildtools/UnrealPak.exe`.
 
 ## Future Features
 

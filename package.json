@@ -7,14 +7,17 @@
   "scripts": {
     "start": "ts-node src/cli/cli.ts",
     "lint": "eslint . --ext .ts",
-    "build:js": "tsc --outDir dist && cpy --parents gamefiles/** dist",
-    "build:cli": "pkg dist/package.json --out-path bin",
-    "build:all": "npm run build:js && npm run build:cli && cpy --parents ./config/config.yml ./gamefiles/ bin",
-    "package:win": "cd bin && bestzip ./windows.zip config/config.yml gamefiles types-of-mania-win.exe",
-    "package:osx": "cd bin && bestzip ./osx.zip config/config.yml gamefiles types-of-mania-macos",
-    "package:linux": "cd bin && bestzip ./linux.zip config/config.yml gamefiles types-of-mania-linux",
+    "build:js": "tsc --outDir build/cli && cpy --parents gamefiles/** build/cli",
+    "build:cli": "pkg build/cli/package.json --out-path build/bin",
+    "build:all": "npm run build:js && npm run build:cli && cpy --parents ./config/config.yml ./gamefiles/ build/bin",
+    "package:win": "cd build/bin && bestzip ./windows.zip config/config.yml gamefiles types-of-mania-win.exe",
+    "package:osx": "cd build/bin && bestzip ./osx.zip config/config.yml gamefiles types-of-mania-macos",
+    "package:linux": "cd build/bin && bestzip ./linux.zip config/config.yml gamefiles types-of-mania-linux",
     "package:all": "npm run package:win && npm run package:osx && npm run package:linux",
-    "release:all": "npm run build:all && npm run package:all",
+    "release:all": "npm run clean && npm run build:all && npm run package:all",
+    "package:nexus": "cd build/bin && bestzip ./nexus.zip config/config.yml ../../README_MOD.txt gamefiles types-of-mania-win.exe TypesOfMania_P.pak",
+    "release:nexus": "npm run clean && npm run build:all && npm run start && cpy ./build/**/*.pak build/bin && npm run package:nexus",
+    "clean": "rimraf build",
     "test": "npm run lint"
   },
   "engines": {
@@ -51,7 +54,8 @@
     "bestzip": "^2.1.5",
     "cpy-cli": "^3.1.1",
     "eslint": "7.0.0",
-    "pkg": "^4.4.8"
+    "pkg": "^4.4.8",
+    "rimraf": "3.0.2"
   },
   "dependencies": {
     "deepmerge": "4.2.2",

@@ -118,6 +118,7 @@ dist
 # custom ignores
 .vscode
 build
+buildtools
 Engine
 *.js
 bin

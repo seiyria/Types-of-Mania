@@ -78,7 +78,7 @@ export class PakFileEditor {
   public async flush(): Promise<void> {
 
     // the root build directory
-    const fileRoot = `build/${packageFile.version}`;
+    const fileRoot = `build/pak/${packageFile.version}`;
 
     // clear out old temporary files
     fs.removeSync(`${fileRoot}/tmp`);
@@ -96,18 +96,22 @@ export class PakFileEditor {
   // pack the files using UnrealPak
   public async pack(): Promise<void> {
 
-    const unrealPakLocation = this.opts.unrealPakLocation || `build/tools/UnrealPak/UnrealPak.exe`
+    let unrealPakLocation = this.opts.unrealPakLocation || `buildtools/UnrealPak.exe`
 
     // make sure the two build tools exist
-    const doesExeExist = await fs.pathExists(unrealPakLocation);
+    const doesExeExist = fs.pathExistsSync(unrealPakLocation);
+    const doesBaseExist = fs.pathExistsSync('UnrealPak.exe');
 
-    if(!doesExeExist) {
-      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed at build/tools/UnrealPak/UnrealPak.exe or specify --unrealPak`);
-
+    if(!doesExeExist && !doesBaseExist) {
+      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed alongside the exe or at buildtools/UnrealPak.exe or specify --unrealPak`);
       return;
     }
 
-    const buildRoot = `build/${packageFile.version}`;
+    if(doesBaseExist) {
+      unrealPakLocation = 'UnrealPak.exe';
+    }
+
+    const buildRoot = `build/pak/${packageFile.version}`;
     const fullBuildRoot = path.resolve(buildRoot);
 
     const fullExeRoot = path.resolve(unrealPakLocation);
@@ -115,7 +119,7 @@ export class PakFileEditor {
     // bundle all the files using UnrealPak
     console.log('Bundling...');
     fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${fullBuildRoot}\\tmp\\*.*" "..\\..\\..\\*.*"`);
-    childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\TypesOfMania_P.pak" -Create=${fullBuildRoot}\\filelist.txt`);
+    childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\TypesOfMania_P.pak" -Create="${fullBuildRoot}\\filelist.txt"`);
 
     // clean up files
     console.log('Cleaning up...');
