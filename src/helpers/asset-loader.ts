@@ -37,6 +37,7 @@ export class AssetLoader {
   public flush(): void {
     fs.outputJsonSync(`build/data/enemynames.json`, this.enemyNames, { spaces: 4 });
     fs.outputJsonSync(`build/data/itemnames.json`, this.itemNames, { spaces: 4 });
+    console.log('Created build/data/itemnames.json and build/data/enemynames.json');
   }
 
 }

@@ -17,7 +17,6 @@ if(argv.version) {
 if(argv.dumpData) {
   const assetLoader = new AssetLoader();
   assetLoader.flush();
-  console.log('Created build/data/itemnames.json and build/data/enemynames.json');
   process.exit(0);
 }
 
