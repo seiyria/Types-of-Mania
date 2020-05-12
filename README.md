@@ -4,7 +4,7 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 
 ## Features
 
-* Allows for changing of the following stats via a multiplier: hp, atk, def, agi, int, spr, luck, offMag, defMag, exp.
+* Allows for changing of the following stats via a multiplier: hp, mp, atk, def, agi, int, spr, luck, offMag, defMag, exp, lucre, drop1, drop2, drop3.
 * Allows for global changes, or specific boss, monster, shinju, or part enemies.
 * Allows for specific enemy changes for fine-tuning specific enemies using specific creature names or level ranges.
 * Has a very simple build process, which allows for automatic installation to your mod directory.
@@ -91,19 +91,16 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 ## Future Features
 
 * Verbose stat edit logs.
-* Parts working
-* Lucre multiplier
+* Part-type enemies working (they might already???)
 * Edit healing item potency
-* Item drop rate multiplier
 * Item shop randomizer (w/ seeds)
 * Item randomization (w/ seeds)
 * Item drop randomization (w/ seeds)
 * Monster randomization (w/ seeds)
 * Monster ability randomization (w/ seeds)
 
-## Version History
+If you or someone you know can help get the Bloodstained Serializer working in reverse to turn these `json` files back into `uexp` files, that would be immensely helpful.
 
-- Version 0.4
-   - Rewrite to JS.
-   - Support config files, CLI arguments.
-   - Update build process to output a pak file w/ the associated config.
+## Warning
+
+This tool modifies your games data, and while the mod can be reversed, if it does damage to your save file, this tool is not responsible for that.

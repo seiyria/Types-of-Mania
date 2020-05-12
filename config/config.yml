@@ -6,15 +6,35 @@ seed: 0
 installTo: C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana
 
 global: &global
+
+  # core stats
   hp: 2
+  mp: 1
   atk: 1.5
   def: 1
   agi: 1.2
   int: 1.5
   spr: 1.5
+
+  # ??? (please help me here)
   defMag: 1
   offMag: 1
+
+  # drop-related stats
   exp: 1
+  lucre: 1
+
+  # item drop rates (monsters can only drop up to 3 items. #1 is always more common than #2, and so on)
+  drop1: 1
+  drop2: 1
+  drop3: 1
+
+  # spp related rates (the amount of skill power dropped when certain conditions happen)
+  # if someone could tell me the specific cases these all trigger, that would be helpful!
+  dropSpp: 1
+  knockoutDropSpp: 1
+  lAttackDropSpp: 1
+  chargeAttackDropSpp: 1
 
 boss:
   <<: *global
@@ -28,12 +48,4 @@ shinju:
 part:
   <<: *global
 
-specific:
-  lv[0-9][^0-9]:
-    hp: 2
-  
-  lv[1][0-9]:
-    hp: 2
-  
-  ARMORNIGHT_Lv16:
-    hp: 2
+specific: {}

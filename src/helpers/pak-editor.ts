@@ -54,6 +54,8 @@ export class PakFileEditor {
 
     // iterate through all the offsets and apply the multipliers
     Object.keys(enemy.offsets).forEach(offsetStat => {
+
+      // get the value and multiply it by the multiplier
       const statValue = file.readInt32LE(enemy.offsets[offsetStat as Stat]);
       let newStatValue = Math.floor(statValue * enemyMultipliers[offsetStat as Stat]);
 
@@ -62,6 +64,11 @@ export class PakFileEditor {
 
       // safe-guard so we can't set HP to 0 (I imagine this works)
       if(offsetStat === Stat.HP && newStatValue <= 0) newStatValue = 1;
+
+      // drop rates should _probably_ be 0-100
+      if(offsetStat.includes('drop')) {
+        newStatValue = Math.max(0, Math.min(100, newStatValue));
+      }
 
       file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
     });
