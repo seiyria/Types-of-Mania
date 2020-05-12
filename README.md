@@ -20,6 +20,7 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 * `--version` will just print the current version of the app.
 * `--dumpData` will dump monster names and item names.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
+* `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `build/tools/UnrealPak/UnrealPak.exe`
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
 * `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier` 

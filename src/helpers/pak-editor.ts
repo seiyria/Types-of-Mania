@@ -20,6 +20,7 @@ const FILE_LOCATIONS: Record<EnemyType, string> = {
 
 export interface PakFileEditorOpts {
   configLoader: ConfigLoader;
+  unrealPakLocation?: string;
 }
 
 export class PakFileEditor {
@@ -87,14 +88,14 @@ export class PakFileEditor {
 
   // pack the files using UnrealPak
   public async pack(): Promise<void> {
-    // make sure the folder exists
-    await fs.ensureDir(`build/tools/UnrealPak`);
+
+    const unrealPakLocation = this.opts.unrealPakLocation || `build/tools/UnrealPak/UnrealPak.exe`
 
     // make sure the two build tools exist
-    const doesExeExist = await fs.pathExists(`build/tools/UnrealPak/UnrealPak.exe`);
+    const doesExeExist = await fs.pathExists(unrealPakLocation);
 
     if(!doesExeExist) {
-      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed in build/tools/UnrealPak`);
+      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed in build/tools/UnrealPak/UnrealPak.exe or specify --unrealPak`);
 
       return;
     }
@@ -102,7 +103,7 @@ export class PakFileEditor {
     const buildRoot = `build/${packageFile.version}`;
     const fullBuildRoot = path.resolve(buildRoot);
 
-    const fullExeRoot = path.resolve('build/tools/UnrealPak/UnrealPak.exe');
+    const fullExeRoot = path.resolve(unrealPakLocation);
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');

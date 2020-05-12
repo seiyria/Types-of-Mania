@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .ts",
     "build:js": "tsc --outDir dist && cpy --parents gamefiles/** dist",
     "build:cli": "pkg dist/package.json --out-path bin",
-    "build:all": "npm run build:js && npm run build:cli",
+    "build:all": "npm run build:js && npm run build:cli && cpy ./config/config.yml bin",
     "package:win": "cd bin && bestzip ./windows.zip ./config.yml ./types-of-mania-win.exe",
     "package:osx": "cd bin && bestzip ./osx.zip ./config.yml ./types-of-mania-macos",
     "package:linux": "cd bin && bestzip ./linux.zip ./config.yml ./types-of-mania-linux",

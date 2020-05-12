@@ -26,11 +26,11 @@ export class AssetLoader {
       )
       .filter(f => f.includes('.json') && !f.includes('ItemDataBase'))
       .map(f => `${__dirname}/../../gamefiles/${f}`)
-      .map(f => require(f))
+      .map(f => fs.readJSONSync(f))
       .flat()
       .map(f => f.Value);
 
-    this.items = require(`${__dirname}/../../gamefiles/items/ItemDataBase.json`)
+    this.items = fs.readJSONSync(`${__dirname}/../../gamefiles/items/ItemDataBase.json`)
       .map((f: any) => ({ Name: f.Key, ...f.Value.ItemData_3_CF780DE6460B8A55C91157B702A6BFA1 }));
   }
 

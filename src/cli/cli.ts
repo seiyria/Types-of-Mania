@@ -20,11 +20,11 @@ if(argv.dumpData) {
   process.exit(0);
 }
 
-const { config, ...totalConfig } = argv;
+const { config, unrealPak, ...totalConfig } = argv;
 
 // set up the config / pak file editor
 const configLoader = new ConfigLoader({ overrides: totalConfig, configLocation: config });
-const editor = new PakFileEditor({ configLoader });
+const editor = new PakFileEditor({ configLoader, unrealPakLocation: unrealPak });
 
 // get all of the enemies
 const bossEnemies = BossParsers.map(x => x.parse()).flat();
