@@ -5,6 +5,7 @@ This mod is based off of rollcall's excellent rebalance mod. It adds more featur
 
 # Features
 ----------
+
 * Supports a config file (config/config.yml) which can be edited/shared to make creating custom builds more easily
 * Supports more stats (full listing below)
 * Supports specific enemy overrides
