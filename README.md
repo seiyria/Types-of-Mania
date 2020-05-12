@@ -20,14 +20,14 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 * `--version` will just print the current version of the app.
 * `--dumpData` will dump monster names and item names.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
-* `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `buildtools/UnrealPak.exe`
+* `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `buildtools/UnrealPak.exe` or `UnrealPak.exe`.
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
-* `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier` 
-* `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier` 
-* `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier` 
-* `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier` 
-* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier` 
+* `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier`.
+* `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier`.
+* `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier`.
+* `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier`.
+* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier`.
 
 The valid `stat` keys you can set can be found in `config.yml`.
 
@@ -39,8 +39,8 @@ The `config/config.yml` file can be modified to add any of the keys you would no
 
 ```yml
 specific:
-   MAGICIAN_LV16:
-      exp: 10
+  MAGICIAN_LV16:
+    exp: 10
 ```
 
 This would make monsters that are `MAGICIAN_LV16` give 10x their normal exp. The name for the creature comes out of the JSON files in the `gamedata` folder.
