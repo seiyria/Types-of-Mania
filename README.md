@@ -59,7 +59,7 @@ This uses the enhanced feature for specifics that allows you to use regex to fil
 
 ### Finished Pak Files
 
-Copy the built `Trials of Mana.pak` file from the `build` folder into the `Trials of Mana/Content/Paks/~mod` folder. If the `~mod` folder does not already exist, you'll have to make it.
+Copy the built `TypesOfMania_P.pak` file from the `build` folder into the `Trials of Mana/Content/Paks/~mod` folder. If the `~mod` folder does not already exist, you'll have to make it. Alternatively, to do this automatically, you can use the `--installTo` option.
 
 ## Development
 
