@@ -96,17 +96,28 @@ export class ConfigLoader {
     });
   }
 
-  public getStats(enemy: Enemy): Record<Stat, number> {
+  public getStatMultipliers(enemy: Enemy): Record<Stat, number> {
 
     // get the type of enemy and the specific name overrides if possible
     const type = this.config[enemy.type] || {};
-    const specific = this.config.specific[enemy.name] || {};
 
     const stats: any = {};
 
-    // take the stats in the priority order: specific name, type, ... if none, multiply by 1
+    // take the stats in the priority order: type, ... if none, multiply by 1
     Object.values(Stat).forEach(stat => {
-      stats[stat as Stat] = specific[stat] || type[stat] || 1;
+      stats[stat as Stat] = type[stat] || 1;
+
+      // then we check each specific key against the enemy name to see if we should apply anything further
+      Object.keys(this.config.specific).forEach(specificKey => {
+
+        // we do a case insensitive match on the regex first
+        if(!enemy.name.match(new RegExp(specificKey, 'i'))) return;
+
+        // then we make sure there's actually a value there
+        if(!this.config.specific[specificKey][stat]) return;
+
+        stats[stat as Stat] = this.config.specific[specificKey][stat];
+      });
     });
 
     return stats as Record<Stat, number>;

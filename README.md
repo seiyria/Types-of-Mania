@@ -6,7 +6,7 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 
 * Allows for changing of the following stats via a multiplier: hp, atk, def, agi, int, spr, luck, offMag, defMag, exp.
 * Allows for global changes, or specific boss, monster, shinju, or part enemies.
-* Allows for specific enemy changes for fine-tuning specific enemies.
+* Allows for specific enemy changes for fine-tuning specific enemies using specific creature names or level ranges.
 * Has a very simple build process, which allows for automatic installation to your mod directory.
 * Supports a config file for easy sharing of configs.
 * Supports CLI arguments for easy copy/paste setups.
@@ -43,6 +43,19 @@ specific:
 ```
 
 This would make monsters that are `MAGICIAN_LV16` give 10x their normal exp. The name for the creature comes out of the JSON files in the `gamedata` folder.
+
+You can also do this:
+
+```yml
+specific:
+  lv[0-9][^0-9]:
+    hp: 0.8
+  
+  lv[1][0-9]:
+    hp: 3
+```
+
+This uses the enhanced feature for specifics that allows you to use regex to filter out a creature name and apply stats - it's somewhat like a filter. In this case, this would set the HP value to creatures level 0-9 to 80% of their max, and creatures from level 10-19 to 3x their max HP. This can be used to better fine-tune the stats for different level ranges.
 
 ### Finished Pak Files
 

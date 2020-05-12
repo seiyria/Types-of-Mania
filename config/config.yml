@@ -28,4 +28,12 @@ shinju:
 part:
   <<: *global
 
-specific: {}
+specific:
+  lv[0-9][^0-9]:
+    hp: 2
+  
+  lv[1][0-9]:
+    hp: 2
+  
+  ARMORNIGHT_Lv16:
+    hp: 2

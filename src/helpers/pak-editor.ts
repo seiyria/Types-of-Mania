@@ -49,7 +49,7 @@ export class PakFileEditor {
     }
 
     // get the multipliers for this specific enemy
-    const enemyMultipliers = this.opts.configLoader.getStats(enemy);
+    const enemyMultipliers = this.opts.configLoader.getStatMultipliers(enemy);
 
     // iterate through all the offsets and apply the multipliers
     Object.keys(enemy.offsets).forEach(offsetStat => {
