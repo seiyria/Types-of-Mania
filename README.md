@@ -90,14 +90,16 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 
 ## Future Features
 
-* Verbose stat edit logs.
-* Part-type enemies working (they might already???)
+* Verbose stat edit logs
+* Part-type enemies working (they might already work???)
 * Edit healing item potency
 * Item shop randomizer (w/ seeds)
 * Item randomization (w/ seeds)
 * Item drop randomization (w/ seeds)
 * Monster randomization (w/ seeds)
 * Monster ability randomization (w/ seeds)
+* Item-specific drop rate multiplier boosts
+* Tests
 
 If you or someone you know can help get the Bloodstained Serializer working in reverse to turn these `json` files back into `uexp` files, that would be immensely helpful.
 

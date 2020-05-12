@@ -59,9 +59,6 @@ export class PakFileEditor {
       const statValue = file.readInt32LE(enemy.offsets[offsetStat as Stat]);
       let newStatValue = Math.floor(statValue * enemyMultipliers[offsetStat as Stat]);
 
-      // we can't exceed int max (2^32 - 1)
-      if(newStatValue > 2147483647) newStatValue = 2147483647;
-
       // safe-guard so we can't set HP to 0 (I imagine this works)
       if(offsetStat === Stat.HP && newStatValue <= 0) newStatValue = 1;
 
@@ -69,6 +66,9 @@ export class PakFileEditor {
       if(offsetStat.includes('drop')) {
         newStatValue = Math.max(0, Math.min(100, newStatValue));
       }
+
+      // we can't exceed int max (2^32 - 1) or int min
+      newStatValue = Math.max(-2147483648, Math.min(2147483647, newStatValue));
 
       file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
     });

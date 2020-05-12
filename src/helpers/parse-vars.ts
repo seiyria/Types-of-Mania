@@ -49,12 +49,16 @@ export class EnemyParser {
         // skip dummy enemies
         if(name === 'dummy') return;
 
+        // if a creature has a Lv property, we need to +29 our offset to account for the extra int
+        const hasLvOffset = enemyData.Value.Lv_26_062BFC31452C8B41AC944E9598501A4C;
+
         return new Enemy({
+          id: enemyData.Key,
           uexpFilePath: this.opts.uexpFilePath,
           name,
           buildFolder: this.opts.buildFolder,
           type: this.opts.type,
-          hpOffset: this.opts.offsetStart + (enemyIndex * this.opts.offsetIteratorIncrementBy)
+          hpOffset: this.opts.offsetStart + (hasLvOffset ? 29 : 0) + (enemyIndex * this.opts.offsetIteratorIncrementBy)
         });
       })
 

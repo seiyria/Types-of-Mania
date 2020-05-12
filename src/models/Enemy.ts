@@ -42,6 +42,9 @@ export enum Stat {
 
 export interface EnemyOpts {
 
+  // a unique(ish) id for this creature for comparing it in code
+  id: string;
+
   // the uexp file path for this enemy
   uexpFilePath: string;
 
@@ -59,6 +62,10 @@ export interface EnemyOpts {
 }
 
 export class Enemy {
+
+  public get id(): string {
+    return this.opts.id;
+  }
 
   public get name(): string {
     return this.opts.name;
@@ -92,7 +99,7 @@ export class Enemy {
       luck:                 this.opts.hpOffset + (      29 * 8),
       defMag:               this.opts.hpOffset + (      29 * 9),
       offMag:               this.opts.hpOffset + (      29 * 10),
-      
+
       exp:                  this.opts.hpOffset + (822),
       dropSpp:              this.opts.hpOffset + (822 + 29 * 1),
 
