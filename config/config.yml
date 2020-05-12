@@ -22,19 +22,19 @@ global: &global
 
   # drop-related stats
   exp: 1
-  lucre: 10
+  lucre: 1
 
   # item drop rates (monsters can only drop up to 3 items. #1 is always more common than #2, and so on)
-  drop1: 100
-  drop2: 100
-  drop3: 100
+  drop1: 1
+  drop2: 1
+  drop3: 1
 
   # spp related rates (the amount of skill power dropped when certain conditions happen)
   # if someone could tell me the specific cases these all trigger, that would be helpful!
-  dropSpp: 10
-  knockoutDropSpp: 10
-  lAttackDropSpp: 10
-  chargeAttackDropSpp: 10
+  dropSpp: 1
+  knockoutDropSpp: 1
+  lAttackDropSpp: 1
+  chargeAttackDropSpp: 1
 
 boss:
   <<: *global
