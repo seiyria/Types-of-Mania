@@ -76,6 +76,8 @@ You need to install NodeJS. The latest version is always recommended.
 
 ### Building
 
+* `npm run build:js` (only compiles the TS to JS)
+* `npm run build:cli` (only compiles the JS to a CLI package for all platforms)
 * `npm run release:all` (runs the configurator with default config and builds release files for all platforms)
 * `npm run release:nexus` (runs the configurator with default config and builds a zip for updating [the nexus mod](https://www.nexusmods.com/trialsofmana/mods/33/))
 
