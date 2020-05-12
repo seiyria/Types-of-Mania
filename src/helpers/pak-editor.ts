@@ -95,7 +95,7 @@ export class PakFileEditor {
     const doesExeExist = await fs.pathExists(unrealPakLocation);
 
     if(!doesExeExist) {
-      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed in build/tools/UnrealPak/UnrealPak.exe or specify --unrealPak`);
+      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed at build/tools/UnrealPak/UnrealPak.exe or specify --unrealPak`);
 
       return;
     }

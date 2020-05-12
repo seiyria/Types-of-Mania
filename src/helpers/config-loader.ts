@@ -65,7 +65,7 @@ export class ConfigLoader {
       // merge the two configs into the finalized config
       this.config = deepmerge(config, this.opts.overrides || {});
     } catch(e) {
-      console.error(`Could not find config.yml in config/. Please place one there or specify --config.`);
+      console.error(`Could not find config.yml at config/config.yml. Please place one there or specify --config.`);
       process.exit(1);
     }
 
