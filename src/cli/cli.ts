@@ -3,7 +3,7 @@
 import packageFile from '../../package.json';
 
 import { BossParsers, NormalEnemyParsers, ShinjuParsers } from '../parsers';
-import { ConfigLoader, PakFileEditor } from '../helpers';
+import { ConfigLoader, PakFileEditor, AssetLoader } from '../helpers';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const argv = require('minimist')(process.argv.slice(2));
@@ -11,6 +11,13 @@ delete argv._;
 
 if(argv.version) {
   console.log(`v${packageFile.version}`);
+  process.exit(0);
+}
+
+if(argv.dumpData) {
+  const assetLoader = new AssetLoader();
+  assetLoader.flush();
+  console.log('Created build/data/itemnames.json and build/data/enemynames.json');
   process.exit(0);
 }
 

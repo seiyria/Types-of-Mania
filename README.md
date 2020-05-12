@@ -18,6 +18,7 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 The CLI allows you to specify custom overrides without messing with `config.yml`. It is very flexible, and lets you specify any key/subkey as follows:
 
 * `--version` will just print the current version of the app.
+* `--dumpData` will dump monster names and item names.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
@@ -75,8 +76,6 @@ Unzip the file and grab `Tools/UnrealPak` folder and put it in `build/tools` (th
 
 ## Future Features
 
-* Generate monster list w/ stats alongside output for visibility/editing purposes.
-* Generate item list alongside output for visibility/editing purposes.
 * Verbose stat edit logs.
 * Parts working
 * Lucre multiplier
