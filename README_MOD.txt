@@ -29,7 +29,7 @@ Base Stats:
 
 Secondary Stats:
 
-* Exp -> 100%
+* Exp -> 80%
 * Lucre -> 100%
 * Drop Rate (Item 1) -> 100%
 * Drop Rate (Item 2) -> 100%

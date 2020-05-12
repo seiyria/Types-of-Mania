@@ -21,7 +21,7 @@ global: &global
   offMag: 1
 
   # drop-related stats
-  exp: 1
+  exp: 0.8
   lucre: 1
 
   # item drop rates (monsters can only drop up to 3 items. #1 is always more common than #2, and so on)
