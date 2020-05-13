@@ -45,8 +45,6 @@ export class ConfigLoader {
     this.init();
   }
 
-  // TODO: rename global to base, stop inserting <<*: global / base, only use value if not present
-  // validateConfig() to go through each key and set it to either itself or base.x
   private init(): void {
 
     const configLocation = this.opts.configLocation || 'config/config.yml';
