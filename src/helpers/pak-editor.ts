@@ -68,9 +68,6 @@ export class PakFileEditor {
       const statValue = file.readInt32LE(enemy.offsets[offsetStat as Stat]);
       let newStatValue = Math.floor(statValue * enemyMultipliers[offsetStat as Stat]);
 
-      // safe-guard so we can't set HP to 0 (I imagine this works)
-      if(offsetStat === Stat.HP && newStatValue <= 0) newStatValue = 1;
-
       // drop rates should _probably_ be 0-100
       if(offsetStat.includes('drop')) {
         newStatValue = Math.max(0, Math.min(100, newStatValue));
@@ -82,11 +79,6 @@ export class PakFileEditor {
       if(updateStats) {
         this.allEnemyStats[enemy.id][offsetStat as Stat] = newStatValue;
       }
-
-      /*
-      if(enemy.name === 'Doran') {
-        console.log(enemy.uexpFilePath, enemy.id, enemy.offsets[offsetStat as Stat], offsetStat, statValue, newStatValue)
-      }*/
 
       file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
     });
