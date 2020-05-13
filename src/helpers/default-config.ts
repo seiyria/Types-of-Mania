@@ -34,6 +34,7 @@ const defaultConfig: ModConfig = {
   boss: undefined,
   monster: undefined,
   shinju: undefined,
+  part: undefined,
   specific: {}
 };
 

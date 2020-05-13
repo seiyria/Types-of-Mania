@@ -49,5 +49,8 @@ monster:
 # shinju-specific overrides go here
 shinju:
 
+# part-specific overrides go here
+part:
+
 # specific monster overrides go here
 specific:

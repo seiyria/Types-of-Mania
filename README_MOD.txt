@@ -94,6 +94,8 @@ It is very flexible, and lets you specify any key/subkey as follows:
 
 * `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier`.
 
+* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier`.
+
 The valid `stat` keys you can set can be found in `config.yml`.
 
 # Custom config.yml Changes

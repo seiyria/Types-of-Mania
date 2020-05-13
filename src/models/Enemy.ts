@@ -8,7 +8,10 @@ export enum EnemyType {
   Monster = 'monster',
 
   // boss-part enemies
-  Shinju = 'shinju'
+  Shinju = 'shinju',
+
+  // part of boss enemies (usually)
+  Part = 'part'
 }
 
 export enum Stat {

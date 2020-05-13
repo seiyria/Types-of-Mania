@@ -29,6 +29,7 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 * `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier`.
 * `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier`.
 * `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier`.
+* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier`.
 
 The valid `stat` keys you can set can be found in `config.yml`.
 

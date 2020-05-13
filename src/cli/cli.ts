@@ -2,7 +2,7 @@
 
 import packageFile from '../../package.json';
 
-import { BossParsers, NormalEnemyParsers, ShinjuParsers } from '../parsers';
+import { BossParsers, NormalEnemyParsers, ShinjuParsers, PartParsers } from '../parsers';
 import { ConfigLoader, PakFileEditor, AssetLoader } from '../helpers';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -30,11 +30,13 @@ const editor = new PakFileEditor({ configLoader, unrealPakLocation: unrealPak, d
 const bossEnemies = BossParsers.map(x => x.parse()).flat();
 const normalEnemies = NormalEnemyParsers.map(x => x.parse()).flat();
 const shinjuEnemies = ShinjuParsers.map(x => x.parse()).flat();
+const partEnemies = PartParsers.map(x => x.parse()).flat();
 
 // edit their hex files (in memory)
 bossEnemies.forEach(e => editor.editHexForEnemy(e));
 normalEnemies.forEach(e => editor.editHexForEnemy(e));
 shinjuEnemies.forEach(e => editor.editHexForEnemy(e));
+partEnemies.forEach(e => editor.editHexForEnemy(e));
 
 // flush the uexp files to disk
 editor.flush();

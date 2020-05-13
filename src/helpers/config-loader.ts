@@ -18,6 +18,7 @@ export interface ModConfig {
   boss?: Partial<Record<Stat, number>>;
   monster?: Partial<Record<Stat, number>>;
   shinju?: Partial<Record<Stat, number>>;
+  part?: Partial<Record<Stat, number>>;
 
   specific: Record<string, Record<Stat, number>>;
 }
@@ -37,7 +38,7 @@ export class ConfigLoader {
   private config!: ModConfig;
   private validKeys = [
     'version', 'seed', 'installTo',
-    'base', 'boss', 'monster', 'shinju', 'specific'
+    'base', 'boss', 'monster', 'shinju', 'part', 'specific'
   ];
   
   constructor(private opts: ConfigLoaderOpts) {
@@ -75,7 +76,7 @@ export class ConfigLoader {
 
     // apply the base to all other aspects
     (Object.keys(config!.base || {}) as Array<Stat>).forEach(baseStatKey => {
-      (['boss', 'monster', 'shinju'] as Array<'boss'|'monster'|'shinju'>).forEach(masterKey => {   
+      (['boss', 'monster', 'shinju', 'part'] as Array<'boss'|'monster'|'shinju'|'part'>).forEach(masterKey => {   
         config[masterKey] = config[masterKey] || {};
         
         if(config[masterKey]![baseStatKey]) return;
@@ -114,8 +115,8 @@ export class ConfigLoader {
     };
 
     // validate top level stat blocks
-    ['base', 'boss', 'monster', 'shinju'].forEach(parentKey => {
-      validateStatBlock(this.config[parentKey as 'base'|'boss'|'monster'|'shinju'] as Record<Stat, number>);
+    ['base', 'boss', 'monster', 'shinju', 'part'].forEach(parentKey => {
+      validateStatBlock(this.config[parentKey as 'base'|'boss'|'monster'|'shinju'|'part'] as Record<Stat, number>);
     });
     
     // validate specific stat blocks

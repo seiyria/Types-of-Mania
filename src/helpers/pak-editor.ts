@@ -14,6 +14,7 @@ import * as packageFile from '../../package.json';
 const FILE_LOCATIONS: Record<EnemyType, string> = {
   [EnemyType.Boss]:     `Trials of Mana/Content/Game00/Data/Csv/CharaData`,
   [EnemyType.Monster]:  `Trials of Mana/Content/Game00/BP/Enemy/Zako/Data`,
+  [EnemyType.Part]:     `Trials of Mana/Content/Game00/Data/Csv/CharaData/Parts`,
   [EnemyType.Shinju]:   `Trials of Mana/Content/Game00/Data/Csv/CharaData/ShinjuStatusTableList`,
 }
 
@@ -34,13 +35,9 @@ export class PakFileEditor {
 
   // edit the hex file for an individual enemy
   public editHexForEnemy(enemy: Enemy): void {
-    
-    let updateStats = enemy.uexpFilePath.includes('StatusTable');
-    if(this.allEnemyStats[enemy.id]) updateStats = false;
 
-    if(updateStats) {
-      this.allEnemyStats[enemy.id] = { name: enemy.name };
-    }
+    const enemyUniqueId = `${enemy.uexpFilePath}|${enemy.id}`;
+    this.allEnemyStats[enemyUniqueId] = { name: enemy.name };
 
     const fileKey = path.basename(enemy.uexpFilePath);
 
@@ -76,9 +73,7 @@ export class PakFileEditor {
       // we can't exceed int max (2^32 - 1) or int min
       newStatValue = Math.max(-2147483648, Math.min(2147483647, newStatValue));
 
-      if(updateStats) {
-        this.allEnemyStats[enemy.id][offsetStat as Stat] = newStatValue;
-      }
+      this.allEnemyStats[enemyUniqueId][offsetStat as Stat] = newStatValue;
 
       file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
     });
