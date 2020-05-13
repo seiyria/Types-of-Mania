@@ -5,7 +5,7 @@ A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://githu
 ## Features
 
 * Allows for changing of the following stats via a multiplier: hp, mp, atk, def, agi, int, spr, luck, offMag, defMag, exp, lucre, drop1, drop2, drop3.
-* Allows for global changes, or specific boss, monster, shinju, or part enemies.
+* Allows for global changes, or specific boss, monster, or shinju enemies.
 * Allows for specific enemy changes for fine-tuning specific enemies using specific creature names or level ranges.
 * Has a very simple build process, which allows for automatic installation to your mod directory.
 * Supports a config file for easy sharing of configs.
@@ -20,19 +20,18 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 * `--version` will just print the current version of the app.
 * `--dumpData` will dump monster names and item names.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
-* `--configJson <json>` will load a config from a stringifed JSON object.
+* `--configJson <json>` will load a config from a stringifed JSON object. Mutually exclusive with loading a `config.yml` file.
 * `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `buildtools/UnrealPak.exe` or `UnrealPak.exe`.
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
-* `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier`.
+* `--base.<stat> <multiplier>` will set the base `stat` multiplier to `multiplier`.
 * `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier`.
 * `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier`.
 * `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier`.
-* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier`.
 
 The valid `stat` keys you can set can be found in `config.yml`.
 
-To pass these in to `npm start`, do this (for example): `npm start -- --global.xp 1 --global.hp 3` (notice the first set of `--` before the args are passed in).
+To pass these in to `npm start`, do this (for example): `npm start -- --base.xp 1 --base.hp 3` (notice the first set of `--` before the args are passed in).
 
 ### config.yml
 
@@ -95,7 +94,6 @@ Unzip the file and grab `Tools/UnrealPak/UnrealPak.exe` folder and put it in `bu
 ## Future Features
 
 * Verbose stat edit logs
-* Part-type enemies working (they might already work???)
 * Edit healing item potency
 * Item shop randomizer (w/ seeds)
 * Item randomization (w/ seeds)

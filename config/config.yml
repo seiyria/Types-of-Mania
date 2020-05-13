@@ -1,11 +1,15 @@
 
-version: 1
+version: 2
 
 seed: 0
 
 installTo: C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana
 
-global: &global
+# these are the base stats
+# they will be applied to all creatures without something set
+# so, if you set boss.hp = 3, this won't override that
+# but if you don't set boss.def, this will set it to 1
+base:
 
   # core stats
   hp: 2
@@ -16,9 +20,9 @@ global: &global
   int: 1.5
   spr: 1.5
 
-  # ??? (please help me here)
-  defMag: 1
-  offMag: 1
+  # possibly related to enemy magic offense/defense, since most of them don't have agi/int/spr set
+  defMag: 1.3
+  offMag: 1.3
 
   # drop-related stats
   exp: 0.8
@@ -36,16 +40,14 @@ global: &global
   lAttackDropSpp: 1
   chargeAttackDropSpp: 1
 
+# boss-specific overrides go here
 boss:
-  <<: *global
 
+# normal enemy-specific overrides go here
 monster:
-  <<: *global
 
+# shinju-specific overrides go here
 shinju:
-  <<: *global
 
-part:
-  <<: *global
-
-specific: {}
+# specific monster overrides go here
+specific:

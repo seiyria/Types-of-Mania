@@ -14,7 +14,6 @@ import * as packageFile from '../../package.json';
 const FILE_LOCATIONS: Record<EnemyType, string> = {
   [EnemyType.Boss]:     `Trials of Mana/Content/Game00/Data/Csv/CharaData`,
   [EnemyType.Monster]:  `Trials of Mana/Content/Game00/BP/Enemy/Zako/Data`,
-  [EnemyType.Part]:     `Trials of Mana/Content/Game00/Data/Csv/CharaData/PartsList`,
   [EnemyType.Shinju]:   `Trials of Mana/Content/Game00/Data/Csv/CharaData/ShinjuStatusTableList`,
 }
 

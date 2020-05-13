@@ -1,9 +1,14 @@
 
 export enum EnemyType {
+
+  // boss enemies
   Boss = 'boss',
+
+  // normal enemies
   Monster = 'monster',
-  Shinju = 'shinju',
-  Part = 'part'
+
+  // boss-part enemies
+  Shinju = 'shinju'
 }
 
 export enum Stat {

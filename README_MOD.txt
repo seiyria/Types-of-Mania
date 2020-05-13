@@ -39,8 +39,8 @@ Secondary Stats:
 
 Other Stats:
 
-* OffMag -> 100%
-* DefMag -> 100%
+* OffMag -> 130%
+* DefMag -> 130%
 
 SPP Stats:
 
@@ -86,15 +86,13 @@ It is very flexible, and lets you specify any key/subkey as follows:
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. 
   Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
 
-* `--global.<stat> <multiplier>` will set the global `stat` multiplier to `multiplier`.
+* `--base.<stat> <multiplier>` will set the base `stat` multiplier to `multiplier`.
 
 * `--boss.<stat> <multiplier>` will set the boss `stat` multiplier to `multiplier`.
 
 * `--monster.<stat> <multiplier>` will set the monster `stat` multiplier to `multiplier`.
 
 * `--shinju.<stat> <multiplier>` will set the shinju `stat` multiplier to `multiplier`.
-
-* `--part.<stat> <multiplier>` will set the part `stat` multiplier to `multiplier`.
 
 The valid `stat` keys you can set can be found in `config.yml`.
 

@@ -11,22 +11,21 @@ import { getDefaultConfig } from './default-config';
 export interface ModConfig {
   version: number;
 
-  seed: number;
+  seed: number|string;
 
   installTo: string;
 
-  global: Record<Stat, number>;
-  boss: Record<Stat, number>;
-  monster: Record<Stat, number>;
-  shinju: Record<Stat, number>;
-  part: Record<Stat, number>;
+  base: Record<Stat, number>;
+  boss?: Partial<Record<Stat, number>>;
+  monster?: Partial<Record<Stat, number>>;
+  shinju?: Partial<Record<Stat, number>>;
 
   specific: Record<string, Record<Stat, number>>;
 }
 
 export interface ConfigLoaderOpts {
   overrides: Partial<ModConfig>;
-  configJson?: any;
+  configJson?: string;
   configLocation?: string;
 }
 
@@ -39,56 +38,65 @@ export class ConfigLoader {
   private config!: ModConfig;
   private validKeys = [
     'version', 'seed', 'installTo',
-    'global', 'boss', 'monster', 'shinju', 'part', 'specific'
+    'base', 'boss', 'monster', 'shinju', 'specific'
   ];
   
   constructor(private opts: ConfigLoaderOpts) {
     this.init();
   }
 
+  // TODO: rename global to base, stop inserting <<*: global / base, only use value if not present
+  // validateConfig() to go through each key and set it to either itself or base.x
   private init(): void {
 
     const configLocation = this.opts.configLocation || 'config/config.yml';
 
-    try {
-      let config = null;
+    let config: ModConfig;
 
-      // load the configJson first, or try to
-      if(this.opts.configJson) {
-        try {
-          config = deepmerge(getDefaultConfig(), JSON.parse(this.opts.configJson));
-        } catch(e) {
-          console.error('Could not load --configJson correctly. Skipping...');
-        }
+    // load the configJson first, or try to
+    // it should be a full config object, ideally, not a partial
+    if(this.opts.configJson) {
+      try {
+        config = deepmerge(getDefaultConfig(), JSON.parse(this.opts.configJson));
+      } catch(e) {
+        console.error('Could not load --configJson correctly. Skipping...');
       }
-      
-      // if there is no configJson passed in (or it fails), try to load config.yml
-      if(!config) {
+    
+    // if there is no configJson passed in, try to load config.yml
+    } else {
+      try {
         config = YAML.safeLoad(fs.readFileSync(path.resolve(configLocation)).toString());
-      }
 
-      // if you specify override.global (via cli), copy those values to the other sections
-      if(this.opts.overrides) {
-        Object.keys(this.opts.overrides.global || {}).forEach(key => {
-          ['boss', 'monster', 'shinju', 'part'].forEach(masterKey => {
-            (this.opts.overrides as any)[masterKey] = (this.opts.overrides as any)[masterKey] || {};
-            (this.opts.overrides as any)[masterKey][key] = (this.opts.overrides as any).global[key];
-          });
-        });
+      } catch(e) {
+        console.error(`Could not find config.yml at ${configLocation}. Please place one there or specify --config.`);
+        process.exit(1);
       }
-  
-      // merge the two configs into the finalized config
-      this.config = deepmerge(config, this.opts.overrides || {});
-    } catch(e) {
-      console.error(`Could not find config.yml at ${configLocation}. Please place one there or specify --config.`);
-      process.exit(1);
     }
+
+    // if you specify override.base (via cli), copy those values to the current config
+    config = deepmerge(config!, this.opts.overrides || {});
+
+    // apply the base to all other aspects
+    (Object.keys(config!.base || {}) as Array<Stat>).forEach(baseStatKey => {
+      (['boss', 'monster', 'shinju'] as Array<'boss'|'monster'|'shinju'>).forEach(masterKey => {   
+        config[masterKey] = config[masterKey] || {};
+        
+        if(config[masterKey]![baseStatKey]) return;
+
+        config[masterKey]![baseStatKey] = config.base[baseStatKey];
+      });
+    });
+
+    // set the finalized config
+    this.config = config! as ModConfig;
 
     this.validateConfig();
   }
 
   // validate the config file
   private validateConfig(): void {
+
+    // validate top level keys
     Object.keys(this.config).forEach(key => {
       if(this.validKeys.includes(key)) return;
 
@@ -96,18 +104,26 @@ export class ConfigLoader {
       process.exit(1);
     });
 
-    const validateStatBlock = (statBlock: string): void => {
+    // validate stat blocks
+    const validateStatBlock = (statBlock: Record<Stat, number>): void => {
       const validKeys = Object.values(Stat);
-      Object.keys(this.config[statBlock as keyof ModConfig]).forEach(statKey => {
+
+      Object.keys(statBlock).forEach(statKey => {
         if(validKeys.includes(statKey as Stat)) return;
 
-        console.error(`Invalid config setting: ${statBlock}.${statKey}. Remove it from your config and try again.`);
+        console.error(`Invalid config setting: ${statKey}. Remove it from your config and try again.`);
         process.exit(1);
       });
     };
 
-    ['global', 'boss', 'monster', 'shinju', 'part'].forEach(parent => {
-      validateStatBlock(parent);
+    // validate top level stat blocks
+    ['base', 'boss', 'monster', 'shinju'].forEach(parentKey => {
+      validateStatBlock(this.config[parentKey as 'base'|'boss'|'monster'|'shinju'] as Record<Stat, number>);
+    });
+    
+    // validate specific stat blocks
+    Object.keys(this.config.specific || {}).forEach(specificStatBlock => {
+      validateStatBlock(this.config.specific[specificStatBlock]);
     });
   }
 
@@ -123,7 +139,7 @@ export class ConfigLoader {
       stats[stat as Stat] = type[stat] || 1;
 
       // then we check each specific key against the enemy name to see if we should apply anything further
-      Object.keys(this.config.specific).forEach(specificKey => {
+      Object.keys(this.config.specific || {}).forEach(specificKey => {
 
         // we do a case insensitive match on the regex first
         if(!enemy.name.match(new RegExp(specificKey, 'i'))) return;
