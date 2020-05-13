@@ -7,7 +7,6 @@ import deepmerge from 'deepmerge';
 import { Enemy, Stat } from '../models';
 import { getDefaultConfig } from './default-config';
 
-// this mirrors config.yml
 export interface ModConfig {
   version: number;
 

@@ -3,6 +3,7 @@ import deepmerge from 'deepmerge';
 
 import { ModConfig } from './config-loader';
 
+// this mirrors config.yml
 const defaultStatConfig = {
   hp: 2,
   mp: 1,
