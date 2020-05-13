@@ -75,6 +75,8 @@ It is very flexible, and lets you specify any key/subkey as follows:
 
 * `--dumpData` will dump monster names and item names.
 
+* `--dumpStats` will dump monster stats as a CSV file.
+
 * `--config <config.yml>` will load a config from a specified path. 
   Default: `config/config.yml`.
 
