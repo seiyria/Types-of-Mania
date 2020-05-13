@@ -19,6 +19,7 @@ base:
   agi: 1.2
   int: 1.5
   spr: 1.5
+  luck: 1
 
   # possibly related to enemy magic offense/defense, since most of them don't have agi/int/spr set
   defMag: 1.3
