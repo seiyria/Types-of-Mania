@@ -20,17 +20,27 @@ const FILE_LOCATIONS: Record<EnemyType, string> = {
 export interface PakFileEditorOpts {
   configLoader: ConfigLoader;
   unrealPakLocation?: string;
+  dumpStats?: boolean;
 }
 
 export class PakFileEditor {
 
   private fileCache: Record<string, Buffer> = {};
   private fileOutputLocation: Record<string, string> = {};
+
+  private allEnemyStats: Record<string, Partial<Record<'name'|Stat, string|number>>> = {};
   
   constructor(private opts: PakFileEditorOpts) {}
 
   // edit the hex file for an individual enemy
   public editHexForEnemy(enemy: Enemy): void {
+    
+    let updateStats = enemy.uexpFilePath.includes('StatusTable');
+    if(this.allEnemyStats[enemy.id]) updateStats = false;
+
+    if(updateStats) {
+      this.allEnemyStats[enemy.id] = { name: enemy.name };
+    }
 
     const fileKey = path.basename(enemy.uexpFilePath);
 
@@ -68,6 +78,15 @@ export class PakFileEditor {
 
       // we can't exceed int max (2^32 - 1) or int min
       newStatValue = Math.max(-2147483648, Math.min(2147483647, newStatValue));
+
+      if(updateStats) {
+        this.allEnemyStats[enemy.id][offsetStat as Stat] = newStatValue;
+      }
+
+      /*
+      if(enemy.name === 'Doran') {
+        console.log(enemy.uexpFilePath, enemy.id, enemy.offsets[offsetStat as Stat], offsetStat, statValue, newStatValue)
+      }*/
 
       file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
     });
@@ -132,6 +151,23 @@ export class PakFileEditor {
       fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
 
+    // dump in CSV if we need to
+    if(this.opts.dumpStats) {
+      const stats = ['id', 'name', ...Object.values(Stat)];
+      let statString = stats.join(',') + '\n';
+      Object.keys(this.allEnemyStats).forEach(enemyId => {
+        const monStats = [
+          enemyId, 
+          this.allEnemyStats[enemyId].name,
+          ...Object.values(Stat).map(s => this.allEnemyStats[enemyId][s])
+        ];
+        statString += monStats.join(',') + '\n';
+      });
+
+      fs.writeFileSync(`${buildRoot}/stats.csv`, statString);
+    }
+
+    // try automatic installation
     const installTo = this.opts.configLoader.finalConfig.installTo;
     if(installTo) {
       if(fs.pathExistsSync(installTo)) {
@@ -152,6 +188,9 @@ export class PakFileEditor {
     // we're done!
     console.log(`Done! Your built pak file is located at ${buildRoot}/TypesOfMania_P.pak`);
     console.log('A copy of the config file that created this build has been included for reference.');
+    if(this.opts.dumpStats) {
+      console.log('A dump of all monster stats has been included as stats.csv.');
+    }
   }
 
 }

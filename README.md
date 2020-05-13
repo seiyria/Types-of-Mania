@@ -19,6 +19,7 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 
 * `--version` will just print the current version of the app.
 * `--dumpData` will dump monster names and item names.
+* `--dumpStats` will dump all monster stats in CSV format with the pak file.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
 * `--configJson <json>` will load a config from a stringifed JSON object. Mutually exclusive with loading a `config.yml` file.
 * `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `buildtools/UnrealPak.exe` or `UnrealPak.exe`.

@@ -10,13 +10,29 @@ const allFiles = recursiveReadDir(
   )
   .map(f => path.join(path.dirname(f), path.basename(f, '.uexp')));
 
-export const ShinjuParsers = allFiles.map(fileName => {
-  return new EnemyParser({
-    offsetStart: 111,
-    offsetIteratorIncrementBy: 1579,
-    type: EnemyType.Shinju,
-    uexpFilePath: `gamefiles/boss/uexp/shinjustatustablelist/${fileName}.uexp`,
-    jsonFilePath: `gamefiles/boss/json/shinjustatustablelist/${fileName}.json`,
-    buildFolder: path.dirname(fileName) !== '.' ? path.dirname(fileName) : ''
-  });
-});
+export const ShinjuParsers = [
+  ...allFiles
+    .filter(fileName => !fileName.includes('Parts'))
+    .map(fileName => {
+      return new EnemyParser({
+        offsetStart: 140,
+        offsetIteratorIncrementBy: 1624,
+        type: EnemyType.Shinju,
+        uexpFilePath: `gamefiles/boss/uexp/shinjustatustablelist/${fileName}.uexp`,
+        jsonFilePath: `gamefiles/boss/json/shinjustatustablelist/${fileName}.json`,
+        buildFolder: path.dirname(fileName) !== '.' ? path.dirname(fileName) : ''
+      });
+    }),
+    ...allFiles
+      .filter(fileName => fileName.includes('Parts'))
+      .map(fileName => {
+        return new EnemyParser({
+          offsetStart: 111,
+          offsetIteratorIncrementBy: 1579,
+          type: EnemyType.Shinju,
+          uexpFilePath: `gamefiles/boss/uexp/shinjustatustablelist/${fileName}.uexp`,
+          jsonFilePath: `gamefiles/boss/json/shinjustatustablelist/${fileName}.json`,
+          buildFolder: path.dirname(fileName) !== '.' ? path.dirname(fileName) : ''
+        });
+      })
+]
