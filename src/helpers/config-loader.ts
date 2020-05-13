@@ -5,6 +5,7 @@ import * as YAML from 'js-yaml';
 import deepmerge from 'deepmerge';
 
 import { Enemy, Stat } from '../models';
+import { getDefaultConfig } from './default-config';
 
 // this mirrors config.yml
 export interface ModConfig {
@@ -25,6 +26,7 @@ export interface ModConfig {
 
 export interface ConfigLoaderOpts {
   overrides: Partial<ModConfig>;
+  configJson?: any;
   configLocation?: string;
 }
 
@@ -49,8 +51,21 @@ export class ConfigLoader {
     const configLocation = this.opts.configLocation || 'config/config.yml';
 
     try {
-      // load config.yml
-      const config = YAML.safeLoad(fs.readFileSync(path.resolve(configLocation)).toString());
+      let config = null;
+
+      // load the configJson first, or try to
+      if(this.opts.configJson) {
+        try {
+          config = deepmerge(getDefaultConfig(), JSON.parse(this.opts.configJson));
+        } catch(e) {
+          console.error('Could not load --configJson correctly. Skipping...');
+        }
+      }
+      
+      // if there is no configJson passed in (or it fails), try to load config.yml
+      if(!config) {
+        config = YAML.safeLoad(fs.readFileSync(path.resolve(configLocation)).toString());
+      }
 
       // if you specify override.global (via cli), copy those values to the other sections
       if(this.opts.overrides) {

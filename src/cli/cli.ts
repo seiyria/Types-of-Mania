@@ -20,10 +20,10 @@ if(argv.dumpData) {
   process.exit(0);
 }
 
-const { config, unrealPak, ...totalConfig } = argv;
+const { config, configJson, unrealPak, ...totalConfig } = argv;
 
 // set up the config / pak file editor
-const configLoader = new ConfigLoader({ overrides: totalConfig, configLocation: config });
+const configLoader = new ConfigLoader({ overrides: totalConfig, configLocation: config, configJson });
 const editor = new PakFileEditor({ configLoader, unrealPakLocation: unrealPak });
 
 // get all of the enemies
