@@ -129,7 +129,11 @@ specific:
   lv[1][0-9]:
     hp: 3
 
-This will apply to all creatures level 10-19, and make their HP 300%.
+This will apply to all enemies that have Lv10 through Lv19 in their internal name, 
+and make their HP 300%.
+
+Please note that not all enemies have Lv in their internal name, so 
+this method captures a lot of creatures, but isn't fool-proof.
 
 # GitHub Repository
 -------------------

@@ -58,7 +58,11 @@ specific:
     hp: 3
 ```
 
-This uses the enhanced feature for specifics that allows you to use regex to filter out a creature name and apply stats - it's somewhat like a filter. In this case, this would set the HP value to creatures level 0-9 to 80% of their max, and creatures from level 10-19 to 3x their max HP. This can be used to better fine-tune the stats for different level ranges.
+This uses the enhanced feature for specifics that allows you to use regex to filter out a creature name and apply stats - it's somewhat like a filter. In this case, this would set the HP value to creatures that have Lv0 through Lv9 in their internal name to 80% of their max, and creatures that have Lv10 through Lv19 in their internal name to 3x their max HP. This can be used to better fine-tune the stats for different level ranges.
+
+This will apply to all enemies that have Lv10 through Lv19 in their internal name, and make their HP 300%.
+
+Please note that not all enemies have Lv in their internal name, so this method captures a lot of creatures, but isn't fool-proof.
 
 ### Finished Pak Files
 
