@@ -122,3 +122,5 @@ buildtools
 Engine
 *.js
 bin
+
+tmp

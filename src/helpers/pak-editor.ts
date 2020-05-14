@@ -10,6 +10,9 @@ import { ConfigLoader } from './config-loader';
 
 import * as packageFile from '../../package.json';
 
+// oh boy
+const execPath = (process as any).pkg ? path.dirname(process.execPath) : process.cwd();
+
 // where files for each enemy type go
 const FILE_LOCATIONS: Record<EnemyType, string> = {
   [EnemyType.Boss]:     `Trials of Mana/Content/Game00/Data/Csv/CharaData`,
@@ -46,7 +49,7 @@ export class PakFileEditor {
 
     // if not, grab it & cache it
     if(!file) {
-      file = fs.readFileSync(path.join(path.dirname(process.execPath), enemy.uexpFilePath));
+      file = fs.readFileSync(path.join(execPath, enemy.uexpFilePath));
       this.fileCache[fileKey] = file;
       this.fileOutputLocation[fileKey] = FILE_LOCATIONS[enemy.type];
 
@@ -83,7 +86,7 @@ export class PakFileEditor {
   public async flush(): Promise<void> {
 
     // the root build directory
-    const fileRoot = path.join(path.dirname(process.execPath), `build/pak/${packageFile.version}`);
+    const fileRoot = path.join(execPath, `build/pak/${packageFile.version}`);
 
     // clear out old temporary files
     fs.removeSync(`${fileRoot}/tmp`);
@@ -104,8 +107,8 @@ export class PakFileEditor {
     let unrealPakLocation = this.opts.unrealPakLocation || `buildtools/UnrealPak.exe`;
 
     // make sure the two build tools exist
-    const doesExeExist = fs.pathExistsSync(path.join(path.dirname(process.execPath), unrealPakLocation));
-    const doesBaseExist = fs.pathExistsSync(path.join(path.dirname(process.execPath), 'UnrealPak.exe'));
+    const doesExeExist = fs.pathExistsSync(path.join(execPath, unrealPakLocation));
+    const doesBaseExist = fs.pathExistsSync(path.join(execPath, 'UnrealPak.exe'));
 
     if(!doesExeExist && !doesBaseExist) {
       console.log(`Error: Could not find UnrealPak.exe. Please make sure it is placed alongside the exe or at buildtools/UnrealPak.exe or specify --unrealPak`);
@@ -116,10 +119,10 @@ export class PakFileEditor {
       unrealPakLocation = 'UnrealPak.exe';
     }
 
-    const buildRoot = path.join(path.dirname(process.execPath), `build/pak/${packageFile.version}`);
+    const buildRoot = path.join(execPath, `build/pak/${packageFile.version}`);
     const fullBuildRoot = path.resolve(buildRoot);
 
-    const fullExeRoot = path.resolve(path.join(path.dirname(process.execPath), unrealPakLocation));
+    const fullExeRoot = path.resolve(path.join(execPath, unrealPakLocation));
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
@@ -136,7 +139,7 @@ export class PakFileEditor {
 
     // we have to wait a bit because ???
     setTimeout(() => {
-      fs.removeSync(path.join(path.dirname(process.execPath), 'Engine'));
+      fs.removeSync(path.join(execPath, 'Engine'));
       fs.removeSync(`${fullBuildRoot}/filelist.txt`);
       fs.removeSync(`${fullBuildRoot}/tmp`);
 
