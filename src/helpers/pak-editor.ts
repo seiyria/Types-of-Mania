@@ -46,7 +46,7 @@ export class PakFileEditor {
 
     // if not, grab it & cache it
     if(!file) {
-      file = fs.readFileSync(enemy.uexpFilePath);
+      file = fs.readFileSync(path.join(path.dirname(process.execPath), enemy.uexpFilePath));
       this.fileCache[fileKey] = file;
       this.fileOutputLocation[fileKey] = FILE_LOCATIONS[enemy.type];
 
@@ -83,7 +83,7 @@ export class PakFileEditor {
   public async flush(): Promise<void> {
 
     // the root build directory
-    const fileRoot = `build/pak/${packageFile.version}`;
+    const fileRoot = path.join(path.dirname(process.execPath), `build/pak/${packageFile.version}`);
 
     // clear out old temporary files
     fs.removeSync(`${fileRoot}/tmp`);
@@ -101,41 +101,46 @@ export class PakFileEditor {
   // pack the files using UnrealPak
   public async pack(): Promise<void> {
 
-    let unrealPakLocation = this.opts.unrealPakLocation || `buildtools/UnrealPak.exe`
+    let unrealPakLocation = this.opts.unrealPakLocation || `buildtools/UnrealPak.exe`;
 
     // make sure the two build tools exist
-    const doesExeExist = fs.pathExistsSync(unrealPakLocation);
-    const doesBaseExist = fs.pathExistsSync('UnrealPak.exe');
+    const doesExeExist = fs.pathExistsSync(path.join(path.dirname(process.execPath), unrealPakLocation));
+    const doesBaseExist = fs.pathExistsSync(path.join(path.dirname(process.execPath), 'UnrealPak.exe'));
 
     if(!doesExeExist && !doesBaseExist) {
-      console.error(`Error: Could not find UnrealPak.exe. Please make sure it is placed alongside the exe or at buildtools/UnrealPak.exe or specify --unrealPak`);
-      return;
+      console.log(`Error: Could not find UnrealPak.exe. Please make sure it is placed alongside the exe or at buildtools/UnrealPak.exe or specify --unrealPak`);
+      process.exit(0);
     }
 
     if(doesBaseExist) {
       unrealPakLocation = 'UnrealPak.exe';
     }
 
-    const buildRoot = `build/pak/${packageFile.version}`;
+    const buildRoot = path.join(path.dirname(process.execPath), `build/pak/${packageFile.version}`);
     const fullBuildRoot = path.resolve(buildRoot);
 
-    const fullExeRoot = path.resolve(unrealPakLocation);
+    const fullExeRoot = path.resolve(path.join(path.dirname(process.execPath), unrealPakLocation));
 
     // bundle all the files using UnrealPak
     console.log('Bundling...');
     fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${fullBuildRoot}\\tmp\\*.*" "..\\..\\..\\*.*"`);
-    childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\TypesOfMania_P.pak" -Create="${fullBuildRoot}\\filelist.txt"`);
+    try {
+      childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\TypesOfMania_P.pak" -Create="${fullBuildRoot}\\filelist.txt"`);
+    } catch(e) {
+      console.log('Cannot run UnrealPak.exe: ', e.message);
+      process.exit(0);
+    }
 
     // clean up files
     console.log('Cleaning up...');
 
     // we have to wait a bit because ???
     setTimeout(() => {
-      fs.removeSync('Engine');
+      fs.removeSync(path.join(path.dirname(process.execPath), 'Engine'));
       fs.removeSync(`${fullBuildRoot}/filelist.txt`);
-      fs.removeSync(`${buildRoot}/tmp`);
+      fs.removeSync(`${fullBuildRoot}/tmp`);
 
-      fs.writeFileSync(`${buildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
+      fs.writeFileSync(`${fullBuildRoot}/config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
     }, 100);
 
     // dump in CSV if we need to
@@ -151,7 +156,7 @@ export class PakFileEditor {
         statString += monStats.join(',') + '\n';
       });
 
-      fs.writeFileSync(`${buildRoot}/stats.csv`, statString);
+      fs.writeFileSync(`${fullBuildRoot}/stats.csv`, statString);
     }
 
     // try automatic installation

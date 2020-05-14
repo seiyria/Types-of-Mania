@@ -57,7 +57,8 @@ export class ConfigLoader {
       try {
         config = deepmerge(getDefaultConfig(), JSON.parse(this.opts.configJson));
       } catch(e) {
-        console.error('Could not load --configJson correctly. Skipping...');
+        console.log('Could not load --configJson correctly. Cancelling...');
+        process.exit(0);
       }
     
     // if there is no configJson passed in, try to load config.yml
@@ -66,8 +67,8 @@ export class ConfigLoader {
         config = YAML.safeLoad(fs.readFileSync(path.resolve(configLocation)).toString());
 
       } catch(e) {
-        console.error(`Could not find config.yml at ${configLocation}. Please place one there or specify --config.`);
-        process.exit(1);
+        console.log(`Could not find config.yml at ${configLocation}. Please place one there or specify --config.`);
+        process.exit(0);
       }
     }
 
@@ -98,8 +99,8 @@ export class ConfigLoader {
     Object.keys(this.config).forEach(key => {
       if(this.validKeys.includes(key)) return;
 
-      console.error(`Invalid config setting: ${key}. Remove it from your config and try again.`);
-      process.exit(1);
+      console.log(`Invalid config setting: ${key}. Remove it from your config and try again.`);
+      process.exit(0);
     });
 
     // validate stat blocks
@@ -109,8 +110,8 @@ export class ConfigLoader {
       Object.keys(statBlock).forEach(statKey => {
         if(validKeys.includes(statKey as Stat)) return;
 
-        console.error(`Invalid config setting: ${statKey}. Remove it from your config and try again.`);
-        process.exit(1);
+        console.log(`Invalid config setting: ${statKey}. Remove it from your config and try again.`);
+        process.exit(0);
       });
     };
 

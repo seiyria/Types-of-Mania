@@ -36,7 +36,7 @@ export class EnemyParser {
     try {
       enemiesInFile = require(path.join('..', '..', this.opts.jsonFilePath));
     } catch(e) {
-      console.error(`Could not find file ${this.opts.jsonFilePath}. Skipping...`);
+      console.log(`Could not find file ${this.opts.jsonFilePath}. Skipping...`);
       return [];
     }
 
