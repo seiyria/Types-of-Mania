@@ -2,6 +2,10 @@
 
 A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://github.com/pyroll/Trials-of-Mania---Difficulty-Mod) for the original Python scripts that got this going.
 
+## Party Builder
+
+Interested in building a party to go with your higher difficulty? [Check out this handy tool](https://trialsofmana.seiyria.com/)!
+
 ## Features
 
 * Allows for changing of the following stats via a multiplier: hp, mp, atk, def, agi, int, spr, luck, offMag, defMag, exp, lucre, drop1, drop2, drop3.

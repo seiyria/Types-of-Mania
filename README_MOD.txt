@@ -4,6 +4,11 @@
 This mod is based off of rollcall's excellent rebalance mod. It offers the ability to add a multiplier to modify 
 nearly any enemy stat in the game.
 
+# Party Builder
+---------------
+
+Interested in building a party to go with your higher difficulty? Check out this handy tool: https://trialsofmana.seiyria.com/
+
 # Features
 ----------
 
