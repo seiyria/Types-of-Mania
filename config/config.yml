@@ -55,12 +55,3 @@ part:
 
 # specific monster overrides go here
 specific:
-
-  ENEMYBOSS_01_01: # first FullmetalHugger fight
-    hp: 3
-  
-  ENEMYBOSS_01_02: # second FullmetalHugger fight
-    hp: 4
-  
-  ENEMYBOSS_01_03: # third FullmetalHugger fight
-    hp: 5
