@@ -58,6 +58,10 @@ export class PakFileEditor {
       }
     }
 
+    if(enemy.name === 'FullmetalHugger') {
+      console.log(enemy.name, enemy.id)
+    }
+
     // get the multipliers for this specific enemy
     const enemyMultipliers = this.opts.configLoader.getStatMultipliers(enemy);
 

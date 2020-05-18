@@ -141,8 +141,8 @@ export class ConfigLoader {
       Object.keys(this.config.specific || {}).forEach(specificKey => {
 
         // we do a case insensitive match on the regex first
-        if(!enemy.name.match(new RegExp(specificKey, 'i'))) return;
-
+        const checkRegex = new RegExp(specificKey, 'i');
+        if(!enemy.name.match(checkRegex) && !enemy.id.match(checkRegex)) return;
         // then we make sure there's actually a value there
         if(!this.config.specific[specificKey][stat]) return;
 

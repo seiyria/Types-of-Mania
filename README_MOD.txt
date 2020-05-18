@@ -140,6 +140,20 @@ and make their HP 300%.
 Please note that not all enemies have Lv in their internal name, so 
 this method captures a lot of creatures, but isn't fool-proof.
 
+You can also capture enemies by their internal id. Here are some examples:
+
+specific:
+  ENEMYBOSS_01_01: # first FullmetalHugger fight
+    hp: 3
+  
+  ENEMYBOSS_01_02: # second FullmetalHugger fight
+    hp: 4
+  
+  ENEMYBOSS_01_03: # third FullmetalHugger fight
+    hp: 5
+
+This would scale the `FullmetalHugger` creatures HP progressively with each fight.
+
 # GitHub Repository
 -------------------
 

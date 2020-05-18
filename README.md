@@ -68,6 +68,22 @@ This will apply to all enemies that have Lv10 through Lv19 in their internal nam
 
 Please note that not all enemies have Lv in their internal name, so this method captures a lot of creatures, but isn't fool-proof.
 
+You can also capture enemies by their internal id. Here are some examples:
+
+```yml
+specific:
+  ENEMYBOSS_01_01: # first FullmetalHugger fight
+    hp: 3
+  
+  ENEMYBOSS_01_02: # second FullmetalHugger fight
+    hp: 4
+  
+  ENEMYBOSS_01_03: # third FullmetalHugger fight
+    hp: 5
+```
+
+This would scale the `FullmetalHugger` creatures HP progressively with each fight.
+
 ### Finished Pak Files
 
 Copy the built `TypesOfMania_P.pak` file from the `build` folder into the `Trials of Mana/Content/Paks/~mod` folder. If the `~mod` folder does not already exist, you'll have to make it. Alternatively, to do this automatically, you can use the `--installTo` option.
