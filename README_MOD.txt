@@ -154,6 +154,12 @@ specific:
 
 This would scale the `FullmetalHugger` creatures HP progressively with each fight.
 
+
+# Shinju
+--------
+
+We don't know entirely what Shinju relates to, but it _seems_ like Shinju might relate specifically to Benevedons. If your Benevedons are not taking boss multiplier boosts, try modifying the Shinju area. If this is confirmed to be only Benevedons, the UI will be updated to clarify.
+
 # GitHub Repository
 -------------------
 

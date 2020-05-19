@@ -84,6 +84,10 @@ specific:
 
 This would scale the `FullmetalHugger` creatures HP progressively with each fight.
 
+### Shinju
+
+We don't know entirely what Shinju relates to, but it _seems_ like Shinju might relate specifically to Benevedons. If your Benevedons are not taking boss multiplier boosts, try modifying the Shinju area. If this is confirmed to be only Benevedons, the UI will be updated to clarify.
+
 ### Finished Pak Files
 
 Copy the built `TypesOfMania_P.pak` file from the `build` folder into the `Trials of Mana/Content/Paks/~mod` folder. If the `~mod` folder does not already exist, you'll have to make it. Alternatively, to do this automatically, you can use the `--installTo` option.
