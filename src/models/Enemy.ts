@@ -24,6 +24,9 @@ export enum Stat {
   SPR = 'spr',
   LUCK = 'luck',
 
+  DOWNDURABLE = 'downDurable',
+  GUARDDURABLE = 'guardDurable',
+
   OFFMAG = 'offMag',
   DEFMAG = 'defMag',
 
@@ -107,6 +110,8 @@ export class Enemy {
       luck:                 this.opts.hpOffset + (      29 * 8),
       defMag:               this.opts.hpOffset + (      29 * 9),
       offMag:               this.opts.hpOffset + (      29 * 10),
+      downDurable:          this.opts.hpOffset + (      29 * 11),
+      guardDurable:         this.opts.hpOffset + (      29 * 13),
 
       exp:                  this.opts.hpOffset + (822),
       dropSpp:              this.opts.hpOffset + (822 + 29 * 1),

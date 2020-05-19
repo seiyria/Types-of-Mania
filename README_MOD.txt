@@ -1,8 +1,7 @@
 # Types of Mania
 ----------------
 
-This mod is based off of rollcall's excellent rebalance mod. It offers the ability to add a multiplier to modify 
-nearly any enemy stat in the game.
+This mod offers the ability to add a multiplier to modify nearly any enemy stat in the game.
 
 # Party Builder
 ---------------
@@ -44,6 +43,8 @@ Secondary Stats:
 
 Other Stats:
 
+* Guard Durability -> 100%
+* Break Bar Durability -> 100%
 * OffMag -> 130%
 * DefMag -> 130%
 

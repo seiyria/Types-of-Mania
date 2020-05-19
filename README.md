@@ -1,6 +1,6 @@
 # Trials of Mania
 
-A difficulty modifier tool for Trials of Mana. Credits to [pyroll](https://github.com/pyroll/Trials-of-Mania---Difficulty-Mod) for the original Python scripts that got this going.
+A difficulty modifier tool for Trials of Mana. This tool lets you edit stats for any creature in a convenient way with a convenient UI.
 
 ## Party Builder
 
@@ -139,3 +139,7 @@ If you or someone you know can help get the Bloodstained Serializer working in r
 ## Warning
 
 This tool modifies your games data, and while the mod can be reversed, if it does damage to your save file, this tool is not responsible for that.
+
+## Credits
+
+Credits to [pyroll](https://github.com/pyroll/Trials-of-Mania---Difficulty-Mod) for the original Python scripts that got this going.

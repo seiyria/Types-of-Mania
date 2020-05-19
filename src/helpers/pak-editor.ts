@@ -58,18 +58,21 @@ export class PakFileEditor {
       }
     }
 
-    if(enemy.name === 'FullmetalHugger') {
-      console.log(enemy.name, enemy.id)
-    }
-
     // get the multipliers for this specific enemy
     const enemyMultipliers = this.opts.configLoader.getStatMultipliers(enemy);
 
     // iterate through all the offsets and apply the multipliers
     Object.keys(enemy.offsets).forEach(offsetStat => {
 
+      let funcType: string = 'Int32';
+      switch(offsetStat) {
+        case Stat.DOWNDURABLE:
+        case Stat.GUARDDURABLE:
+          funcType = 'Float';
+      }
+
       // get the value and multiply it by the multiplier
-      const statValue = file.readInt32LE(enemy.offsets[offsetStat as Stat]);
+      const statValue = (file[`read${funcType}LE` as any] as any)(enemy.offsets[offsetStat as Stat]);
       let newStatValue = Math.floor(statValue * enemyMultipliers[offsetStat as Stat]);
 
       // drop rates should _probably_ be 0-100
@@ -82,7 +85,7 @@ export class PakFileEditor {
 
       this.allEnemyStats[enemyUniqueId][offsetStat as Stat] = newStatValue;
 
-      file.writeInt32LE(newStatValue, enemy.offsets[offsetStat as Stat]);
+      (file[`write${funcType}LE` as any] as any)(newStatValue, enemy.offsets[offsetStat as Stat]);
     });
   }
 
