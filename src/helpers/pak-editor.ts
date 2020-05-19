@@ -80,7 +80,7 @@ export class PakFileEditor {
         newStatValue = Math.max(0, Math.min(100, newStatValue));
       }
 
-      // we can't exceed int max (2^32 - 1) or int min
+      // we can't exceed int max (2^31 - 1) or int min
       newStatValue = Math.max(-2147483648, Math.min(2147483647, newStatValue));
 
       this.allEnemyStats[enemyUniqueId][offsetStat as Stat] = newStatValue;
