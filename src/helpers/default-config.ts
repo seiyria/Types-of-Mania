@@ -40,4 +40,4 @@ const defaultConfig: ModConfig = {
   specific: {}
 };
 
-export const getDefaultConfig = () => deepmerge({}, defaultConfig);
+export const getDefaultConfig: () => ModConfig = () => deepmerge({}, defaultConfig);

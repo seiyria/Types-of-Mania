@@ -64,7 +64,7 @@ export class PakFileEditor {
     // iterate through all the offsets and apply the multipliers
     Object.keys(enemy.offsets).forEach(offsetStat => {
 
-      let funcType: string = 'Int32';
+      let funcType = 'Int32';
       switch(offsetStat) {
         case Stat.DOWNDURABLE:
         case Stat.GUARDDURABLE:
