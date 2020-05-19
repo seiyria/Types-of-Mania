@@ -155,6 +155,14 @@ specific:
 
 This would scale the `FullmetalHugger` creatures HP progressively with each fight.
 
+Using a different syntax, instead of multiplying the creatures stat, you can instead set it to a specific value. As an example:
+
+specific:
+  MAGICIAN_LV16:
+    exp: @1000
+
+This would set the `MAGICIAN_LV16` creature to always give exactly 1000 experience on kill.
+
 
 # Shinju
 --------

@@ -72,8 +72,15 @@ export class PakFileEditor {
       }
 
       // get the value and multiply it by the multiplier
+      const multValue = enemyMultipliers[offsetStat as Stat];
       const statValue = (file[`read${funcType}LE` as any] as any)(enemy.offsets[offsetStat as Stat]);
-      let newStatValue = Math.floor(statValue * enemyMultipliers[offsetStat as Stat]);
+      let newStatValue = Math.floor(statValue * multValue);
+
+      // handle a set value situation
+      if(typeof multValue === 'string' && (multValue as string).startsWith('@')) {
+        const setValue = +(multValue as string).substring(1);
+        newStatValue = setValue;
+      }
 
       // drop rates should _probably_ be 0-100
       if(offsetStat.includes('drop')) {

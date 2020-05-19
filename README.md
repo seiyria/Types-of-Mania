@@ -84,6 +84,16 @@ specific:
 
 This would scale the `FullmetalHugger` creatures HP progressively with each fight.
 
+Using a different syntax, instead of multiplying the creatures stat, you can instead set it to a specific value. As an example:
+
+```yml
+specific:
+  MAGICIAN_LV16:
+    exp: @1000
+```
+
+This would set the `MAGICIAN_LV16` creature to always give exactly 1000 experience on kill.
+
 ### Shinju
 
 We don't know entirely what Shinju relates to, but it _seems_ like Shinju might relate specifically to Benevedons. If your Benevedons are not taking boss multiplier boosts, try modifying the Shinju area. If this is confirmed to be only Benevedons, the UI will be updated to clarify.
@@ -131,7 +141,6 @@ Unzip the file and grab `Tools/UnrealPak/UnrealPak.exe` folder and put it in `bu
 * Monster randomization (w/ seeds)
 * Monster ability randomization (w/ seeds)
 * Item-specific drop rate multiplier boosts
-* Notation to set value instead of a multiplier (`hp: @100` possibly?)
 * Tests
 
 If you or someone you know can help get the Bloodstained Serializer working in reverse to turn these `json` files back into `uexp` files, that would be immensely helpful.
