@@ -1,6 +1,6 @@
 {
   "name": "types-of-mania",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Types of Mania",
   "main": "src/index.ts",
   "bin": "src/cli/cli.js",
