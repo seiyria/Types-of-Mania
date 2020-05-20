@@ -4,6 +4,7 @@ version: 2
 seed: 0
 
 installTo: C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana
+pakName: TypesOfMania_P
 
 # these are the base stats
 # they will be applied to all creatures without something set

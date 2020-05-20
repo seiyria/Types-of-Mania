@@ -31,6 +31,7 @@ const defaultStatConfig = {
 const defaultConfig: ModConfig = {
   version: 1,
   seed: 0,
+  pakName: 'TypesOfMania_P',
   installTo: '',
   base: defaultStatConfig,
   boss: undefined,

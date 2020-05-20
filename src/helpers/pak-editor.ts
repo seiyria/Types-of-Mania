@@ -138,11 +138,13 @@ export class PakFileEditor {
 
     const fullExeRoot = path.resolve(path.join(execPath, unrealPakLocation));
 
+    const finalPakName = this.opts.configLoader.finalConfig.pakName;
+
     // bundle all the files using UnrealPak
     console.log('Bundling...');
     fs.writeFileSync(`${buildRoot}/filelist.txt`, `"${fullBuildRoot}\\tmp\\*.*" "..\\..\\..\\*.*"`);
     try {
-      childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\TypesOfMania_P.pak" -Create="${fullBuildRoot}\\filelist.txt"`);
+      childProcess.execSync(`"${fullExeRoot}" "${fullBuildRoot}\\${finalPakName}.pak" -Create="${fullBuildRoot}\\filelist.txt"`);
     } catch(e) {
       console.log('Cannot run UnrealPak.exe: ', e.message);
       process.exit(0);
@@ -185,7 +187,7 @@ export class PakFileEditor {
         const finalInstallDir = `${installTo}/Trials of Mana/Content/Paks/~mod`;
         await fs.ensureDirSync(finalInstallDir);
 
-        fs.copyFileSync(`${buildRoot}/TypesOfMania_P.pak`, `${finalInstallDir}/TypesOfMania_P.pak`);
+        fs.copyFileSync(`${buildRoot}/${finalPakName}.pak`, `${finalInstallDir}/${finalPakName}.pak`);
         fs.writeFileSync(`${finalInstallDir}/TypesOfMania_config.yml`, YAML.safeDump(this.opts.configLoader.finalConfig));
 
       } else {
@@ -195,7 +197,7 @@ export class PakFileEditor {
     }
 
     // we're done!
-    console.log(`Done! Your built pak file is located at ${buildRoot}/TypesOfMania_P.pak`);
+    console.log(`Done! Your built pak file is located at ${buildRoot}/${finalPakName}.pak`);
     console.log('A copy of the config file that created this build has been included for reference.');
     if(this.opts.dumpStats) {
       console.log('A dump of all monster stats has been included as stats.csv.');

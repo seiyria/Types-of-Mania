@@ -85,6 +85,8 @@ It is very flexible, and lets you specify any key/subkey as follows:
 
 * `--config <config.yml>` will load a config from a specified path. 
   Default: `config/config.yml`.
+  
+* `--pakName <pakName>` will designate the output `.pak` file name. Default: `TypesOfMania_P`.
 
 * `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. 
   Default: `buildtools/UnrealPak.exe` or `UnrealPak.exe`.

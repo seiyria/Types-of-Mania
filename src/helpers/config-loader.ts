@@ -13,6 +13,7 @@ export interface ModConfig {
   seed: number|string;
 
   installTo: string;
+  pakName: string;
 
   base: Record<Stat, number>;
   boss?: Partial<Record<Stat, number>>;
@@ -37,7 +38,7 @@ export class ConfigLoader {
 
   private config!: ModConfig;
   private validKeys = [
-    'version', 'seed', 'installTo',
+    'version', 'seed', 'installTo', 'pakName',
     'base', 'boss', 'monster', 'shinju', 'part', 'specific'
   ];
   

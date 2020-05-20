@@ -26,6 +26,7 @@ The CLI allows you to specify custom overrides without messing with `config.yml`
 * `--dumpStats` will dump all monster stats in CSV format with the pak file.
 * `--config <config.yml>` will load a config from a specified path. Default: `config/config.yml`.
 * `--configJson <json>` will load a config from a stringifed JSON object. Mutually exclusive with loading a `config.yml` file.
+* `--pakName <pakName>` will designate the output `.pak` file name. Default: `TypesOfMania_P`.
 * `--unrealPak <UnrealPak.exe>` will search for UnrealPak.exe in the specified path. Default: `buildtools/UnrealPak.exe` or `UnrealPak.exe`.
 * `--seed <num>` will set the RNG seed for randomizing. Default: completely random.
 * `--installTo <path>` will automatically move the completed pak to your `~mod` folder. Default: `C:\Program Files (x86)\Steam\steamapps\common\Trials of Mana`.
